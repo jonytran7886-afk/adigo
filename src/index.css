@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "DM Sans", "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-adigo-blue: #0A74DA;
+  --color-adigo-blue-dark: #0759A8;
+  --color-adigo-teal: #00A896;
+  --color-adigo-green: #16A34A;
+  --color-adigo-navy: #0B1F33;
+  --color-adigo-ink: #0C1B2A;
+  --color-adigo-muted: #4A6075;
+  --color-adigo-surface: #F5F9FC;
+  --color-adigo-border: #E2ECF4;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    color: var(--color-adigo-ink);
+    background-color: #ffffff;
+    overflow-x: clip;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Custom subtle scrollbar for interactive horizontal mockup showcases */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
