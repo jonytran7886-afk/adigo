@@ -3,6 +3,7 @@ import { MotionConfig } from 'motion/react';
 import { HeroSection } from './components/hero/HeroSection';
 import { ExploreSection } from './components/explore/ExploreSection';
 import { AdigoAppSection } from './components/app-section/AdigoAppSection';
+import { MarketplaceSection } from './components/marketplace/MarketplaceSection';
 import { HeroPreviewModal, HeroModalMode } from './components/hero/HeroPreviewModal';
 import { HERO_CONFIG } from './config/heroConfig';
 
@@ -21,7 +22,7 @@ export default function App() {
 
   const handleSelectNav = (id: string) => {
     setActiveNav(id);
-    if (id === 'explore' || id === 'app') {
+    if (id === 'explore' || id === 'app' || id === 'marketplace') {
       scrollToSection(id);
       return;
     }
@@ -47,6 +48,8 @@ export default function App() {
           <ExploreSection />
 
           <AdigoAppSection />
+
+          <MarketplaceSection />
         </main>
 
         <HeroPreviewModal

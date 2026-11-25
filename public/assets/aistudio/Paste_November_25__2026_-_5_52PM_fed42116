@@ -1,0 +1,1268 @@
+# PROMPT – PHÁT TRIỂN SECTION 03: ADIGO MARKETPLACE
+
+## 01. Nhiệm vụ
+
+Đóng vai trò Senior UI/UX Designer, Creative Director, Product Designer và Senior Frontend Developer.
+
+Tiếp tục phát triển Section 03 – ADIGO Marketplace cho landing page ADIGO hiện tại, bám sát hình ảnh thiết kế tham chiếu được cung cấp.
+
+Kế thừa Design System và ngôn ngữ thiết kế từ:
+
+- Section 00 – Hero Banner.
+- Section 01 – Khám phá ADIGO.
+- Section 02 – ADIGO App.
+
+Không thiết kế lại các section đã hoàn thành.
+
+Section 03 cần thể hiện ADIGO Marketplace là một nền tảng thương mại có khả năng kết nối nhiều sản phẩm, thương hiệu, nhà bán hàng và người tiêu dùng.
+
+Tập trung vào sản phẩm, trải nghiệm thương mại, khả năng kết nối thị trường và tiềm năng mở rộng.
+
+Không trình bày theo hướng phần mềm quản lý gian hàng hoặc quản trị doanh nghiệp.
+
+## 02. Mục tiêu truyền thông
+
+Khi xem Section 03, người dùng phải hiểu được:
+
+- ADIGO Marketplace là gì.
+- Có thể khám phá những nhóm sản phẩm nào.
+- Có thể tìm kiếm sản phẩm, thương hiệu và gian hàng như thế nào.
+- Marketplace tạo thêm cơ hội tiếp cận thị trường cho nhà bán hàng ra sao.
+- Trải nghiệm thương mại được kết nối trên nhiều thiết bị.
+- ADIGO không giới hạn trong sản phẩm của riêng Organic Việt Nam.
+- ADIGO có khả năng mở rộng thành nền tảng thương mại với nhiều nhà bán hàng và danh mục sản phẩm.
+
+Không biến landing page thành website bán hàng trực tiếp.
+
+Đây là khu vực giới thiệu sản phẩm Marketplace thông qua Product Showcase.
+
+---
+
+## 03. Định hướng thiết kế
+
+Áp dụng kết hợp:
+
+- Premium Consumer Technology.
+- Digital Commerce Platform.
+- Glassmorphism.
+- Multi-device Product Showcase.
+- Abstract Technology Geometry.
+- Dynamic Glass Layers.
+- Soft Gradient.
+- Modern Light Mode.
+- Immersive Product Experience.
+
+Section 03 phải mạnh mẽ, hiện đại và mang bản sắc công nghệ rõ ràng hơn Section 01 và Section 02.
+
+Giữ màu xanh lam làm màu công nghệ chủ đạo, kết hợp xanh ngọc và xanh lá làm điểm nhấn.
+
+### Yêu cầu đặc biệt đối với background
+
+Tuyệt đối không sử dụng:
+
+- Hoa trang trí.
+- Lá cây ở các góc màn hình.
+- Lá cây làm mờ ở foreground.
+- Cành cây.
+- Dây leo.
+- Họa tiết thiên nhiên.
+- Hình ảnh trang trại.
+- Các chi tiết trang trí mang phong cách website nông sản truyền thống.
+
+Thay thế bằng:
+
+- Hình khối kính trừu tượng.
+- Dải hình học chuyển động.
+- Đường cong công nghệ.
+- Các lớp kính xếp chồng.
+- Khối hình học bo góc.
+- Dải ánh sáng xanh lam và xanh ngọc.
+- Gradient có chiều sâu.
+- Đường nét lấy cảm hứng từ chuyển động của biểu tượng chữ A trong logo ADIGO.
+
+Không sử dụng màu tím, hiệu ứng neon quá mạnh hoặc phong cách khoa học viễn tưởng.
+
+---
+
+## 04. Cấu trúc tổng thể
+
+Section 03 được chia thành ba vùng chính.
+
+### Vùng A – Section Introduction
+
+Nằm phía trên, căn giữa:
+
+- Glass eyebrow label.
+- Headline chính.
+- Nội dung mô tả ngắn.
+
+### Vùng B – Marketplace Product Showcase
+
+Nằm ở trung tâm:
+
+- Một màn hình Marketplace kích thước lớn.
+- Một smartphone hiển thị Marketplace.
+- Bốn Glass Feature Cards bố trí hai bên.
+- Glass Platform bên dưới thiết bị.
+- Một số hình ảnh sản phẩm làm điểm nhấn.
+
+### Vùng C – Marketplace Navigation
+
+Thanh điều hướng tương tác dạng Glass Dock nằm phía dưới.
+
+Bao gồm:
+
+- Sản phẩm.
+- Gian hàng.
+- Thương hiệu.
+- Ưu đãi.
+
+Khi người dùng chọn từng tab, giao diện Marketplace trên các thiết bị thay đổi theo nhóm trải nghiệm tương ứng.
+
+### Kích thước tham chiếu
+
+- Width: 100%.
+- Content max-width: 1600px.
+- Section padding-top: 70–90px.
+- Section padding-bottom: 70–90px.
+- Horizontal padding: 4–6%.
+- Product Showcase height: 580–680px.
+- Tổng chiều cao mục tiêu: 850–1000px trên desktop.
+
+Không ép section có chiều cao cố định nếu nội dung bị cắt.
+
+Giữ nhịp điệu không gian tương đương các section trước.
+
+---
+
+## 05. Section Introduction
+
+### 5.1. Glass Eyebrow Label
+
+Nội dung:
+
+ADIGO Marketplace
+
+Thiết kế:
+
+- Icon Shopping Cart dạng line.
+- Background trắng bán trong suốt.
+- Border trắng sáng.
+- Backdrop blur.
+- Border radius: 100px.
+- Shadow xanh lam nhẹ.
+- Căn giữa.
+- Chiều cao khoảng 44–48px.
+
+Kế thừa component Glass Eyebrow từ các section trước.
+
+### 5.2. Headline chính
+
+Sử dụng nội dung:
+
+Khám phá nhiều hơn. Kết nối rộng hơn.
+
+Trong đó:
+
+- “Khám phá nhiều hơn.” sử dụng màu xanh navy.
+- “Kết nối rộng hơn.” sử dụng gradient xanh lam chuyển sang xanh lá.
+
+Typography:
+
+- Font chữ kế thừa từ Hero.
+- Font size desktop: 48–60px.
+- Font weight: 700–800.
+- Line height: 1.15–1.25.
+- Text align: center.
+- Sử dụng clamp() để điều chỉnh kích thước responsive.
+
+Ưu tiên trình bày trên một dòng đối với desktop đủ rộng.
+
+### 5.3. Nội dung mô tả
+
+ADIGO Marketplace hướng đến kết nối sản phẩm, thương hiệu và nhà bán hàng trên một không gian thương mại số trực quan, linh hoạt và mở rộng.
+
+Thiết kế:
+
+- Font size: 18–21px.
+- Line height: 1.6.
+- Text color: xanh xám đậm.
+- Max-width: 900px.
+- Căn giữa.
+- Tối đa 2–3 dòng.
+
+Không bổ sung nội dung giới thiệu dài hoặc thông tin quản trị kỹ thuật.
+
+---
+
+## 06. Marketplace Product Showcase
+
+### 6.1. Bố cục ba vùng
+
+Thiết kế theo tỷ lệ desktop tham chiếu:
+
+- Cột trái: 20%.
+- Vùng thiết bị trung tâm: 60%.
+- Cột phải: 20%.
+
+Cột trái gồm:
+
+- Danh mục đa dạng.
+- Gian hàng kết nối.
+
+Cột phải gồm:
+
+- Tìm kiếm trực quan.
+- Mua sắm linh hoạt.
+
+Vùng trung tâm gồm:
+
+- Màn hình Marketplace desktop hoặc tablet ngang kích thước lớn.
+- Smartphone Marketplace nằm phía trước bên phải.
+- Glass Platform bên dưới.
+
+Không sử dụng lại cụm ba smartphone của Section 00 hoặc Section 02.
+
+Điểm khác biệt của Section 03 phải là giao diện thương mại đa thiết bị, thể hiện quy mô danh mục, gian hàng và thương hiệu.
+
+---
+
+## 07. Màn hình Marketplace chính
+
+### 7.1. Thiết kế thiết bị
+
+Sử dụng mockup màn hình tablet ngang hoặc màn hình máy tính dạng edge-to-edge.
+
+Yêu cầu:
+
+- Viền thiết bị mỏng.
+- Màu graphite hoặc titanium.
+- Bo góc tự nhiên.
+- Phản chiếu ánh sáng nhẹ.
+- Shadow có chiều sâu.
+- Góc phối cảnh nhẹ.
+- Không nghiêng quá nhiều gây khó đọc.
+
+Kích thước tham chiếu:
+
+- Chiều rộng: 700–900px.
+- Chiều cao: 460–560px.
+- Tỷ lệ điều chỉnh theo viewport.
+
+Màn hình phải đủ lớn để nhìn thấy rõ giao diện Marketplace.
+
+### 7.2. Header Marketplace
+
+Bao gồm:
+
+- Logo ADIGO.
+- Thanh tìm kiếm.
+- Icon thông báo.
+- Avatar tài khoản.
+- Icon giỏ hàng nếu phù hợp.
+
+Placeholder:
+
+Tìm sản phẩm, thương hiệu, gian hàng...
+
+Logo phải sử dụng đúng file chính thức:
+
+ADIGO_Dung_2400px.png
+
+Nếu sử dụng phiên bản ngang, phải lấy từ bộ nhận diện hoặc bố trí từ thành phần logo gốc.
+
+Không tự vẽ lại logo.
+
+### 7.3. Category Navigation
+
+Thiết kế thanh danh mục ngang.
+
+Bao gồm:
+
+- Tất cả danh mục.
+- Thịt và trứng.
+- Rau củ.
+- Trái cây.
+- Nông sản.
+- Thực phẩm chế biến.
+- Hải sản.
+
+Mỗi danh mục có icon nhỏ hoặc hình ảnh minh họa phù hợp.
+
+Trạng thái active sử dụng nền xanh đậm hoặc xanh nhạt theo Product UI Design System.
+
+Không sử dụng quá nhiều màu sắc trong thanh điều hướng.
+
+### 7.4. Marketplace Banner
+
+Thiết kế banner sản phẩm lớn bên trong giao diện Marketplace.
+
+Nội dung:
+
+Đa dạng sản phẩm.
+Thêm nhiều lựa chọn.
+
+Mô tả:
+
+Khám phá những sản phẩm phù hợp với nhu cầu mỗi ngày.
+
+CTA minh họa:
+
+Khám phá ngay →
+
+Hình ảnh bao gồm:
+
+- Thịt bò.
+- Thịt gà.
+- Thịt lợn.
+- Trứng.
+- Rau củ.
+- Trái cây.
+
+Sử dụng hình ảnh thực phẩm cao cấp, có bố cục tự nhiên.
+
+Không sử dụng nhãn “100% sạch”, chứng nhận chất lượng hoặc tuyên bố chưa được xác minh.
+
+Không dùng từ “hữu cơ” để mô tả sản phẩm.
+
+### 7.5. Danh sách sản phẩm nổi bật
+
+Tiêu đề:
+
+Sản phẩm nổi bật
+
+Bên phải:
+
+Xem tất cả →
+
+Hiển thị khoảng 4–6 product cards trên một hàng tùy kích thước mockup.
+
+Danh mục sản phẩm minh họa:
+
+- Thịt gà ta.
+- Thịt bò.
+- Thịt lợn ba chỉ.
+- Trứng gà.
+- Rau củ tươi.
+- Cam hoặc bưởi.
+
+Mỗi card gồm:
+
+- Hình ảnh sản phẩm.
+- Tên sản phẩm.
+- Quy cách hoặc đơn vị tính.
+- Giá minh họa nếu cần.
+- Icon yêu thích.
+- Nút thêm vào giỏ hàng.
+
+Nếu hiển thị giá minh họa:
+
+- Sử dụng tiền Việt Nam đồng.
+- Không sử dụng USD.
+- Không trình bày giá minh họa như giá bán chính thức.
+- Quản lý dữ liệu demo tập trung để dễ dàng cập nhật.
+
+Không tự tạo nhãn giảm giá, chứng nhận, lượt mua hoặc đánh giá sao chưa được xác nhận.
+
+### 7.6. Gian hàng và thương hiệu
+
+Bên dưới danh sách sản phẩm, chia thành hai vùng:
+
+**Gian hàng nổi bật**
+
+Hiển thị thẻ gian hàng minh họa gồm:
+
+- Store icon.
+- Tên gian hàng minh họa.
+- Hình ảnh sản phẩm.
+- Nút khám phá.
+
+**Khám phá thương hiệu**
+
+Hiển thị các brand tiles với:
+
+- Biểu tượng thương hiệu đã được cung cấp.
+- Hình ảnh đại diện.
+- Tên thương hiệu.
+- Danh mục sản phẩm.
+
+Không tự tạo thương hiệu giả rồi trình bày như đối tác thật của ADIGO.
+
+Nếu chưa có dữ liệu chính thức, sử dụng tên gian hàng và thương hiệu demo trung tính, có trạng thái minh họa rõ ràng.
+
+---
+
+## 08. Smartphone Marketplace
+
+### 8.1. Vị trí
+
+Đặt smartphone phía trước, lệch bên phải màn hình Marketplace chính.
+
+Smartphone phải có chiều sâu và tạo cảm giác các thiết bị được kết nối trong cùng một hệ sinh thái.
+
+Không che khuất quá nhiều nội dung quan trọng của màn hình lớn.
+
+### 8.2. Kích thước
+
+- Chiều cao tham chiếu: 480–570px.
+- Viền graphite hoặc titanium.
+- Bo góc tự nhiên.
+- Shadow mềm.
+- Góc nhìn gần chính diện.
+
+### 8.3. Giao diện
+
+Hiển thị Marketplace dành cho người tiêu dùng trên mobile.
+
+Bao gồm:
+
+- Logo ADIGO.
+- Thanh tìm kiếm.
+- Danh mục sản phẩm.
+- Banner mua sắm.
+- Sản phẩm đề xuất.
+- Bottom Navigation.
+
+Bottom Navigation:
+
+- Trang chủ.
+- Danh mục.
+- Giỏ hàng.
+- Đơn hàng.
+- Tài khoản.
+
+Hình ảnh sản phẩm cần đa dạng, không chỉ tập trung vào rau củ.
+
+Ưu tiên các nhóm thực phẩm tươi, thịt, trứng, trái cây, nông sản và thực phẩm chế biến.
+
+### 8.4. Đồng bộ giao diện
+
+Smartphone và màn hình Marketplace chính phải sử dụng cùng:
+
+- Product Design System.
+- Màu sắc.
+- Font chữ.
+- Icon.
+- Product Card.
+- Category Navigation.
+- Dữ liệu minh họa.
+- Trạng thái trải nghiệm.
+
+Khi người dùng chuyển tab tại Marketplace Navigation, hai thiết bị thay đổi màn hình tương ứng.
+
+Không tạo cảm giác đang giới thiệu hai ứng dụng hoàn toàn khác nhau.
+
+---
+
+## 09. Glass Feature Cards
+
+Bố trí bốn card kính hai bên cụm thiết bị.
+
+Mỗi card gồm:
+
+- Glass Icon.
+- Tiêu đề.
+- Nội dung mô tả ngắn.
+
+Không sử dụng hình ảnh lớn bên trong card để tránh cạnh tranh với Product Showcase.
+
+### Card 01 – Danh mục đa dạng
+
+Vị trí: Bên trái, phía trên.
+
+Icon: Layout Grid hoặc Grid 2x2.
+
+Màu icon: Xanh lam.
+
+Tiêu đề:
+
+Danh mục đa dạng
+
+Nội dung:
+
+Khám phá nhiều nhóm sản phẩm, từ thực phẩm tươi sống, nông sản đến thực phẩm chế biến.
+
+Thể hiện khả năng mở rộng danh mục mà không tuyên bố số lượng sản phẩm chưa được xác nhận.
+
+### Card 02 – Gian hàng kết nối
+
+Vị trí: Bên trái, phía dưới.
+
+Icon: Store.
+
+Màu icon: Xanh lá.
+
+Tiêu đề:
+
+Gian hàng kết nối
+
+Nội dung:
+
+Kết nối người tiêu dùng với các nhà bán hàng, nhà sản xuất và thương hiệu.
+
+Không sử dụng nội dung “hàng nghìn gian hàng” hoặc “phủ sóng toàn quốc” nếu chưa có dữ liệu thực tế.
+
+### Card 03 – Tìm kiếm trực quan
+
+Vị trí: Bên phải, phía trên.
+
+Icon: Search.
+
+Màu icon: Xanh lam.
+
+Tiêu đề:
+
+Tìm kiếm trực quan
+
+Nội dung:
+
+Dễ dàng khám phá sản phẩm, gian hàng và thương hiệu theo nhu cầu.
+
+Không biến nội dung thành mô tả công nghệ tìm kiếm phức tạp.
+
+### Card 04 – Mua sắm linh hoạt
+
+Vị trí: Bên phải, phía dưới.
+
+Icon: Shopping Cart.
+
+Màu icon: Xanh lá.
+
+Tiêu đề:
+
+Mua sắm linh hoạt
+
+Nội dung:
+
+Lựa chọn sản phẩm, phương thức mua sắm và nhận hàng phù hợp.
+
+Không cam kết tốc độ giao hàng, mức ưu đãi hoặc phương thức thanh toán chưa được xác nhận.
+
+### Thiết kế chung
+
+- Background trắng trong suốt: 35–60%.
+- Backdrop blur: 16–24px.
+- Border trắng: 1.5–2px.
+- Border radius: 24–30px.
+- Padding: 24–28px.
+- Soft glass shadow.
+- Tiêu đề: 22–26px.
+- Nội dung: 16–18px.
+- Icon container: 52–60px.
+- Icon border radius: 16–20px.
+
+Bốn card phải có kích thước cân đối.
+
+Không để card che khuất thiết bị.
+
+Không tạo thêm CTA bên trong từng card.
+
+---
+
+## 10. Glass Platform
+
+Thiết kế một bệ kính lớn nằm bên dưới màn hình Marketplace và smartphone.
+
+Khác với bệ kính của Section 02, bệ kính trong Section 03 cần mang cảm giác mạnh mẽ, ổn định và có quy mô lớn hơn.
+
+### Thiết kế
+
+- Hình ellipse kéo dài hoặc hình chữ nhật bo tròn theo phối cảnh.
+- Chất liệu kính trong suốt.
+- Các lớp kính xếp chồng nhẹ.
+- Viền cyan tinh tế.
+- Gradient xanh lam và xanh ngọc.
+- Phản chiếu ánh sáng mềm.
+- Shadow lan tỏa.
+
+Không sử dụng bệ kính quá dày.
+
+Không để bệ chiếm quá nhiều chiều cao section.
+
+Có thể dựng bằng CSS, SVG và gradient, không bắt buộc sử dụng WebGL.
+
+### Product Styling trên bệ kính
+
+Bố trí một số sản phẩm thực tế hoặc asset tách nền:
+
+Bên trái:
+
+- Thịt bò.
+- Trứng gà.
+
+Bên phải:
+
+- Thịt gà đóng gói.
+- Thực phẩm chế biến đóng gói.
+
+Các sản phẩm phải có chất lượng hình ảnh cao, tỷ lệ hợp lý và shadow tự nhiên.
+
+Không đặt quá nhiều thực phẩm xung quanh thiết bị.
+
+Không sử dụng hoa lá trang trí tại các góc background.
+
+Hình ảnh rau củ nếu xuất hiện chỉ nằm trong giao diện Marketplace hoặc nhóm sản phẩm thương mại minh họa.
+
+---
+
+## 11. Marketplace Navigation – Interactive Glass Dock
+
+Thiết kế một thanh điều hướng tương tác dạng kính nằm ở phía dưới Product Showcase.
+
+Bao gồm bốn tab:
+
+### Tab 01 – Sản phẩm
+
+Icon: Package hoặc Box.
+
+### Tab 02 – Gian hàng
+
+Icon: Store.
+
+### Tab 03 – Thương hiệu
+
+Icon: Badge hoặc Tag.
+
+### Tab 04 – Ưu đãi
+
+Icon: Gift hoặc Ticket.
+
+### Thiết kế
+
+- Background trắng bán trong suốt.
+- Backdrop blur: 24px.
+- Border trắng sáng.
+- Border radius: 28–36px.
+- Shadow nhẹ.
+- Chiều cao khoảng 80–90px.
+- Max-width: 780–900px.
+- Căn giữa.
+
+Mỗi tab gồm:
+
+- Icon line.
+- Tên trải nghiệm.
+- Trạng thái hover.
+- Trạng thái active.
+
+Tab active sử dụng background xanh mint nhạt kết hợp glass highlight.
+
+Không sử dụng gradient quá đậm trên thanh dock.
+
+### Hành vi tương tác
+
+Khi người dùng chọn tab:
+
+1. Cập nhật active tab.
+2. Thay đổi giao diện màn hình Marketplace chính.
+3. Thay đổi giao diện smartphone tương ứng.
+4. Nhấn mạnh Glass Feature Card liên quan nếu phù hợp.
+5. Thực hiện chuyển cảnh nhẹ.
+6. Giữ nguyên kích thước và vị trí thiết bị.
+
+Không reload trang.
+
+Không làm thay đổi chiều cao section.
+
+Không tự động chuyển tab liên tục.
+
+Mặc định chọn tab Sản phẩm.
+
+---
+
+## 12. Thiết kế bốn trạng thái Marketplace
+
+### Trạng thái 01 – Sản phẩm
+
+Màn hình lớn:
+
+- Thanh tìm kiếm.
+- Thanh danh mục.
+- Banner sản phẩm.
+- Sản phẩm nổi bật.
+- Sản phẩm mới.
+- Gian hàng và thương hiệu minh họa.
+
+Smartphone:
+
+- Danh mục sản phẩm.
+- Product cards.
+- Tìm kiếm.
+- Gợi ý lựa chọn.
+
+Đây là trạng thái mặc định của Section 03.
+
+### Trạng thái 02 – Gian hàng
+
+Màn hình lớn:
+
+- Tiêu đề Khám phá gian hàng.
+- Thanh tìm kiếm gian hàng.
+- Bộ lọc theo nhóm sản phẩm.
+- Store cards.
+- Hình ảnh đại diện gian hàng.
+- Một số sản phẩm nổi bật của từng gian hàng.
+
+Smartphone:
+
+- Danh sách gian hàng.
+- Chi tiết gian hàng.
+- Danh mục sản phẩm của gian hàng.
+- Nút khám phá sản phẩm.
+
+Không hiển thị dashboard quản lý dành cho nhà bán hàng.
+
+Không hiển thị doanh thu, số đơn hàng hoặc công cụ quản lý gian hàng.
+
+### Trạng thái 03 – Thương hiệu
+
+Màn hình lớn:
+
+- Tiêu đề Khám phá thương hiệu.
+- Brand directory.
+- Brand tiles.
+- Danh mục sản phẩm theo thương hiệu.
+- Bộ lọc ngành hàng.
+
+Smartphone:
+
+- Danh sách thương hiệu.
+- Trang giới thiệu thương hiệu.
+- Các sản phẩm thuộc thương hiệu.
+
+Chỉ sử dụng logo thương hiệu được cung cấp hoặc dữ liệu minh họa có ghi rõ trạng thái.
+
+Không tự tạo quan hệ hợp tác thương mại giữa ADIGO và các doanh nghiệp khác.
+
+### Trạng thái 04 – Ưu đãi
+
+Màn hình lớn:
+
+- Tiêu đề Khám phá ưu đãi.
+- Các nhóm chương trình mua sắm.
+- Product collection.
+- Thẻ voucher minh họa.
+- Khu vực ưu đãi thành viên.
+
+Smartphone:
+
+- Danh sách ưu đãi.
+- Sản phẩm thuộc chương trình.
+- Thẻ tiện ích mua sắm.
+
+Không tạo mức giảm giá, thời hạn khuyến mãi hoặc mã voucher có thể bị hiểu là chương trình đang áp dụng nếu chưa được xác nhận.
+
+Ưu tiên thể hiện bố cục trải nghiệm và khả năng mở rộng của sản phẩm.
+
+---
+
+## 13. Background Design – Công nghệ mạnh mẽ
+
+Đây là yêu cầu quan trọng của Section 03.
+
+Background phải có bản sắc công nghệ rõ ràng, mạnh mẽ hơn nhưng vẫn duy trì Light Mode và Glassmorphism.
+
+### Layer 01 – Base Gradient
+
+Nền chuyển từ xanh lam sáng sang trắng xanh, kết hợp vùng cyan và xanh mint ở phía phải.
+
+Màu tham chiếu:
+
+- #EAF4FF.
+- #D5E9FA.
+- #BFDFF5.
+- #C6EDE5.
+
+Không sử dụng nền xanh lá làm màu chủ đạo.
+
+### Layer 02 – Geometric Glass Shapes
+
+Sử dụng các khối hình học lớn ở hai góc phía trên.
+
+Ví dụ:
+
+- Hình chữ nhật bo góc nghiêng.
+- Dải kính chéo.
+- Hình thang trong suốt.
+- Các lớp hình học xếp chồng.
+- Các mặt phẳng kính giao nhau.
+
+Các khối hình học cần tạo cảm giác chuyển động và chiều sâu.
+
+Hướng chuyển động có thể lấy cảm hứng từ dải cong trong logo ADIGO.
+
+### Layer 03 – Technology Light Trails
+
+Bổ sung 2–3 đường cong ánh sáng mảnh chạy theo chiều chéo hoặc bao quanh Product Showcase.
+
+- Màu xanh cyan.
+- Màu trắng.
+- Màu xanh lam nhạt.
+- Độ sáng vừa phải.
+- Không tạo cảm giác neon.
+
+### Layer 04 – Radial Glow
+
+Tạo vùng sáng phía sau màn hình Marketplace.
+
+- Màu xanh lam sáng.
+- Blur rộng.
+- Opacity thấp.
+- Tạo chiều sâu cho thiết bị.
+
+### Layer 05 – Glass Reflection
+
+Bổ sung ánh sáng phản chiếu tại khu vực bệ kính và các cạnh khối hình học.
+
+Không sử dụng:
+
+- Hình ảnh lá cây.
+- Hoa.
+- Cành lá làm mờ.
+- Họa tiết cây cối.
+- Hạt bụi ánh sáng dày đặc.
+- Mạch điện tử phức tạp.
+- Hình robot.
+- Hình ảnh AI không liên quan.
+
+Background phải tạo cảm giác ADIGO là một nền tảng công nghệ thương mại, không phải một website nông nghiệp truyền thống.
+
+### CSS tham chiếu
+
+```css
+.marketplace-section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      ellipse at 52% 55%,
+      rgba(119, 193, 240, 0.23),
+      transparent 52%
+    ),
+    radial-gradient(
+      ellipse at 100% 0%,
+      rgba(108, 218, 181, 0.18),
+      transparent 42%
+    ),
+    linear-gradient(
+      135deg,
+      #EAF4FF 0%,
+      #D5E9FA 55%,
+      #C6EDE5 100%
+    );
+}
+
+.marketplace-glass-shape {
+  position: absolute;
+  pointer-events: none;
+
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.35),
+    rgba(126, 194, 238, 0.08)
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 36px;
+  transform: rotate(-32deg);
+}
+```
+
+Các khối trang trí phải nằm phía sau nội dung, sử dụng aria-hidden và không ảnh hưởng thao tác của người dùng.
+
+---
+
+## 14. Hệ thống màu sắc
+
+Kế thừa Design System hiện tại.
+
+### Brand Colors
+
+- Deep Navy: #142F63.
+- Brand Blue: #345EAA.
+- Technology Blue: #4C9DC6.
+- Leaf Green: #398441.
+- Lime Green: #A4CE46.
+
+### Marketplace Background
+
+- Ice Blue: #EAF4FF.
+- Light Blue: #D5E9FA.
+- Glass Cyan: #BFDFF5.
+- Soft Mint: #C6EDE5.
+- White: #FFFFFF.
+
+### Glass Design
+
+- Glass background: rgba(255,255,255,0.40).
+- Glass border: rgba(255,255,255,0.80).
+- Backdrop blur: 20px.
+- Border radius: 28px.
+- Shadow: xanh lam nhạt với độ trong suốt thấp.
+
+Màu sắc chỉ là tham chiếu bổ sung.
+
+Nếu Design System hiện tại đã định nghĩa các token tương đương, ưu tiên tái sử dụng token có sẵn.
+
+Không tạo hệ màu mới làm mất tính nhất quán.
+
+---
+
+## 15. Animation và Micro-interactions
+
+### 15.1. Scroll Reveal
+
+Khi người dùng cuộn đến Section 03:
+
+- Eyebrow label fade-up.
+- Headline xuất hiện.
+- Nội dung mô tả fade-in.
+- Màn hình Marketplace xuất hiện nhẹ từ dưới lên.
+- Smartphone chuyển vào từ phía phải.
+- Bốn Glass Feature Cards xuất hiện lần lượt.
+- Glass Dock xuất hiện cuối cùng.
+
+Tổng hiệu ứng phải nhanh, mượt và không gây mất tập trung.
+
+### 15.2. Tab Switching
+
+Khi chọn tab tại Marketplace Navigation:
+
+- Crossfade giữa hai giao diện.
+- Có thể kết hợp translateX nhẹ khoảng 8–12px.
+- Duration: 250–350ms.
+- Sử dụng easing mềm.
+- Không thay đổi khung thiết bị.
+- Không gây layout shift.
+
+### 15.3. Background Animation
+
+Có thể sử dụng chuyển động nhẹ cho các khối kính trừu tượng.
+
+- Biên độ nhỏ.
+- Tốc độ chậm.
+- Opacity ổn định.
+- Không xoay liên tục.
+- Không tạo hiệu ứng chớp sáng.
+
+Ưu tiên animate transform và opacity.
+
+Không animate backdrop-filter hoặc blur trên các vùng lớn.
+
+### 15.4. Hover Effects
+
+- Glass card nâng nhẹ.
+- Border sáng hơn.
+- Glass Dock active indicator chuyển động mượt.
+- Product tile highlight nhẹ.
+
+Hỗ trợ prefers-reduced-motion.
+
+Tắt animation trang trí không cần thiết trên mobile hoặc thiết bị hiệu năng thấp.
+
+---
+
+## 16. Responsive Design
+
+### Desktop từ 1440px
+
+Hiển thị đầy đủ:
+
+- Màn hình Marketplace lớn.
+- Smartphone.
+- Bốn Glass Feature Cards.
+- Glass Platform.
+- Product visuals.
+- Glass Dock.
+
+Giữ bố cục ba vùng 20% – 60% – 20%.
+
+### Laptop 1024–1439px
+
+- Giảm kích thước thiết bị.
+- Giảm padding các card.
+- Điều chỉnh tỷ lệ cột.
+- Không để card đè lên màn hình.
+- Có thể chuyển card xuống dưới nếu không gian không đủ.
+- Giữ Marketplace là hình ảnh trung tâm.
+
+### Tablet 768–1023px
+
+Bố cục ưu tiên:
+
+1. Section Introduction.
+2. Màn hình Marketplace.
+3. Smartphone phụ.
+4. Marketplace Navigation.
+5. Bốn Glass Feature Cards dạng grid 2 × 2.
+
+Giảm bớt decorative elements.
+
+Không cố giữ bố cục desktop nếu gây chật chội.
+
+### Mobile dưới 768px
+
+Thiết kế riêng theo thứ tự:
+
+1. Eyebrow label.
+2. Headline.
+3. Nội dung mô tả.
+4. Smartphone Marketplace kích thước lớn.
+5. Marketplace Navigation.
+6. Bốn Glass Feature Cards.
+
+Màn hình Marketplace desktop có thể được ẩn hoặc hiển thị dưới dạng một preview riêng nếu đủ không gian.
+
+Yêu cầu:
+
+- Headline: 32–40px.
+- Nội dung: 15–17px.
+- Smartphone đủ lớn để đọc giao diện.
+- Glass Dock bốn tab có kích thước thao tác phù hợp.
+- Có thể dùng grid 2 × 2 cho tab trên màn hình nhỏ.
+- Feature Cards chuyển thành một hoặc hai cột tùy chiều rộng.
+- Không tràn ngang.
+- Không để background geometry che nội dung.
+- Không dùng chiều cao cố định 100vh.
+- Không thu nhỏ toàn bộ bố cục desktop thành một hình ảnh.
+
+---
+
+## 17. Quản lý hình ảnh và Assets
+
+Sử dụng logo ADIGO chính thức.
+
+Không tự vẽ lại logo.
+
+Tách các hình ảnh và asset theo từng mục đích sử dụng.
+
+Cấu trúc thư mục tham chiếu:
+
+```text
+assets/
+└── sections/
+    └── section-03-marketplace/
+        ├── devices/
+        │   ├── desktop-frame.webp
+        │   └── mobile-frame.webp
+        ├── screens/
+        │   ├── desktop-products.webp
+        │   ├── desktop-stores.webp
+        │   ├── desktop-brands.webp
+        │   ├── desktop-offers.webp
+        │   ├── mobile-products.webp
+        │   ├── mobile-stores.webp
+        │   ├── mobile-brands.webp
+        │   └── mobile-offers.webp
+        ├── products/
+        │   ├── beef.webp
+        │   ├── eggs.webp
+        │   ├── chicken.webp
+        │   └── packaged-food.webp
+        └── decorations/
+            ├── glass-platform.svg
+            ├── glass-geometry.svg
+            └── light-trails.svg
+```
+
+Có thể điều chỉnh theo cấu trúc dự án hiện tại.
+
+Không bắt buộc tạo screenshot raster nếu có thể dựng UI bằng component thực tế với chất lượng tốt hơn.
+
+### Nguyên tắc hình ảnh
+
+- Hình ảnh sản phẩm rõ nét.
+- Không watermark.
+- Không kéo giãn sai tỷ lệ.
+- Không sử dụng hình ảnh chất lượng thấp.
+- Ưu tiên WebP hoặc AVIF.
+- Sử dụng alpha transparency với asset chồng lớp.
+- Lazy loading khi phù hợp.
+- Khai báo kích thước ảnh để hạn chế layout shift.
+
+Tuyệt đối không sử dụng toàn bộ hình ảnh thiết kế tham chiếu làm background tĩnh.
+
+Headline, description, Glass Cards, Dock và các tương tác phải được dựng bằng code.
+
+---
+
+## 18. Cấu trúc Component
+
+Tổ chức Section 03 thành component độc lập.
+
+```text
+MarketplaceSection
+├── MarketplaceBackground
+│   ├── GradientLayer
+│   ├── GlassGeometry
+│   ├── TechnologyLightTrails
+│   └── RadialGlow
+│
+├── SectionIntroduction
+│   ├── GlassEyebrow
+│   ├── SectionHeadline
+│   └── SectionDescription
+│
+├── MarketplaceShowcase
+│   ├── LeftFeatureCards
+│   │   ├── CategoryCard
+│   │   └── ConnectedStoresCard
+│   │
+│   ├── DeviceShowcase
+│   │   ├── MarketplaceDesktopMockup
+│   │   ├── MarketplaceMobileMockup
+│   │   ├── GlassPlatform
+│   │   └── ProductVisuals
+│   │
+│   └── RightFeatureCards
+│       ├── SearchCard
+│       └── ShoppingCard
+│
+└── MarketplaceNavigation
+    ├── ProductsTab
+    ├── StoresTab
+    ├── BrandsTab
+    └── OffersTab
+```
+
+Tái sử dụng các component từ section trước nếu phù hợp:
+
+- GlassEyebrow.
+- SectionHeadline.
+- GlassCard.
+- GlassIcon.
+- DeviceMockup.
+- GlassDock.
+- ScrollReveal.
+
+Không sao chép component không cần thiết.
+
+---
+
+## 19. Quản lý trạng thái tương tác
+
+Quản lý trạng thái active tab tập trung.
+
+Dữ liệu cấu hình tham chiếu:
+
+```js
+const marketplaceTabs = [
+  {
+    id: 'products',
+    label: 'Sản phẩm',
+    icon: 'package',
+    desktopScreen: 'desktop-products',
+    mobileScreen: 'mobile-products'
+  },
+  {
+    id: 'stores',
+    label: 'Gian hàng',
+    icon: 'store',
+    desktopScreen: 'desktop-stores',
+    mobileScreen: 'mobile-stores'
+  },
+  {
+    id: 'brands',
+    label: 'Thương hiệu',
+    icon: 'badge',
+    desktopScreen: 'desktop-brands',
+    mobileScreen: 'mobile-brands'
+  },
+  {
+    id: 'offers',
+    label: 'Ưu đãi',
+    icon: 'gift',
+    desktopScreen: 'desktop-offers',
+    mobileScreen: 'mobile-offers'
+  }
+];
+```
+
+Đây là cấu trúc dữ liệu tham chiếu, điều chỉnh theo framework và thư viện icon thực tế của dự án.
+
+Sử dụng cùng một state để đồng bộ giao diện desktop và smartphone.
+
+Không quản lý hai state độc lập gây mất đồng bộ.
+
+Các tab phải hỗ trợ:
+
+- Mouse click.
+- Touch.
+- Keyboard navigation.
+- Focus-visible.
+- Active state.
+- ARIA tabs phù hợp.
+
+Gắn ID `marketplace` cho section.
+
+Menu Marketplace trên Header phải điều hướng đến section này.
+
+---
+
+## 20. Yêu cầu kỹ thuật
+
+- Kiểm tra source code hiện tại trước khi triển khai.
+- Giữ nguyên framework và kiến trúc dự án.
+- Kế thừa Design System đã xây dựng.
+- Không thay đổi Header.
+- Không thay đổi Section 00, Section 01 và Section 02.
+- Không ghi đè global CSS gây ảnh hưởng các section khác.
+- Không tạo thêm thư viện nặng khi không cần thiết.
+- Không xây dựng database.
+- Không xây dựng Marketplace backend.
+- Không triển khai checkout hoặc thanh toán thực tế.
+- Không xây dựng trang quản trị nhà bán hàng.
+- Không triển khai hệ thống đăng nhập trong section này.
+
+Section 03 là một Product Showcase tương tác, không phải một Marketplace hoàn chỉnh có giao dịch thực tế.
+
+## 21. Kiểm soát nội dung
+
+- Không dùng từ “hữu cơ” để mô tả sản phẩm.
+- Không sử dụng giá USD trong mockup dành cho thị trường Việt Nam.
+- Không tự tạo số lượng sản phẩm.
+- Không tự tạo số lượng gian hàng.
+- Không tự công bố phạm vi hoạt động toàn quốc.
+- Không sử dụng logo đối tác chưa được xác nhận.
+- Không tạo chứng nhận chất lượng giả.
+- Không tạo đánh giá khách hàng giả.
+- Không tạo chương trình ưu đãi chưa được phê duyệt.
+- Không cam kết thời gian giao hàng khi chưa có cơ sở.
+- Không trình bày tính năng chưa phát hành như đã vận hành.
+- Không giới thiệu chức năng quản trị nội bộ.
+- Không giới hạn ADIGO Marketplace trong các sản phẩm của Organic Việt Nam.
+
+Các mockup chưa phải giao diện chính thức phải được thể hiện rõ là giao diện minh họa sản phẩm.
+
+## 22. Tiêu chí nghiệm thu
+
+Sau khi hoàn thành, tự kiểm tra:
+
+1. Section 03 bám sát hình ảnh tham chiếu.
+2. Thể hiện rõ ADIGO Marketplace.
+3. Khác biệt bố cục với Section 02.
+4. Màn hình Marketplace lớn là điểm nhấn chính.
+5. Smartphone có giao diện đồng nhất với màn hình lớn.
+6. Bốn Glass Feature Cards được bố trí cân đối.
+7. Background mạnh mẽ, hiện đại, mang bản sắc công nghệ.
+8. Không có hoa lá trang trí ở các góc background.
+9. Hình học kính và đường ánh sáng được sử dụng tinh tế.
+10. Glassmorphism nhất quán với các section trước.
+11. Bốn tab tương tác hoạt động thực tế.
+12. Hai thiết bị chuyển đổi màn hình đồng bộ.
+13. Không có layout shift khi chuyển tab.
+14. Danh mục sản phẩm phong phú.
+15. Không có thương hiệu, chứng nhận hoặc thành tích giả.
+16. Không có lỗi chính tả tiếng Việt.
+17. Không sử dụng USD trong giao diện minh họa.
+18. Logo ADIGO đúng bản gốc.
+19. Responsive tốt trên desktop, tablet và mobile.
+20. Không tràn chiều ngang.
+21. Animation mượt, không ảnh hưởng đáng kể đến hiệu năng.
+22. Không làm thay đổi các section đã hoàn thành.
+
+Hãy triển khai Section 03 hoàn chỉnh bằng code thực tế, không chỉ trả về wireframe hoặc hướng dẫn chung.
+
+Mục tiêu cuối cùng: thể hiện ADIGO Marketplace như một nền tảng thương mại số hiện đại, đa dạng, có khả năng kết nối và mở rộng thị trường, với ngôn ngữ thiết kế công nghệ mạnh mẽ, cao cấp và nhất quán với toàn bộ landing page ADIGO.
