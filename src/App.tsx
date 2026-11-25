@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { MotionConfig } from 'motion/react';
 import { HeroSection } from './components/hero/HeroSection';
 import { ExploreSection } from './components/explore/ExploreSection';
+import { AdigoAppSection } from './components/app-section/AdigoAppSection';
 import { HeroPreviewModal, HeroModalMode } from './components/hero/HeroPreviewModal';
 import { HERO_CONFIG } from './config/heroConfig';
 
@@ -10,9 +11,9 @@ export default function App() {
   const [modalMode, setModalMode] = useState<HeroModalMode>(null);
   const [selectedTopic, setSelectedTopic] = useState<string | undefined>(undefined);
 
-  const scrollToExplore = () => {
-    setActiveNav('explore');
-    const el = document.getElementById('explore');
+  const scrollToSection = (sectionId: string) => {
+    setActiveNav(sectionId);
+    const el = document.getElementById(sectionId);
     if (el) {
       el.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
@@ -20,16 +21,13 @@ export default function App() {
 
   const handleSelectNav = (id: string) => {
     setActiveNav(id);
-    if (id === 'explore') {
-      scrollToExplore();
+    if (id === 'explore' || id === 'app') {
+      scrollToSection(id);
       return;
     }
 
     const navMatch = HERO_CONFIG.navItems.find((n) => n.id === id);
-    if (id === 'ung-dung') {
-      setSelectedTopic(undefined);
-      setModalMode('app-tour');
-    } else if (navMatch) {
+    if (navMatch) {
       setSelectedTopic(navMatch.label);
       setModalMode('register');
     }
@@ -42,14 +40,13 @@ export default function App() {
           <HeroSection
             activeNav={activeNav}
             onSelectNav={handleSelectNav}
-            onPrimaryCta={scrollToExplore}
-            onSecondaryCta={() => {
-              setSelectedTopic(undefined);
-              setModalMode('app-tour');
-            }}
+            onPrimaryCta={() => scrollToSection('explore')}
+            onSecondaryCta={() => scrollToSection('app')}
           />
 
           <ExploreSection />
+
+          <AdigoAppSection />
         </main>
 
         <HeroPreviewModal

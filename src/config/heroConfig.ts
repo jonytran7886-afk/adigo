@@ -21,7 +21,7 @@ export const HERO_CONFIG = {
   },
   navItems: [
     { id: 'explore', label: 'Khám phá', href: '#explore', hasSubmenuHint: true },
-    { id: 'ung-dung', label: 'Ứng dụng', href: '#ung-dung' },
+    { id: 'app', label: 'Ứng dụng', href: '#app' },
     { id: 'marketplace', label: 'Marketplace', href: '#marketplace' },
     { id: 'mart', label: 'Mart', href: '#mart' },
     { id: 'doi-tac', label: 'Đối tác', href: '#doi-tac' },
