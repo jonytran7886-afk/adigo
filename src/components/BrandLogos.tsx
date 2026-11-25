@@ -11,41 +11,22 @@ export const AdigoLogo: React.FC<LogoProps> = ({
   compact = false,
   inverted = false,
 }) => {
+  const src = compact
+    ? '/assets/aistudio/ADIGO_Icon_Nen_Trang_512_4639cde4.png'
+    : '/assets/aistudio/ADIGO_Ngang_2400px_872a9a4e.png';
+
   return (
-    <span className={`inline-flex items-center gap-2.5 select-none whitespace-nowrap shrink-0 ${className}`}>
-      <svg
-        width="32"
-        height="32"
-        viewBox="0 0 36 36"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        aria-hidden="true"
-        className="shrink-0"
-      >
-        <defs>
-          <linearGradient id="adigoLogoGrad" x1="2" y1="34" x2="34" y2="2" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stopColor="#0A74DA" />
-            <stop offset="60%" stopColor="#00A896" />
-            <stop offset="100%" stopColor="#16A34A" />
-          </linearGradient>
-        </defs>
-        <rect x="2" y="2" width="32" height="32" rx="9" fill="url(#adigoLogoGrad)" />
-        {/* Stylized 'A' node + connecting ecosystem arc */}
-        <path
-          d="M18 8.5L25.5 25.5H21.9L20.3 21.7H15.7L14.1 25.5H10.5L18 8.5ZM18 14.3L16.7 18.6H19.3L18 14.3Z"
-          fill="#FFFFFF"
-        />
-        <circle cx="26.5" cy="10.5" r="2.2" fill="#FFFFFF" fillOpacity="0.92" />
-      </svg>
-      {!compact && (
-        <span
-          className={`font-display text-[20px] font-extrabold tracking-[-0.03em] leading-none ${
-            inverted ? 'text-white' : 'text-[#0B1F33]'
-          }`}
-        >
-          ADIGO
-        </span>
-      )}
+    <span
+      className={`inline-flex items-center select-none shrink-0 ${
+        inverted ? 'bg-white/95 px-2.5 py-1.5 rounded-xl' : ''
+      } ${className}`}
+    >
+      <img
+        src={src}
+        alt="ADIGO"
+        referrerPolicy="no-referrer"
+        className={compact ? 'h-8 w-8 object-contain' : 'h-8 w-auto object-contain'}
+      />
     </span>
   );
 };

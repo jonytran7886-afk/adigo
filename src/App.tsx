@@ -1,65 +1,49 @@
 import React, { useState } from 'react';
 import { MotionConfig } from 'motion/react';
-import { Header } from './components/Header';
-import { HeroSection } from './components/HeroSection';
-import { DiscoverSection } from './components/DiscoverSection';
-import { AppShowcaseSection } from './components/AppShowcaseSection';
-import { MarketplaceSection } from './components/MarketplaceSection';
-import { MartSection } from './components/MartSection';
-import { TraceabilitySection } from './components/TraceabilitySection';
-import { TechExperienceSection } from './components/TechExperienceSection';
-import { BusinessSection } from './components/BusinessSection';
-import { CtaBannerSection } from './components/CtaBannerSection';
-import { Footer, InfoDocType } from './components/Footer';
-import { InterestModal, InfoDocModal, InterestRole } from './components/InterestModal';
+import { HeroSection } from './components/hero/HeroSection';
+import { HeroPreviewModal, HeroModalMode } from './components/hero/HeroPreviewModal';
+import { HERO_CONFIG } from './config/heroConfig';
 
 export default function App() {
-  const [modalOpen, setModalOpen] = useState(false);
-  const [modalRole, setModalRole] = useState<InterestRole>('consumer');
-  const [activeInfoDoc, setActiveInfoDoc] = useState<InfoDocType | null>(null);
+  const [activeNav, setActiveNav] = useState<string>('kham-pha');
+  const [modalMode, setModalMode] = useState<HeroModalMode>(null);
+  const [selectedTopic, setSelectedTopic] = useState<string | undefined>(undefined);
 
-  const openInterestModal = (role: InterestRole) => {
-    setModalRole(role);
-    setModalOpen(true);
+  const handleSelectNav = (id: string) => {
+    setActiveNav(id);
+    const navMatch = HERO_CONFIG.navItems.find((n) => n.id === id);
+    if (id === 'ung-dung') {
+      setSelectedTopic(undefined);
+      setModalMode('app-tour');
+    } else if (navMatch) {
+      setSelectedTopic(navMatch.label);
+      setModalMode('register');
+    }
   };
 
   return (
     <MotionConfig reducedMotion="user">
-      <div className="min-h-screen flex flex-col bg-white text-[#0C1B2A]">
-        <Header onOpenExperienceModal={() => openInterestModal('consumer')} />
-
-        <main className="flex-1">
-          <HeroSection onExploreClick={() => openInterestModal('consumer')} />
-          <DiscoverSection />
-          <AppShowcaseSection />
-          <MarketplaceSection />
-          <MartSection />
-          <TraceabilitySection />
-          <TechExperienceSection />
-          <BusinessSection
-            onOpenSellerModal={() => openInterestModal('seller')}
-            onOpenPartnerModal={() => openInterestModal('partner')}
-          />
-          <CtaBannerSection
-            onOpenRegister={() => openInterestModal('consumer')}
-            onOpenConnect={() => openInterestModal('partner')}
+      <div className="min-h-screen bg-[#EAF5FF] text-[#112D52]">
+        <main>
+          <HeroSection
+            activeNav={activeNav}
+            onSelectNav={handleSelectNav}
+            onPrimaryCta={() => {
+              setSelectedTopic(undefined);
+              setModalMode('register');
+            }}
+            onSecondaryCta={() => {
+              setSelectedTopic(undefined);
+              setModalMode('app-tour');
+            }}
           />
         </main>
 
-        <Footer
-          onOpenInterest={openInterestModal}
-          onOpenInfoDoc={(doc) => setActiveInfoDoc(doc)}
-        />
-
-        <InterestModal
-          isOpen={modalOpen}
-          initialRole={modalRole}
-          onClose={() => setModalOpen(false)}
-        />
-
-        <InfoDocModal
-          docType={activeInfoDoc}
-          onClose={() => setActiveInfoDoc(null)}
+        <HeroPreviewModal
+          mode={modalMode}
+          selectedTopic={selectedTopic}
+          onSwitchMode={(next) => setModalMode(next)}
+          onClose={() => setModalMode(null)}
         />
       </div>
     </MotionConfig>

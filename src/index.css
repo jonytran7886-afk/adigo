@@ -1,32 +1,90 @@
 @import "tailwindcss";
 
-@theme {
-  --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
-  --font-sans: "DM Sans", "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+:root {
+  --color-primary: #345EAA;
+  --color-navy: #142F63;
+  --color-tech-blue: #4C9DC6;
+  --color-green: #398441;
+  --color-lime: #A4CE46;
+  --color-soft-blue: #EAF5FF;
+  --color-soft-mint: #E8F8F0;
+  --color-text-primary: #112D52;
+  --color-text-secondary: #52677D;
 
-  --color-adigo-blue: #0A74DA;
-  --color-adigo-blue-dark: #0759A8;
-  --color-adigo-teal: #00A896;
-  --color-adigo-green: #16A34A;
-  --color-adigo-navy: #0B1F33;
-  --color-adigo-ink: #0C1B2A;
-  --color-adigo-muted: #4A6075;
-  --color-adigo-surface: #F5F9FC;
-  --color-adigo-border: #E2ECF4;
+  --glass-bg: rgba(255, 255, 255, 0.36);
+  --glass-bg-strong: rgba(255, 255, 255, 0.62);
+  --glass-border: rgba(255, 255, 255, 0.78);
+
+  --glass-blur: 20px;
+  --glass-radius: 24px;
+
+  --glass-shadow:
+    0 12px 32px rgba(31, 84, 130, 0.10),
+    inset 0 1px 1px rgba(255, 255, 255, 0.65);
+
+  --brand-gradient: linear-gradient(
+    115deg,
+    #345EAA 0%,
+    #168CA9 55%,
+    #398441 100%
+  );
+}
+
+@theme {
+  --font-display: "Be Vietnam Pro", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Be Vietnam Pro", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
 }
 
 @layer base {
   html {
     font-family: var(--font-sans);
-    color: var(--color-adigo-ink);
-    background-color: #ffffff;
+    color: var(--color-text-primary);
+    background-color: var(--color-soft-blue);
     overflow-x: clip;
   }
 
   h1, h2, h3, h4, .font-display {
     font-family: var(--font-display);
   }
+}
+
+/* Reusable Glassmorphism Utilities with Backdrop Filter Fallback */
+.adigo-glass {
+  background-color: rgba(255, 255, 255, 0.88);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+.adigo-glass-strong {
+  background-color: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+@supports (backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px)) {
+  .adigo-glass {
+    background-color: var(--glass-bg);
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    backdrop-filter: blur(var(--glass-blur));
+  }
+
+  .adigo-glass-strong {
+    background-color: var(--glass-bg-strong);
+    -webkit-backdrop-filter: blur(24px);
+    backdrop-filter: blur(24px);
+  }
+}
+
+.adigo-brand-gradient {
+  background: var(--brand-gradient);
+}
+
+.adigo-text-gradient {
+  background: linear-gradient(95deg, #345EAA 0%, #168CA9 48%, #398441 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .text-balance {
@@ -37,7 +95,6 @@
   font-variant-numeric: tabular-nums;
 }
 
-/* Custom subtle scrollbar for interactive horizontal mockup showcases */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
@@ -46,8 +103,29 @@
   scrollbar-width: none;
 }
 
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -6px, 0);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 5.5s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: floatSlow 6.5s ease-in-out 1.2s infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+  .animate-float-slow,
+  .animate-float-delayed {
+    animation: none;
   }
 }
