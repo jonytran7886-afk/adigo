@@ -1,16 +1,30 @@
 import React, { useState } from 'react';
 import { MotionConfig } from 'motion/react';
 import { HeroSection } from './components/hero/HeroSection';
+import { ExploreSection } from './components/explore/ExploreSection';
 import { HeroPreviewModal, HeroModalMode } from './components/hero/HeroPreviewModal';
 import { HERO_CONFIG } from './config/heroConfig';
 
 export default function App() {
-  const [activeNav, setActiveNav] = useState<string>('kham-pha');
+  const [activeNav, setActiveNav] = useState<string>('explore');
   const [modalMode, setModalMode] = useState<HeroModalMode>(null);
   const [selectedTopic, setSelectedTopic] = useState<string | undefined>(undefined);
 
+  const scrollToExplore = () => {
+    setActiveNav('explore');
+    const el = document.getElementById('explore');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   const handleSelectNav = (id: string) => {
     setActiveNav(id);
+    if (id === 'explore') {
+      scrollToExplore();
+      return;
+    }
+
     const navMatch = HERO_CONFIG.navItems.find((n) => n.id === id);
     if (id === 'ung-dung') {
       setSelectedTopic(undefined);
@@ -28,15 +42,14 @@ export default function App() {
           <HeroSection
             activeNav={activeNav}
             onSelectNav={handleSelectNav}
-            onPrimaryCta={() => {
-              setSelectedTopic(undefined);
-              setModalMode('register');
-            }}
+            onPrimaryCta={scrollToExplore}
             onSecondaryCta={() => {
               setSelectedTopic(undefined);
               setModalMode('app-tour');
             }}
           />
+
+          <ExploreSection />
         </main>
 
         <HeroPreviewModal

@@ -20,7 +20,7 @@ export const HERO_CONFIG = {
     secondaryText: '#52677D',
   },
   navItems: [
-    { id: 'kham-pha', label: 'Khám phá', href: '#kham-pha', hasSubmenuHint: true },
+    { id: 'explore', label: 'Khám phá', href: '#explore', hasSubmenuHint: true },
     { id: 'ung-dung', label: 'Ứng dụng', href: '#ung-dung' },
     { id: 'marketplace', label: 'Marketplace', href: '#marketplace' },
     { id: 'mart', label: 'Mart', href: '#mart' },
