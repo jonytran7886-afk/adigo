@@ -14,45 +14,32 @@ export const DiscoverVisual: React.FC = () => {
 
   return (
     <div className="relative w-full h-full min-h-[220px] lg:min-h-full flex items-end justify-center lg:justify-end pr-0 lg:pr-5 pt-4 lg:pt-5 overflow-hidden select-none pointer-events-none">
-      {/* Curved translucent glass arc behind phone */}
+      {/* Bold curved translucent glass bands behind phone (pure tech geometry, zero leaves) */}
       <svg
-        viewBox="0 0 320 260"
+        viewBox="0 0 340 280"
         fill="none"
-        className="absolute right-0 bottom-0 w-72 h-60 opacity-75"
+        className="absolute right-0 bottom-0 w-80 h-64 opacity-90"
         aria-hidden="true"
       >
         <path
-          d="M20 240C70 130 175 75 310 95"
-          stroke="rgba(255,255,255,0.85)"
-          strokeWidth="2"
+          d="M15 245C70 125 180 70 325 90"
+          stroke="rgba(255,255,255,0.92)"
+          strokeWidth="2.5"
         />
         <circle
-          cx="220"
-          cy="190"
-          r="110"
-          fill="rgba(255,255,255,0.22)"
-          stroke="rgba(255,255,255,0.5)"
+          cx="225"
+          cy="195"
+          r="118"
+          fill="rgba(255,255,255,0.28)"
+          stroke="rgba(255,255,255,0.65)"
+          strokeWidth="1.5"
         />
-      </svg>
-
-      {/* Subtle green leaves behind smartphone for depth (never overlapping screen) */}
-      <svg
-        viewBox="0 0 120 100"
-        fill="none"
-        className="absolute bottom-2 left-4 lg:left-2 w-24 h-20 opacity-85"
-        aria-hidden="true"
-      >
-        <path d="M18 92C20 52 52 24 98 20C82 60 54 84 18 92Z" fill="#65B848" />
-        <path d="M44 96C56 66 84 48 114 52C94 82 70 94 44 96Z" fill="#398441" fillOpacity="0.85" />
-      </svg>
-
-      <svg
-        viewBox="0 0 100 100"
-        fill="none"
-        className="absolute bottom-0 right-1 w-20 h-20 opacity-85"
-        aria-hidden="true"
-      >
-        <path d="M90 95C84 54 54 26 14 24C32 64 58 88 90 95Z" fill="#65B848" />
+        <circle
+          cx="175"
+          cy="215"
+          r="76"
+          fill="rgba(76,157,198,0.14)"
+        />
       </svg>
 
       {/* Tilted Smartphone Mockup cropped cleanly at bottom edge */}

@@ -42,20 +42,25 @@
 .explore-section-bg {
   background:
     radial-gradient(
-      ellipse at 95% 20%,
-      rgba(145, 214, 235, 0.22),
-      transparent 45%
+      ellipse at 92% 18%,
+      rgba(52, 94, 170, 0.14),
+      transparent 46%
     ),
     radial-gradient(
-      ellipse at 5% 90%,
-      rgba(180, 229, 212, 0.18),
-      transparent 40%
+      ellipse at 12% 82%,
+      rgba(76, 157, 198, 0.22),
+      transparent 48%
+    ),
+    radial-gradient(
+      ellipse at 52% 52%,
+      rgba(57, 132, 65, 0.08),
+      transparent 55%
     ),
     linear-gradient(
       180deg,
-      #F3F9FE 0%,
-      #EAF5FC 55%,
-      #F5FAFD 100%
+      #E4F2FD 0%,
+      #D9EEFC 52%,
+      #E6F5FA 100%
     );
 }
 
