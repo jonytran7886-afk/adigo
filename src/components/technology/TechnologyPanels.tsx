@@ -6,9 +6,9 @@ import {
   Sparkles,
   Store,
   QrCode,
+  ArrowUpRight,
 } from 'lucide-react';
 import { BrandLogo } from '../hero/Header/BrandLogo';
-import { FoodThumbnail } from '../hero/ProductShowcase/ProductVisuals';
 import {
   TECHNOLOGY_CONFIG,
   TechnologyExperienceId,
@@ -21,10 +21,10 @@ interface PanelProps {
 }
 
 const panelBaseClass = (isHighlighted: boolean) =>
-  `group text-left rounded-[24px] p-2.5 border-[1.5px] transition-all duration-300 cursor-pointer select-none ${
+  `group relative text-left rounded-[26px] p-2.5 sm:p-3 border-[1.5px] transition-all duration-300 cursor-pointer select-none overflow-hidden ${
     isHighlighted
-      ? 'bg-white/86 border-[#4C9DC6] shadow-[0_22px_46px_rgba(52,94,170,0.22)] -translate-y-1'
-      : 'bg-white/64 border-white/88 shadow-[0_16px_34px_rgba(31,84,130,0.13)] hover:-translate-y-0.5 hover:bg-white/78'
+      ? 'bg-white/92 border-[#1676D2] shadow-[0_26px_54px_rgba(20,47,99,0.26),0_0_0_2px_rgba(66,200,239,0.38)] -translate-y-1'
+      : 'bg-white/76 border-white/90 shadow-[0_18px_38px_rgba(20,47,99,0.16)] hover:-translate-y-0.5 hover:bg-white/88'
   }`;
 
 export const ConnectedProductPanel: React.FC<PanelProps> = ({
@@ -40,31 +40,42 @@ export const ConnectedProductPanel: React.FC<PanelProps> = ({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.5, delay: 0.14 }}
-      style={{ backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)' }}
+      style={{ backdropFilter: 'blur(22px)', WebkitBackdropFilter: 'blur(22px)' }}
       className={`w-full animate-float-slow ${panelBaseClass(isHighlighted)}`}
     >
-      <div className="grid grid-cols-3 gap-1.5 h-[76px] sm:h-[84px] rounded-[16px] overflow-hidden bg-[#F2F8FD] p-1.5 border border-white">
-        <div className="rounded-[10px] overflow-hidden bg-white">
-          <FoodThumbnail type="pork" />
-        </div>
-        <div className="rounded-[10px] overflow-hidden bg-white">
-          <FoodThumbnail type="veggies" />
-        </div>
-        <div className="rounded-[10px] overflow-hidden bg-white">
-          <FoodThumbnail type="orange" />
-        </div>
+      {/* Unified Commercial Showcase Visual (75% visual area) */}
+      <div className="relative h-[112px] sm:h-[128px] xl:h-[140px] rounded-[18px] overflow-hidden border border-white bg-[#EAF4FC]">
+        <img
+          src={TECHNOLOGY_CONFIG.assets.varietyPhoto}
+          alt="Hệ sinh thái sản phẩm tươi sống và nông sản kết nối trên ADIGO"
+          width={560}
+          height={360}
+          loading="lazy"
+          decoding="async"
+          className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]"
+        />
+        <div
+          className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#142F63]/45 via-transparent to-transparent"
+          aria-hidden="true"
+        />
+        <span className="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-white/94 text-[#142F63] text-[9px] font-bold shadow-xs">
+          Hệ sinh thái sản phẩm
+        </span>
       </div>
 
-      <div className="mt-2 px-1 flex items-center gap-2">
-        <span className="w-7 h-7 rounded-xl bg-[#EAF5FF] text-[#345EAA] flex items-center justify-center shrink-0">
-          <ShoppingBag className="w-3.5 h-3.5" />
-        </span>
-        <div className="min-w-0">
-          <p className="font-display text-[12.5px] font-bold text-[#142F63] truncate">
-            {cfg.title}
-          </p>
-          <p className="text-[9.5px] text-[#52677D] truncate">{cfg.subtitle}</p>
+      <div className="mt-2.5 px-1 flex items-center justify-between gap-2">
+        <div className="flex items-center gap-2 min-w-0">
+          <span className="w-7.5 h-7.5 rounded-xl bg-[#EAF5FF] text-[#1676D2] flex items-center justify-center shrink-0">
+            <ShoppingBag className="w-3.5 h-3.5" />
+          </span>
+          <div className="min-w-0">
+            <p className="font-display text-[13px] font-bold text-[#142F63] truncate">
+              {cfg.title}
+            </p>
+            <p className="text-[9.5px] text-[#52677D] truncate">{cfg.subtitle}</p>
+          </div>
         </div>
+        <ArrowUpRight className="w-3.5 h-3.5 text-[#345EAA] shrink-0 opacity-70 group-hover:opacity-100" />
       </div>
     </motion.button>
   );
@@ -83,35 +94,52 @@ export const TraceabilityPanel: React.FC<PanelProps> = ({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.5, delay: 0.2 }}
-      style={{ backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)' }}
+      style={{ backdropFilter: 'blur(22px)', WebkitBackdropFilter: 'blur(22px)' }}
       className={`w-full ${panelBaseClass(isHighlighted)}`}
     >
-      <div className="h-[84px] sm:h-[92px] rounded-[16px] bg-gradient-to-br from-[#F7FAFE] to-[#E6F3FB] border border-white p-2 flex items-center justify-between gap-2">
-        {/* Mini Fresh Product Tray */}
-        <div className="flex-1 h-full rounded-[12px] bg-white border border-[#DCE8F2] p-1.5 flex items-center justify-center">
-          <svg viewBox="0 0 80 60" className="w-full h-full" aria-hidden="true">
-            <path d="M10 34 C10 16, 28 8, 48 11 C64 14, 70 26, 68 40 C64 52, 42 54, 24 50 C14 48, 10 42, 10 34 Z" fill="#C43434" />
-            <path d="M22 24 C34 30, 48 28, 56 22 M18 36 C32 42, 46 40, 58 34" stroke="#FCE5E5" strokeWidth="2.5" strokeLinecap="round" strokeOpacity="0.7" fill="none" />
-          </svg>
+      {/* Photorealistic Vacuum-Sealed Beef Tray + Official ADIGO Vertical Brand & QR Label */}
+      <div className="relative h-[112px] sm:h-[128px] xl:h-[140px] rounded-[18px] overflow-hidden border border-white bg-[#F7FAFE]">
+        <img
+          src={TECHNOLOGY_CONFIG.assets.traceabilityBeefPhoto}
+          alt="Thịt bò đóng gói hút chân không gắn tem QR truy xuất nguồn gốc ADIGO"
+          width={560}
+          height={360}
+          loading="lazy"
+          decoding="async"
+          className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]"
+        />
+        <div
+          className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#142F63]/40 via-transparent to-transparent"
+          aria-hidden="true"
+        />
+
+        {/* Crisp HTML/CSS Brand + QR Packaging Sticker Overlay */}
+        <div className="absolute top-2 right-2 rounded-xl bg-white/96 backdrop-blur-sm border border-[#DCEAF5] px-2 py-1.5 shadow-md flex flex-col items-center gap-1">
+          <BrandLogo variant="vertical" size="sm" className="!h-[20px]" />
+          <div className="w-9 h-9 rounded-md bg-[#F2F8FD] border border-[#CBE0F2] p-0.5 flex items-center justify-center">
+            <QrCode className="w-full h-full text-[#142F63]" />
+          </div>
         </div>
 
-        {/* Official Vertical Logo ADIGO_Dung_2400px + QR Badge */}
-        <div className="w-[60px] h-full rounded-[11px] bg-white border border-[#DCEAF5] p-1.5 flex flex-col items-center justify-between shrink-0">
-          <BrandLogo variant="vertical" size="sm" className="!h-[24px]" />
-          <QrCode className="w-7 h-7 text-[#142F63]" />
-        </div>
+        <span className="absolute bottom-2 left-2 px-2 py-0.5 rounded-full bg-white/94 text-[#247A4B] text-[9px] font-bold shadow-xs flex items-center gap-1">
+          <CheckCircle2 className="w-2.5 h-2.5" />
+          Lô ADG-01 · Đóng gói lạnh
+        </span>
       </div>
 
-      <div className="mt-2 px-1 flex items-center gap-2">
-        <span className="w-7 h-7 rounded-xl bg-[#E8F8F0] text-[#247A4B] flex items-center justify-center shrink-0">
-          <CheckCircle2 className="w-4 h-4" />
-        </span>
-        <div className="min-w-0">
-          <p className="font-display text-[12.5px] font-bold text-[#142F63] truncate">
-            {cfg.title}
-          </p>
-          <p className="text-[9.5px] text-[#52677D] truncate">{cfg.subtitle}</p>
+      <div className="mt-2.5 px-1 flex items-center justify-between gap-2">
+        <div className="flex items-center gap-2 min-w-0">
+          <span className="w-7.5 h-7.5 rounded-xl bg-[#E8F8F0] text-[#247A4B] flex items-center justify-center shrink-0">
+            <CheckCircle2 className="w-4 h-4" />
+          </span>
+          <div className="min-w-0">
+            <p className="font-display text-[13px] font-bold text-[#142F63] truncate">
+              {cfg.title}
+            </p>
+            <p className="text-[9.5px] text-[#52677D] truncate">{cfg.subtitle}</p>
+          </div>
         </div>
+        <ArrowUpRight className="w-3.5 h-3.5 text-[#247A4B] shrink-0 opacity-70 group-hover:opacity-100" />
       </div>
     </motion.button>
   );
@@ -130,33 +158,72 @@ export const SmartExperiencePanel: React.FC<PanelProps> = ({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.5, delay: 0.24 }}
-      style={{ backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)' }}
+      style={{ backdropFilter: 'blur(22px)', WebkitBackdropFilter: 'blur(22px)' }}
       className={`w-full animate-float-delayed ${panelBaseClass(isHighlighted)}`}
     >
-      <div className="rounded-[16px] bg-gradient-to-br from-[#F3FAFF] to-[#E8F8F0] border border-white p-2.5 flex flex-col gap-1.5">
-        <div className="flex items-center justify-between">
-          <span className="text-[9.5px] font-bold text-[#142F63]">
-            Trợ lý gợi ý minh họa
+      {/* Realistic AI Shopping Assistant Card with Meal Photography */}
+      <div className="rounded-[18px] bg-gradient-to-br from-[#F3FAFF] via-[#FFFFFF] to-[#E8F8F0] border border-white p-2.5 flex flex-col gap-2">
+        <div className="flex items-center justify-between gap-1">
+          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#EAF5FF] text-[#1676D2] text-[8.5px] font-bold">
+            <Sparkles className="w-2.5 h-2.5" />
+            Trợ lý mua sắm
           </span>
-          <Sparkles className="w-3.5 h-3.5 text-[#168CA9]" />
+          <span className="text-[8.5px] font-semibold text-[#247A4B]">
+            Gợi ý nhanh
+          </span>
         </div>
-        <div className="rounded-[10px] bg-white/95 border border-[#DCEAF5] px-2 py-1.5 text-[9.5px] font-medium text-[#142F63] leading-snug">
+
+        <div className="rounded-[11px] bg-white border border-[#DCEAF5] px-2.5 py-1.5 text-[10px] font-semibold text-[#142F63] leading-snug shadow-2xs">
           “Hôm nay bạn muốn chuẩn bị món gì?”
         </div>
-        <div className="rounded-[10px] bg-[#EAF5FF] px-2 py-1 text-[9px] text-[#345EAA] font-medium truncate">
-          Gợi ý bữa ăn gia đình · Minh họa
+
+        <div className="grid grid-cols-2 gap-1.5">
+          <div className="rounded-[10px] overflow-hidden bg-white border border-[#E2ECF4] p-1">
+            <div className="h-[46px] rounded-[7px] overflow-hidden">
+              <img
+                src={TECHNOLOGY_CONFIG.assets.chickenPlatterPhoto}
+                alt="Gà ta nguyên con cho bữa ăn gia đình"
+                width={200}
+                height={150}
+                loading="lazy"
+                decoding="async"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <p className="mt-1 text-[8.5px] font-bold text-[#142F63] truncate">
+              Gà ta thảo dược
+            </p>
+          </div>
+          <div className="rounded-[10px] overflow-hidden bg-white border border-[#E2ECF4] p-1">
+            <div className="h-[46px] rounded-[7px] overflow-hidden">
+              <img
+                src={TECHNOLOGY_CONFIG.assets.veggiesProcessedPhoto}
+                alt="Rau củ tươi cho bữa ăn gia đình"
+                width={200}
+                height={150}
+                loading="lazy"
+                decoding="async"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <p className="mt-1 text-[8.5px] font-bold text-[#142F63] truncate">
+              Rau củ theo mùa
+            </p>
+          </div>
         </div>
       </div>
 
-      <div className="mt-2 px-1 flex items-center gap-2">
-        <span className="w-7 h-7 rounded-xl bg-[#EAF5FF] text-[#168CA9] flex items-center justify-center shrink-0">
-          <Sparkles className="w-3.5 h-3.5" />
-        </span>
-        <div className="min-w-0">
-          <p className="font-display text-[12.5px] font-bold text-[#142F63] truncate">
-            {cfg.title}
-          </p>
-          <p className="text-[9.5px] text-[#52677D] truncate">{cfg.subtitle}</p>
+      <div className="mt-2.5 px-1 flex items-center justify-between gap-2">
+        <div className="flex items-center gap-2 min-w-0">
+          <span className="w-7.5 h-7.5 rounded-xl bg-[#EAF5FF] text-[#168CA9] flex items-center justify-center shrink-0">
+            <Sparkles className="w-3.5 h-3.5" />
+          </span>
+          <div className="min-w-0">
+            <p className="font-display text-[13px] font-bold text-[#142F63] truncate">
+              {cfg.title}
+            </p>
+            <p className="text-[9.5px] text-[#52677D] truncate">{cfg.subtitle}</p>
+          </div>
         </div>
       </div>
     </motion.button>
@@ -176,44 +243,58 @@ export const RetailNetworkPanel: React.FC<PanelProps> = ({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.5, delay: 0.28 }}
-      style={{ backdropFilter: 'blur(20px)', WebkitBackdropFilter: 'blur(20px)' }}
+      style={{ backdropFilter: 'blur(22px)', WebkitBackdropFilter: 'blur(22px)' }}
       className={`w-full animate-float-slow ${panelBaseClass(isHighlighted)}`}
     >
-      {/* Mini Architectural ADIGO Mart Storefront Visual */}
-      <div className="h-[88px] sm:h-[96px] rounded-[16px] overflow-hidden border border-white bg-[#EAF4FC] flex flex-col">
+      {/* Photorealistic ADIGO Mart Retail Photo + Official ADIGO Mart Signboard Strip */}
+      <div className="relative h-[134px] sm:h-[144px] rounded-[18px] overflow-hidden border border-white bg-[#EAF4FC] flex flex-col">
         <div
-          className="h-8 px-2.5 flex items-center justify-between"
+          className="h-8 px-2.5 flex items-center justify-between shrink-0"
           style={{
             background: 'linear-gradient(108deg, #103A73 0%, #1F5CA8 100%)',
           }}
         >
           <div className="flex items-center gap-1.5">
-            <span className="px-1.5 py-0.5 rounded bg-white/95 flex items-center">
+            <span className="px-1.5 py-0.5 rounded bg-white/96 flex items-center">
               <BrandLogo variant="horizontal" size="sm" className="!h-[11px]" />
             </span>
             <span className="font-display font-extrabold text-[11px] text-[#A4CE46]">
               Mart
             </span>
           </div>
-          <span className="text-[8px] text-white/80">Đa kênh</span>
+          <span className="text-[8px] font-semibold text-white/90">Đa kênh</span>
         </div>
-        <div className="h-1 bg-gradient-to-r from-[#65B848] via-[#A4CE46] to-[#4C9DC6]" />
-        <div className="flex-1 bg-gradient-to-b from-[#DCEEFB] to-[#F3F9FD] p-1.5 grid grid-cols-3 gap-1">
-          <div className="rounded bg-white/90 border border-[#D4E4F2]" />
-          <div className="rounded bg-[#E8F8F0] border border-[#CBEAD9]" />
-          <div className="rounded bg-white/90 border border-[#D4E4F2]" />
+
+        <div className="h-[3px] bg-gradient-to-r from-[#65B848] via-[#A4CE46] to-[#42C8EF] shrink-0" />
+
+        <div className="relative flex-1 overflow-hidden">
+          <img
+            src={TECHNOLOGY_CONFIG.assets.martConceptPhoto}
+            alt="Không gian cửa hàng bán lẻ hiện đại ADIGO Mart"
+            width={480}
+            height={320}
+            loading="lazy"
+            decoding="async"
+            className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-[1.03]"
+          />
+          <div
+            className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#142F63]/35 via-transparent to-transparent"
+            aria-hidden="true"
+          />
         </div>
       </div>
 
-      <div className="mt-2 px-1 flex items-center gap-2">
-        <span className="w-7 h-7 rounded-xl bg-[#E8F8F0] text-[#398441] flex items-center justify-center shrink-0">
-          <Store className="w-3.5 h-3.5" />
-        </span>
-        <div className="min-w-0">
-          <p className="font-display text-[12.5px] font-bold text-[#142F63] truncate">
-            {cfg.title}
-          </p>
-          <p className="text-[9.5px] text-[#52677D] truncate">{cfg.subtitle}</p>
+      <div className="mt-2.5 px-1 flex items-center justify-between gap-2">
+        <div className="flex items-center gap-2 min-w-0">
+          <span className="w-7.5 h-7.5 rounded-xl bg-[#E8F8F0] text-[#398441] flex items-center justify-center shrink-0">
+            <Store className="w-3.5 h-3.5" />
+          </span>
+          <div className="min-w-0">
+            <p className="font-display text-[13px] font-bold text-[#142F63] truncate">
+              {cfg.title}
+            </p>
+            <p className="text-[9.5px] text-[#52677D] truncate">{cfg.subtitle}</p>
+          </div>
         </div>
       </div>
     </motion.button>
@@ -224,47 +305,49 @@ export const DataConnectionLines: React.FC<{
   highlightedPanels: TechnologyPanelId[];
 }> = ({ highlightedPanels }) => {
   const strokeFor = (id: TechnologyPanelId) =>
-    highlightedPanels.includes(id) ? '#34C0D8' : '#FFFFFF';
+    highlightedPanels.includes(id) ? '#42C8EF' : '#FFFFFF';
+  const widthFor = (id: TechnologyPanelId) =>
+    highlightedPanels.includes(id) ? 3.2 : 2.2;
   const opacityFor = (id: TechnologyPanelId) =>
-    highlightedPanels.includes(id) ? 0.92 : 0.62;
+    highlightedPanels.includes(id) ? 0.96 : 0.65;
 
   return (
     <svg
-      viewBox="0 0 600 420"
+      viewBox="0 0 640 460"
       fill="none"
       className="pointer-events-none absolute inset-0 w-full h-full z-10"
       aria-hidden="true"
     >
-      {/* Top-Left Panel -> Bottom-Center ADIGO Core */}
+      {/* Top-Left Panel -> ADIGO Core */}
       <path
-        d="M150 135 C 185 210, 240 250, 290 295"
+        d="M156 172 C 195 235, 250 278, 305 322"
         stroke={strokeFor('products')}
         strokeOpacity={opacityFor('products')}
-        strokeWidth="2.5"
+        strokeWidth={widthFor('products')}
         strokeLinecap="round"
       />
-      {/* Top-Right Panel -> Bottom-Center ADIGO Core */}
+      {/* Top-Right Panel -> ADIGO Core */}
       <path
-        d="M450 135 C 415 210, 360 250, 310 295"
+        d="M484 172 C 445 235, 390 278, 335 322"
         stroke={strokeFor('traceability')}
         strokeOpacity={opacityFor('traceability')}
-        strokeWidth="2.5"
+        strokeWidth={widthFor('traceability')}
         strokeLinecap="round"
       />
-      {/* Bottom-Left Smart Panel -> Bottom-Center ADIGO Core */}
+      {/* Bottom-Left Smart Panel -> ADIGO Core */}
       <path
-        d="M160 315 C 210 315, 245 315, 275 315"
+        d="M168 355 C 218 355, 254 352, 290 345"
         stroke={strokeFor('smart')}
         strokeOpacity={opacityFor('smart')}
-        strokeWidth="2.5"
+        strokeWidth={widthFor('smart')}
         strokeLinecap="round"
       />
-      {/* Bottom-Right Retail Network Panel -> Bottom-Center ADIGO Core */}
+      {/* Bottom-Right Retail Network Panel -> ADIGO Core */}
       <path
-        d="M440 315 C 390 315, 355 315, 325 315"
+        d="M472 355 C 422 355, 386 352, 350 345"
         stroke={strokeFor('network')}
         strokeOpacity={opacityFor('network')}
-        strokeWidth="2.5"
+        strokeWidth={widthFor('network')}
         strokeLinecap="round"
       />
     </svg>

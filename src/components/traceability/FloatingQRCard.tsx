@@ -46,7 +46,7 @@ export const FloatingQRCard: React.FC = () => {
           Quét mã truy xuất
         </p>
         <p className="mt-0.5 text-[10px] font-medium text-[#52677D]">
-          Mã QR minh họa
+          Mã QR truy xuất ADIGO
         </p>
       </div>
     </motion.div>

@@ -91,7 +91,7 @@ export const HeroPreviewModal: React.FC<HeroPreviewModalProps> = ({
               Khám phá trải nghiệm ADIGO App
             </h2>
             <p className="mt-1.5 text-sm text-[#52677D] leading-relaxed">
-              Giao diện trên Hero minh họa ba điểm chạm chính trong hành trình sử dụng ứng dụng ADIGO.
+              Khám phá ba điểm chạm chính trong hành trình trải nghiệm ứng dụng ADIGO.
             </p>
 
             <div className="mt-5 flex flex-col gap-3">

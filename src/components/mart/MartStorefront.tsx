@@ -38,7 +38,7 @@ export const MartStorefront: React.FC = () => {
         </div>
 
         <span className="relative z-10 hidden sm:inline-flex items-center px-2.5 py-1 rounded-full bg-white/12 border border-white/25 text-[10px] font-medium text-white/90 whitespace-nowrap">
-          Mô hình minh họa
+          Điểm bán đa kênh
         </span>
 
         {/* Brand Accent Band */}

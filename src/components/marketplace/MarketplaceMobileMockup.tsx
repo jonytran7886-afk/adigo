@@ -12,8 +12,6 @@ import {
   LayoutGrid,
   ClipboardList,
   User,
-  Store,
-  Award,
   Tag,
 } from 'lucide-react';
 import { PhoneShell } from '../hero/ProductShowcase/PhoneShell';
@@ -57,7 +55,7 @@ export const MarketplaceMobileMockup: React.FC<MarketplaceMobileMockupProps> = (
   const suggestedProducts = MARKETPLACE_CONFIG.demoProducts
     .filter((p) => {
       if (selectedChip === 'all') return true;
-      if (selectedChip === 'eggs') return p.id === 'mp-4';
+      if (selectedChip === 'eggs') return p.id === 'mp-3';
       return p.category === selectedChip;
     })
     .slice(0, 2);
@@ -196,7 +194,7 @@ export const MarketplaceMobileMockup: React.FC<MarketplaceMobileMockupProps> = (
                       Sản phẩm gợi ý
                     </span>
                     <span className="text-[8.5px] font-semibold text-[#398441]">
-                      Minh họa
+                      Chọn lọc
                     </span>
                   </div>
 
@@ -210,7 +208,7 @@ export const MarketplaceMobileMockup: React.FC<MarketplaceMobileMockupProps> = (
                           className="rounded-[12px] bg-white border border-[#E2ECF4] p-1.5 flex flex-col justify-between shadow-2xs"
                         >
                           <div>
-                            <div className="relative h-[58px] rounded-[8px] overflow-hidden bg-[#F4F8FB]">
+                            <div className="relative h-[64px] rounded-[8px] overflow-hidden bg-[#F4F8FB]">
                               <FoodThumbnail type={product.visual} />
                               <button
                                 type="button"
@@ -278,27 +276,32 @@ export const MarketplaceMobileMockup: React.FC<MarketplaceMobileMockupProps> = (
                     Gian hàng kết nối
                   </span>
                   <span className="text-[8.5px] font-semibold text-[#345EAA] bg-[#EAF5FF] px-1.5 py-0.5 rounded-full">
-                    Minh họa
+                    Đối tác
                   </span>
                 </div>
                 <div className="flex flex-col gap-2">
                   {MARKETPLACE_CONFIG.demoStores.map((store) => (
                     <div
                       key={store.id}
-                      className="rounded-[12px] bg-white border border-[#E2ECF4] p-2.5 flex items-center justify-between gap-2"
+                      className="rounded-[12px] bg-white border border-[#E2ECF4] p-1.5 flex items-center justify-between gap-2"
                     >
                       <div className="flex items-center gap-2 min-w-0">
-                        <div
-                          className="w-8 h-8 rounded-xl flex items-center justify-center text-white shrink-0"
-                          style={{ backgroundColor: store.accentColor }}
-                        >
-                          <Store className="w-4 h-4" />
+                        <div className="w-12 h-11 rounded-lg overflow-hidden border border-[#DCEAF5] shrink-0">
+                          <img
+                            src={store.image}
+                            alt={store.name}
+                            width={140}
+                            height={105}
+                            loading="lazy"
+                            decoding="async"
+                            className="w-full h-full object-cover"
+                          />
                         </div>
                         <div className="min-w-0">
-                          <p className="text-[10px] font-bold text-[#142F63] truncate">
+                          <p className="text-[9.5px] font-bold text-[#142F63] truncate">
                             {store.name}
                           </p>
-                          <p className="text-[8.5px] text-[#398441] truncate">
+                          <p className="text-[8px] text-[#398441] truncate">
                             {store.category}
                           </p>
                         </div>
@@ -329,34 +332,44 @@ export const MarketplaceMobileMockup: React.FC<MarketplaceMobileMockupProps> = (
                   <span className="text-[11px] font-bold text-[#142F63]">
                     Thương hiệu chọn lọc
                   </span>
-                  <span className="text-[8.5px] font-semibold text-[#345EAA] bg-[#EAF5FF] px-1.5 py-0.5 rounded-full">
-                    Minh họa
+                  <span className="text-[8.5px] font-semibold text-[#398441] bg-[#E8F8F0] px-1.5 py-0.5 rounded-full">
+                    Chính thức
                   </span>
                 </div>
                 <div className="grid grid-cols-2 gap-2">
-                  {MARKETPLACE_CONFIG.demoBrands.map((brand, idx) => (
+                  {MARKETPLACE_CONFIG.demoBrands.map((brand) => (
                     <button
                       key={brand.id}
                       type="button"
                       onClick={() => onSelectTab('products')}
-                      className="rounded-[12px] bg-white border border-[#E2ECF4] p-2 text-left flex flex-col gap-1.5 cursor-pointer hover:border-[#4C9DC6]"
+                      className="rounded-[12px] bg-white border border-[#E2ECF4] p-1.5 text-left flex flex-col gap-1.5 cursor-pointer hover:border-[#4C9DC6]"
                     >
-                      <div className="w-7 h-7 rounded-lg bg-[#F1F7FD] flex items-center justify-center">
-                        {brand.id === 'br-4' ? (
-                          <BrandLogo variant="icon" size="sm" className="!h-4 !w-4" />
-                        ) : (
-                          <Award
-                            className={`w-4 h-4 ${
-                              idx % 2 === 0 ? 'text-[#345EAA]' : 'text-[#398441]'
-                            }`}
-                          />
-                        )}
+                      <div className="relative h-14 rounded-lg overflow-hidden bg-[#F1F7FD]">
+                        <img
+                          src={brand.image}
+                          alt={brand.name}
+                          width={180}
+                          height={120}
+                          loading="lazy"
+                          decoding="async"
+                          className="w-full h-full object-cover"
+                        />
+                        <div className="absolute top-1 left-1 px-1.5 py-0.5 rounded bg-white/95 flex items-center">
+                          {brand.logoType === 'organic-vn' ? (
+                            <img
+                              src="/assets/organic-vietnam-logo.png"
+                              alt="Organic Việt Nam"
+                              width={175}
+                              height={65}
+                              className="h-2.5 w-auto object-contain"
+                            />
+                          ) : (
+                            <BrandLogo variant="icon" size="sm" className="!h-3 !w-3" />
+                          )}
+                        </div>
                       </div>
-                      <p className="text-[9.5px] font-bold text-[#142F63] line-clamp-2 leading-tight">
+                      <p className="text-[9px] font-bold text-[#142F63] line-clamp-2 leading-tight px-0.5">
                         {brand.name}
-                      </p>
-                      <p className="text-[8px] text-[#64748B] truncate">
-                        {brand.category}
                       </p>
                     </button>
                   ))}
@@ -375,28 +388,38 @@ export const MarketplaceMobileMockup: React.FC<MarketplaceMobileMockupProps> = (
               >
                 <div className="flex items-center justify-between">
                   <span className="text-[11px] font-bold text-[#142F63]">
-                    Gợi ý ưu đãi
+                    Bộ sưu tập & Ưu đãi
                   </span>
                   <span className="text-[8.5px] font-semibold text-[#398441] bg-[#E8F8F0] px-1.5 py-0.5 rounded-full">
                     Thành viên
                   </span>
                 </div>
                 <div className="flex flex-col gap-2">
-                  {MARKETPLACE_CONFIG.demoOffers.map((offer) => (
+                  {MARKETPLACE_CONFIG.demoOffers.slice(0, 2).map((offer) => (
                     <div
                       key={offer.id}
-                      className="rounded-[12px] bg-white border border-[#E2ECF4] p-2.5"
+                      className="rounded-[12px] bg-white border border-[#E2ECF4] p-1.5 flex items-center gap-2"
                     >
-                      <span className="inline-flex items-center gap-1 text-[8px] font-semibold text-[#345EAA]">
-                        <Tag className="w-2.5 h-2.5" />
-                        {offer.tag}
-                      </span>
-                      <p className="mt-0.5 text-[10px] font-bold text-[#142F63] leading-snug">
-                        {offer.title}
-                      </p>
-                      <p className="mt-0.5 text-[8.5px] text-[#52677D] line-clamp-2">
-                        {offer.desc}
-                      </p>
+                      <div className="w-16 h-14 rounded-lg overflow-hidden shrink-0">
+                        <img
+                          src={offer.image}
+                          alt={offer.title}
+                          width={160}
+                          height={120}
+                          loading="lazy"
+                          decoding="async"
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <span className="inline-flex items-center gap-1 text-[7.5px] font-semibold text-[#345EAA]">
+                          <Tag className="w-2.5 h-2.5" />
+                          {offer.tag}
+                        </span>
+                        <p className="mt-0.5 text-[9.5px] font-bold text-[#142F63] leading-snug line-clamp-2">
+                          {offer.title}
+                        </p>
+                      </div>
                     </div>
                   ))}
                 </div>

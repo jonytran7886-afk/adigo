@@ -88,21 +88,19 @@ export const ConnectedProductsVisual: React.FC = () => {
           </div>
         </div>
 
-        {/* Tile 6: Cửa hàng bán lẻ minh họa */}
+        {/* Tile 6: Cửa hàng bán lẻ ADIGO Mart */}
         <div className="rounded-2xl bg-white/92 backdrop-blur-md border-2 border-white p-1.5 shadow-[0_14px_28px_rgba(31,84,130,0.14)] rotate-[4deg] translate-y-2">
-          <div className="h-16 sm:h-[72px] rounded-xl bg-gradient-to-br from-[#F0F7FF] to-[#E6F7F2] flex items-center justify-center p-2">
-            <svg viewBox="0 0 80 64" className="w-full h-full" aria-label="Cửa hàng bán lẻ minh họa">
-              {/* Minimalist store body */}
-              <rect x="12" y="24" width="56" height="34" rx="4" fill="#FFFFFF" stroke="#B6D5EB" strokeWidth="1.5" />
-              {/* Awning stripes */}
-              <path d="M9 24L14 12H66L71 24H9Z" fill="#345EAA" />
-              <path d="M21 12L18 24H27L29 12H21Z" fill="#65B848" />
-              <path d="M36 12L35 24H45L44 12H36Z" fill="#FFFFFF" fillOpacity="0.9" />
-              <path d="M51 12L53 24H62L59 12H51Z" fill="#65B848" />
-              {/* Glass storefront windows & door */}
-              <rect x="18" y="31" width="22" height="17" rx="2" fill="#DCEEFF" />
-              <rect x="45" y="31" width="16" height="27" rx="2" fill="#4C9DC6" fillOpacity="0.35" />
-            </svg>
+          <div className="h-16 sm:h-[72px] rounded-xl overflow-hidden bg-[#F0F7FF]">
+            <img
+              src="/src/assets/images/adigo_mart_concept_1795602232694.webp"
+              alt="Hệ thống điểm bán ADIGO Mart"
+              width={400}
+              height={224}
+              decoding="async"
+              referrerPolicy="no-referrer"
+              loading="lazy"
+              className="w-full h-full object-cover object-center"
+            />
           </div>
         </div>
       </div>

@@ -23,17 +23,17 @@ export const TechnologySection: React.FC = () => {
     >
       <TechnologyBackground />
 
-      <div className="relative z-10 max-w-[1480px] mx-auto px-4 sm:px-6 lg:px-10">
-        {/* Main 2-Column Split (Desktop: 38% Left | 62% Right) */}
+      <div className="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-10">
+        {/* Main 2-Column Split (Desktop: 40% Left | 60% Right) */}
         <div className="flex flex-col lg:grid lg:grid-cols-12 items-start lg:items-center gap-8 lg:gap-6 xl:gap-10">
-          <div className="w-full lg:col-span-5 xl:col-span-4">
+          <div className="w-full lg:col-span-5">
             <TechnologyContent
               activeExperience={activeExperience}
               showChips={true}
             />
           </div>
 
-          <div className="w-full lg:col-span-7 xl:col-span-8">
+          <div className="w-full lg:col-span-7">
             <TechnologyShowcase
               activeExperience={activeExperience}
               onSelectExperience={setActiveExperience}

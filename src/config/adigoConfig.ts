@@ -24,7 +24,7 @@ export interface MarketplaceStore {
 export const ADIGO_CONFIG = {
   brandName: 'ADIGO',
   releaseStatus: 'pre-launch' as ReleaseStatus,
-  releaseNote: 'Giao diện minh họa trải nghiệm sản phẩm · Ứng dụng đang hoàn thiện ra mắt',
+  releaseNote: 'Trải nghiệm mua sắm số đa kênh · Ứng dụng đang hoàn thiện ra mắt',
   parentCompany: 'Organic Việt Nam',
   colors: {
     blue: '#0A74DA',

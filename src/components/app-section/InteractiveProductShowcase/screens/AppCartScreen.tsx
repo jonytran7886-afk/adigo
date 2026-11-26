@@ -25,7 +25,7 @@ export const AppCartScreen: React.FC<ScreenProps> = ({ onNavigate }) => {
     <div className="flex-1 flex flex-col overflow-hidden bg-white px-3.5 pt-2 pb-4 gap-2.5">
       <div className="flex items-center justify-between">
         <p className="font-display text-sm font-bold text-[#112D52]">Giỏ hàng</p>
-        <span className="text-[9.5px] font-medium text-[#52677D]">Minh họa đặt hàng</span>
+        <span className="text-[9.5px] font-medium text-[#52677D]">Đặt hàng nhanh</span>
       </div>
 
       {/* Product list */}
@@ -101,7 +101,7 @@ export const AppCartScreen: React.FC<ScreenProps> = ({ onNavigate }) => {
       {/* Subtotal + Continue */}
       <div className="shrink-0 pt-2 border-t border-[#E2ECF4] flex items-center justify-between gap-2">
         <div>
-          <span className="text-[9px] text-[#52677D] block">Tạm tính minh họa</span>
+          <span className="text-[9px] text-[#52677D] block">Tạm tính</span>
           <span className="font-display text-xs font-extrabold text-[#142F63] tabular-nums">
             {subtotal.toLocaleString('vi-VN')} đ
           </span>

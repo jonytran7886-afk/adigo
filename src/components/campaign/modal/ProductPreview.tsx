@@ -96,7 +96,7 @@ export const ProductPreview: React.FC<ProductPreviewProps> = ({ config }) => {
           <div className="relative h-24 sm:h-32 lg:h-36 overflow-hidden">
             <img
               src={modalAssets.farmLandscape}
-              alt="Minh họa vùng nuôi thảo dược"
+              alt="Vùng nuôi thảo dược Organic Việt Nam"
               width={960}
               height={540}
               loading="lazy"

@@ -195,31 +195,33 @@
   overflow-x: clip;
   background:
     radial-gradient(
-      ellipse at 72% 48%,
-      rgba(76, 157, 198, 0.34),
-      transparent 48%
-    ),
-    radial-gradient(
-      ellipse at 92% 20%,
-      rgba(52, 94, 170, 0.22),
+      ellipse at 70% 48%,
+      rgba(66, 200, 239, 0.34),
       transparent 46%
     ),
     radial-gradient(
-      ellipse at 85% 84%,
-      rgba(108, 218, 181, 0.20),
+      ellipse at 92% 20%,
+      rgba(22, 118, 210, 0.32),
+      transparent 48%
+    ),
+    radial-gradient(
+      ellipse at 82% 86%,
+      rgba(22, 181, 170, 0.24),
       transparent 44%
     ),
     radial-gradient(
-      ellipse at 12% 30%,
-      rgba(255, 255, 255, 0.72),
-      transparent 50%
+      ellipse at 14% 34%,
+      rgba(255, 255, 255, 0.96),
+      rgba(234, 245, 255, 0.72) 44%,
+      transparent 66%
     ),
     linear-gradient(
-      125deg,
-      #EAF4FF 0%,
-      #D6EBFC 42%,
-      #B5DCF4 76%,
-      #C6EDE5 100%
+      118deg,
+      #FFFFFF 0%,
+      #EAF5FF 34%,
+      #BCE3FA 64%,
+      #7CC7EE 86%,
+      #5BBCE6 100%
     );
 }
 
@@ -228,12 +230,15 @@
   pointer-events: none;
   background: linear-gradient(
     145deg,
-    rgba(255, 255, 255, 0.38),
-    rgba(76, 157, 198, 0.12)
+    rgba(255, 255, 255, 0.44) 0%,
+    rgba(66, 200, 239, 0.14) 55%,
+    rgba(20, 47, 99, 0.10) 100%
   );
-  border: 1.5px solid rgba(255, 255, 255, 0.75);
-  border-radius: 32px;
-  box-shadow: 0 20px 44px rgba(20, 47, 99, 0.08);
+  border: 1.5px solid rgba(255, 255, 255, 0.78);
+  border-radius: 36px;
+  box-shadow:
+    0 24px 52px rgba(20, 47, 99, 0.14),
+    inset 0 1px 2px rgba(255, 255, 255, 0.85);
 }
 
 .partnership-section {

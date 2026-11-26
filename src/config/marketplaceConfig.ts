@@ -30,6 +30,27 @@ export interface MarketplaceDemoStore {
   category: string;
   note: string;
   accentColor: string;
+  image: string;
+  badge: string;
+}
+
+export interface MarketplaceBrandCollection {
+  id: string;
+  name: string;
+  category: string;
+  industry: 'fresh' | 'agri' | 'processed';
+  logoType: 'adigo' | 'organic-vn';
+  image: string;
+  tag: string;
+}
+
+export interface MarketplaceOfferCollection {
+  id: string;
+  title: string;
+  desc: string;
+  tag: string;
+  image: string;
+  ctaLabel: string;
 }
 
 export const MARKETPLACE_CONFIG = {
@@ -83,16 +104,16 @@ export const MARKETPLACE_CONFIG = {
   demoProducts: [
     {
       id: 'mp-1',
-      name: 'Thịt gà ta',
+      name: 'Thịt gà ta nguyên con',
       unit: 'Khay 1 kg',
       priceVnd: '129.000 đ',
       category: 'meat-eggs',
-      originTag: 'Thông tin nguồn gốc',
+      originTag: 'Truy xuất nguồn gốc',
       visual: 'chicken',
     },
     {
       id: 'mp-2',
-      name: 'Thịt bò thái lát',
+      name: 'Thịt bò & ba chỉ tươi',
       unit: 'Khay 500 g',
       priceVnd: '145.000 đ',
       category: 'meat-eggs',
@@ -101,33 +122,24 @@ export const MARKETPLACE_CONFIG = {
     },
     {
       id: 'mp-3',
-      name: 'Thịt lợn ba chỉ',
-      unit: 'Khay 500 g',
-      priceVnd: '89.000 đ',
-      category: 'meat-eggs',
-      originTag: 'Thông tin nguồn gốc',
-      visual: 'pork',
-    },
-    {
-      id: 'mp-4',
-      name: 'Trứng gà ta',
+      name: 'Trứng gà ta tươi',
       unit: 'Vỉ 10 quả',
       priceVnd: '39.000 đ',
       category: 'meat-eggs',
-      originTag: 'Dữ liệu nhà sản xuất',
+      originTag: 'Vùng nuôi liên kết',
       visual: 'eggs',
     },
     {
-      id: 'mp-5',
+      id: 'mp-4',
       name: 'Rau củ tươi theo mùa',
       unit: 'Gói 400 g',
       priceVnd: '28.000 đ',
       category: 'veggies',
-      originTag: 'Thông tin nguồn gốc',
+      originTag: 'Thu hoạch trong ngày',
       visual: 'veggies',
     },
     {
-      id: 'mp-6',
+      id: 'mp-5',
       name: 'Cam sành chọn lọc',
       unit: 'Túi 1 kg',
       priceVnd: '45.000 đ',
@@ -135,70 +147,107 @@ export const MARKETPLACE_CONFIG = {
       originTag: 'Theo mùa vụ',
       visual: 'orange',
     },
+    {
+      id: 'mp-6',
+      name: 'Thực phẩm chế biến sẵn',
+      unit: 'Khay 400 g',
+      priceVnd: '79.000 đ',
+      category: 'processed',
+      originTag: 'Đóng gói tiêu chuẩn',
+      visual: 'processed',
+    },
   ] as MarketplaceDemoProduct[],
   demoStores: [
     {
       id: 'st-1',
-      name: 'Gian hàng minh họa 01',
-      category: 'Thịt tươi & Gia cầm',
-      note: 'Giao diện gian hàng đối tác',
+      name: 'Gian hàng Thực phẩm Tươi',
+      category: 'Thịt tươi · Gia cầm · Trứng',
+      note: 'Quầy trưng bày sản phẩm đóng gói giữ lạnh mỗi ngày',
       accentColor: '#345EAA',
+      image: '/src/assets/images/marketplace_retail_stall_1795655579789.webp',
+      badge: 'Gian hàng đối tác',
     },
     {
       id: 'st-2',
-      name: 'Gian hàng minh họa 02',
-      category: 'Rau củ & Trái cây',
-      note: 'Giao diện gian hàng nhà sản xuất',
+      name: 'Gian hàng Nông sản Xanh',
+      category: 'Rau củ · Trái cây theo mùa',
+      note: 'Kết nối trực tiếp từ vùng trồng đến giỏ hàng gia đình',
       accentColor: '#398441',
+      image: '/src/assets/images/adigo_traceability_produce_1795602233534.webp',
+      badge: 'Nhà sản xuất liên kết',
     },
     {
       id: 'st-3',
-      name: 'Gian hàng minh họa 03',
-      category: 'Nông sản & Chế biến',
-      note: 'Giao diện gian hàng thương hiệu',
+      name: 'Không gian ADIGO Mart',
+      category: 'Tổng hợp & Thực phẩm tiện lợi',
+      note: 'Đồng bộ trải nghiệm mua sắm trực tuyến và tại điểm bán',
       accentColor: '#4C9DC6',
+      image: '/src/assets/images/adigo_mart_concept_1795602232694.webp',
+      badge: 'Điểm bán đa kênh',
     },
   ] as MarketplaceDemoStore[],
   demoBrands: [
     {
       id: 'br-1',
-      name: 'Nhóm thương hiệu Thực phẩm tươi',
-      category: 'Thịt · Trứng · Hải sản',
+      name: 'Organic Việt Nam · Gà thịt thảo dược',
+      category: 'Chăn nuôi tự nhiên · Truy xuất QR',
+      industry: 'fresh',
+      logoType: 'organic-vn',
+      image: '/src/assets/images/herbal_chicken_farm_1795655112377.webp',
+      tag: 'Thương hiệu đối tác',
     },
     {
       id: 'br-2',
-      name: 'Nhóm thương hiệu Nông sản Việt',
-      category: 'Rau củ · Trái cây · Hạt',
+      name: 'Organic Việt Nam · Bộ sưu tập Bữa ăn sạch',
+      category: 'Thịt tươi · Trứng gà · Nông sản',
+      industry: 'agri',
+      logoType: 'organic-vn',
+      image: '/src/assets/images/marketplace_eggs_citrus_1795655578585.webp',
+      tag: 'Tuyển chọn theo mùa',
     },
     {
       id: 'br-3',
-      name: 'Nhóm thương hiệu Chế biến tiện lợi',
-      category: 'Đóng gói sẵn · Gia vị',
+      name: 'ADIGO · Thực phẩm tươi chọn lọc',
+      category: 'Rau củ · Thịt cá · Đóng gói tiện lợi',
+      industry: 'processed',
+      logoType: 'adigo',
+      image: '/src/assets/images/adigo_marketplace_variety_1795602233383.webp',
+      tag: 'Hệ sinh thái ADIGO',
     },
     {
       id: 'br-4',
-      name: 'Thương hiệu ADIGO Ecosystem',
-      category: 'Sản phẩm kết nối đa kênh',
+      name: 'ADIGO Mart · Tiện ích gia đình mỗi ngày',
+      category: 'Thực phẩm sơ chế · Đa kênh',
+      industry: 'processed',
+      logoType: 'adigo',
+      image: '/src/assets/images/marketplace_veggies_processed_1795655578984.webp',
+      tag: 'Kết nối đa kênh',
     },
-  ],
+  ] as MarketplaceBrandCollection[],
   demoOffers: [
     {
       id: 'of-1',
-      title: 'Bộ sưu tập thực phẩm mỗi ngày',
-      desc: 'Gợi ý kết hợp nhiều nhóm hàng từ các gian hàng minh họa',
-      tag: 'Chương trình minh họa',
+      title: 'Bộ sưu tập thực phẩm tươi mỗi ngày',
+      desc: 'Kết hợp gà thảo dược, thịt bò cắt lát và rau củ theo mùa từ các gian hàng đối tác.',
+      tag: 'Bộ sưu tập tuần',
+      image: '/src/assets/images/chicken_whole_platter_1795655111655.webp',
+      ctaLabel: 'Xem bộ sưu tập',
     },
     {
       id: 'of-2',
-      title: 'Đặc quyền kết nối thành viên',
-      desc: 'Trải nghiệm đồng bộ ưu đãi giữa ADIGO Marketplace và ADIGO Mart',
-      tag: 'Minh họa tiện ích',
+      title: 'Đặc quyền kết nối thành viên ADIGO',
+      desc: 'Trải nghiệm đồng bộ tiện ích mua sắm giữa ADIGO Marketplace và ADIGO Mart.',
+      tag: 'Thành viên ADIGO',
+      image: '/src/assets/images/marketplace_pork_beef_cuts_1795655577544.webp',
+      ctaLabel: 'Khám phá tiện ích',
     },
     {
       id: 'of-3',
       title: 'Combo bữa ăn gia đình linh hoạt',
-      desc: 'Lựa chọn nhanh nhiều sản phẩm thiết yếu trong một lần đặt',
-      tag: 'Định hướng trải nghiệm',
+      desc: 'Lựa chọn nhanh các nhóm sản phẩm thiết yếu trong một lần đặt và nhận hàng thuận tiện.',
+      tag: 'Gợi ý theo mùa',
+      image: '/src/assets/images/marketplace_veggies_processed_1795655578984.webp',
+      ctaLabel: 'Chọn sản phẩm',
     },
-  ],
+  ] as MarketplaceOfferCollection[],
 };

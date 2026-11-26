@@ -54,13 +54,13 @@ export const TechnologyFeatureGrid: React.FC<{
               delay: 0.14 + idx * 0.06,
               ease: [0.16, 1, 0.3, 1],
             }}
-            className={`min-h-[84px] sm:min-h-[90px] rounded-[22px] p-3.5 sm:p-4 flex items-center gap-3.5 transition-colors duration-300 ${
+            className={`min-h-[84px] sm:min-h-[90px] rounded-[22px] p-3.5 sm:p-4 flex items-center gap-3.5 transition-all duration-300 ${
               isRelated
-                ? 'bg-white/78 border-[1.5px] border-[#4C9DC6]/65 shadow-[0_14px_30px_rgba(39,112,164,0.10)]'
-                : 'adigo-glass-strong border-[1.5px] border-white/85'
+                ? 'bg-white/90 border-[1.5px] border-[#1676D2]/60 shadow-[0_14px_30px_rgba(20,47,99,0.12)]'
+                : 'adigo-glass-strong border-[1.5px] border-white/90'
             }`}
           >
-            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-[16px] bg-gradient-to-br from-white/95 to-[#EAF5FF] border border-white shadow-[0_6px_14px_rgba(39,112,164,0.08)] flex items-center justify-center shrink-0">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-[16px] bg-gradient-to-br from-white to-[#EAF5FF] border border-white shadow-[0_6px_14px_rgba(39,112,164,0.08)] flex items-center justify-center shrink-0">
               {renderIcon(chip.icon)}
             </div>
             <div className="font-display text-[15.5px] sm:text-[16.5px] font-bold text-[#142F63] leading-[1.3]">
@@ -92,14 +92,14 @@ export const TechnologyContent: React.FC<TechnologyContentProps> = ({
         <span>{TECHNOLOGY_CONFIG.eyebrow}</span>
       </motion.div>
 
-      {/* Main Left-Aligned Headline */}
+      {/* Main Left-Aligned Headline (cleanly balanced 2-3 lines) */}
       <motion.h2
         id="technology-section-heading"
         initial={{ opacity: 0, y: 16 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.4 }}
         transition={{ duration: 0.5, delay: 0.08, ease: [0.16, 1, 0.3, 1] }}
-        className="mt-5 font-display font-extrabold tracking-[-0.025em] leading-[1.14] text-[clamp(2rem,3.4vw,3.65rem)] text-left"
+        className="mt-5 font-display font-extrabold tracking-[-0.025em] leading-[1.14] text-[clamp(2rem,3.3vw,3.5rem)] text-left max-w-[540px]"
       >
         <span className="block text-[#142F63]">
           {TECHNOLOGY_CONFIG.headlineLine1}
@@ -115,7 +115,7 @@ export const TechnologyContent: React.FC<TechnologyContentProps> = ({
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.4 }}
         transition={{ duration: 0.5, delay: 0.14, ease: [0.16, 1, 0.3, 1] }}
-        className="mt-5 text-[15.5px] sm:text-[18px] lg:text-[18.5px] leading-[1.6] text-[#52677D] max-w-[540px]"
+        className="mt-5 text-[15.5px] sm:text-[17.5px] leading-[1.6] text-[#455A70] max-w-[540px]"
       >
         {TECHNOLOGY_CONFIG.description}
       </motion.p>

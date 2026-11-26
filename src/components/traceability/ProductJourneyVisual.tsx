@@ -192,9 +192,9 @@ export const ProductJourneyVisual: React.FC<ProductJourneyVisualProps> = ({
           );
         })}
 
-        {/* Quiet Illustrative Badge */}
+        {/* Quiet Traceability Badge */}
         <span className="absolute bottom-2.5 right-3 px-2.5 py-0.5 rounded-full bg-white/88 text-[#142F63] text-[9px] font-semibold shadow-2xs pointer-events-none">
-          Hành trình minh họa
+          Hành trình sản phẩm
         </span>
       </div>
     </motion.div>

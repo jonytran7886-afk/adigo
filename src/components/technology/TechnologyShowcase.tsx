@@ -35,24 +35,24 @@ export const TechnologyShowcase: React.FC<TechnologyShowcaseProps> = ({
       <div className="hidden md:block relative w-full pt-2 pb-12">
         {/* Elongated Translucent Glass Platform */}
         <div
-          className="pointer-events-none absolute bottom-1 left-2 right-0 h-[82px] rounded-[50%] border border-white/85 shadow-[0_24px_50px_rgba(31,84,130,0.18),inset_0_2px_6px_rgba(255,255,255,0.88)] z-10"
+          className="pointer-events-none absolute bottom-1 left-4 right-0 h-[88px] rounded-[50%] border border-white/90 shadow-[0_28px_56px_rgba(20,47,99,0.22),inset_0_2px_8px_rgba(255,255,255,0.92)] z-10"
           style={{
             background:
-              'linear-gradient(180deg, rgba(235, 250, 255, 0.86) 0%, rgba(188, 232, 248, 0.62) 100%)',
-            backdropFilter: 'blur(16px)',
-            WebkitBackdropFilter: 'blur(16px)',
+              'linear-gradient(180deg, rgba(235, 250, 255, 0.9) 0%, rgba(168, 224, 248, 0.68) 100%)',
+            backdropFilter: 'blur(18px)',
+            WebkitBackdropFilter: 'blur(18px)',
           }}
           aria-hidden="true"
         />
 
         <div className="relative z-20 flex items-end gap-2 lg:gap-3 xl:gap-5">
-          {/* Smartphone Mockup (Front Left) */}
+          {/* Titanium Smartphone Mockup (Front Left) */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, delay: 0.08, ease: [0.16, 1, 0.3, 1] }}
-            className="shrink-0 origin-bottom-left md:scale-[0.80] lg:scale-[0.82] xl:scale-[0.92] md:-mr-10 lg:-mr-8 xl:-mr-2 lg:-rotate-[3deg]"
+            className="shrink-0 origin-bottom-left md:scale-[0.80] lg:scale-[0.82] xl:scale-[0.92] md:-mr-10 lg:-mr-8 xl:-mr-2 lg:-rotate-[3.5deg]"
           >
             <TechnologyPhoneMockup
               activeExperience={activeExperience}
@@ -61,12 +61,12 @@ export const TechnologyShowcase: React.FC<TechnologyShowcaseProps> = ({
             />
           </motion.div>
 
-          {/* Right Ecosystem Hub: 4 Floating Glass Panels Converging to ADIGO Core */}
+          {/* Right Ecosystem Hub: 4 Enlarged 3D Glass Panels Converging to ADIGO Core */}
           <div className="relative flex-1 min-w-0 pb-2">
             <DataConnectionLines highlightedPanels={highlightedPanels} />
 
             {/* Top Row: Connected Products + Traceability */}
-            <div className="relative z-20 grid grid-cols-2 gap-3 xl:gap-4 px-2 xl:px-4">
+            <div className="relative z-20 grid grid-cols-2 gap-3 xl:gap-4 px-1 xl:px-3">
               <ConnectedProductPanel
                 isHighlighted={highlightedPanels.includes('products')}
                 onSelect={onSelectExperience}
@@ -77,8 +77,8 @@ export const TechnologyShowcase: React.FC<TechnologyShowcaseProps> = ({
               />
             </div>
 
-            {/* Bottom Row: Smart Experience | ADIGO Core | Retail Network */}
-            <div className="relative z-20 grid grid-cols-12 items-end gap-2.5 xl:gap-3.5 mt-4 xl:mt-6">
+            {/* Bottom Row: Smart Experience | Enlarged ADIGO Core | Retail Network */}
+            <div className="relative z-20 grid grid-cols-12 items-end gap-2.5 xl:gap-3.5 mt-4 xl:mt-5">
               <div className="col-span-4 pb-2">
                 <SmartExperiencePanel
                   isHighlighted={highlightedPanels.includes('smart')}
@@ -86,7 +86,7 @@ export const TechnologyShowcase: React.FC<TechnologyShowcaseProps> = ({
                 />
               </div>
 
-              <div className="col-span-4 flex justify-center -mb-2">
+              <div className="col-span-4 flex justify-center -mb-3">
                 <AdigoCore />
               </div>
 

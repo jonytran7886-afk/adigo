@@ -129,12 +129,12 @@ export const CAMPAIGN_CONFIG: CampaignConfig = {
     vacuumPackedWholeChicken:
       '/src/assets/images/chicken_whole_vacuum_pack_1795655111694.webp',
     farmLandscape: '/src/assets/images/herbal_chicken_farm_1795655112377.webp',
-    farmCaption: 'Hình minh họa vùng nuôi thảo dược',
+    farmCaption: 'Vùng nuôi thảo dược',
   },
   modalAssets: {
     wholeChickenPlatter: '/src/assets/images/chicken_whole_platter_1795655111655.webp',
     farmLandscape: '/src/assets/images/herbal_chicken_farm_1795655112377.webp',
-    farmCaption: 'Hình minh họa vùng nuôi thảo dược',
+    farmCaption: 'Vùng nuôi thảo dược',
     productCardThumbnail: '/src/assets/images/chicken_whole_platter_1795655111655.webp',
   },
   product: {

@@ -90,7 +90,7 @@ export const TraceabilityPhoneMockup: React.FC<
               aria-hidden="true"
             />
             <span className="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-white/92 text-[#142F63] text-[8.5px] font-bold shadow-2xs">
-              Dữ liệu minh họa
+              Truy xuất QR
             </span>
 
             {/* Crisp Mini QR Badge */}
@@ -106,7 +106,7 @@ export const TraceabilityPhoneMockup: React.FC<
               </p>
               <div className="mt-0.5 flex items-center gap-1 text-[9.5px] font-semibold text-[#2E8547]">
                 <CheckCircle2 className="w-3 h-3 shrink-0" />
-                <span>Thông tin sản phẩm minh họa</span>
+                <span>Hồ sơ nguồn gốc sản phẩm</span>
               </div>
             </div>
           </div>

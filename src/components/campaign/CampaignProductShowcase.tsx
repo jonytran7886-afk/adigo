@@ -22,7 +22,7 @@ export const CampaignProductShowcase: React.FC<CampaignProductShowcaseProps> = (
         <div className="relative ml-auto w-[92%] sm:w-[86%] lg:w-[88%] h-[165px] sm:h-[205px] lg:h-[235px] mb-10 sm:mb-12 rounded-[26px] rounded-tl-[84px] overflow-hidden border-2 border-[#FFE082]/75 shadow-[0_14px_34px_rgba(120,14,10,0.45)]">
           <img
             src={config.bannerAssets.farmLandscape}
-            alt="Minh họa vùng nuôi gà thảo dược"
+            alt="Vùng nuôi gà thảo dược Organic Việt Nam"
             width={960}
             height={540}
             loading="lazy"

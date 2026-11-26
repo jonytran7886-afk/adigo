@@ -49,7 +49,7 @@ export const AppDiscoverScreen: React.FC<ScreenProps> = ({ onNavigate }) => {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Tìm sản phẩm, nhóm hàng..."
-          aria-label="Tìm sản phẩm minh họa"
+          aria-label="Tìm sản phẩm trên ADIGO"
           className="w-full bg-transparent text-[11px] text-[#112D52] placeholder:text-[#52677D] focus:outline-none"
         />
       </div>

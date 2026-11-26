@@ -33,7 +33,7 @@ export const AppProductDetailScreen: React.FC<ScreenProps> = ({ onNavigate }) =>
         {/* Title & Unit */}
         <div>
           <span className="text-[9.5px] font-semibold text-[#398441]">
-            Đơn vị sản xuất liên kết (Thông tin minh họa)
+            Đơn vị sản xuất liên kết
           </span>
           <p className="font-display text-sm font-bold text-[#112D52] mt-0.5">
             Thịt gà ta
@@ -54,7 +54,7 @@ export const AppProductDetailScreen: React.FC<ScreenProps> = ({ onNavigate }) =>
             <div>
               <p className="text-[10.5px] font-bold text-[#142F63]">Tìm hiểu nguồn gốc sản phẩm</p>
               <p className="text-[9px] text-[#52677D]">
-                {showOrigin ? 'Thu gọn hành trình minh họa' : 'Xem thông tin hành trình theo dữ liệu'}
+                {showOrigin ? 'Thu gọn hành trình nguồn gốc' : 'Xem thông tin hành trình theo dữ liệu'}
               </p>
             </div>
           </div>

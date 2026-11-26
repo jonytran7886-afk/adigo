@@ -20,6 +20,16 @@ export const TECHNOLOGY_CONFIG = {
   headlineLine2: 'kết nối toàn chuỗi.',
   description:
     'ADIGO phát triển công nghệ để kết nối sản phẩm, thương hiệu, điểm bán và người tiêu dùng, hướng đến trải nghiệm mua sắm thông minh, thuận tiện và liền mạch.',
+  assets: {
+    varietyPhoto: '/src/assets/images/adigo_marketplace_variety_1795602233383.webp',
+    traceabilityBeefPhoto: '/src/assets/images/traceability_beef_pack_1795655579958.webp',
+    martConceptPhoto: '/src/assets/images/adigo_mart_concept_1795602232694.webp',
+    chickenPlatterPhoto: '/src/assets/images/chicken_whole_platter_1795655111655.webp',
+    veggiesProcessedPhoto: '/src/assets/images/marketplace_veggies_processed_1795655578984.webp',
+    porkBeefPhoto: '/src/assets/images/marketplace_pork_beef_cuts_1795655577544.webp',
+    eggsCitrusPhoto: '/src/assets/images/marketplace_eggs_citrus_1795655578585.webp',
+    lifestylePhoto: '/src/assets/images/adigo_consumer_lifestyle_1795602233057.webp',
+  },
   featureChips: [
     {
       id: 'chain' as TechnologyChipId,
@@ -50,25 +60,25 @@ export const TECHNOLOGY_CONFIG = {
     products: {
       id: 'products' as TechnologyPanelId,
       title: 'Kết nối sản phẩm',
-      subtitle: 'Sản phẩm · Nhà sản xuất · Thị trường',
+      subtitle: 'Thịt tươi · Trứng · Rau củ · Trái cây',
       targetTab: 'data' as TechnologyExperienceId,
     },
     traceability: {
       id: 'traceability' as TechnologyPanelId,
       title: 'Truy xuất nguồn gốc',
-      subtitle: 'Tem mã QR · Hành trình minh họa',
+      subtitle: 'Mã QR xác thực · Lô ADG-01',
       targetTab: 'data' as TechnologyExperienceId,
     },
     smart: {
       id: 'smart' as TechnologyPanelId,
       title: 'Trải nghiệm thông minh',
-      subtitle: 'Gợi ý & hỗ trợ mua sắm định hướng AI',
+      subtitle: 'Trợ lý gợi ý mua sắm',
       targetTab: 'smart' as TechnologyExperienceId,
     },
     network: {
       id: 'network' as TechnologyPanelId,
       title: 'Mạng lưới điểm bán',
-      subtitle: 'ADIGO Mart · Marketplace đa kênh',
+      subtitle: 'ADIGO Mart · Bán lẻ đa kênh',
       targetTab: 'sync' as TechnologyExperienceId,
     },
   },
@@ -95,7 +105,7 @@ export const TECHNOLOGY_CONFIG = {
       highlightedPanels: ['smart'],
       relatedChips: ['smart'],
       phoneHeadline: 'Trợ lý mua sắm thông minh',
-      phoneSubtitle: 'Giao diện minh họa định hướng hỗ trợ tìm kiếm bằng ngôn ngữ tự nhiên.',
+      phoneSubtitle: 'Hỗ trợ tìm kiếm sản phẩm và gợi ý thực đơn theo ngôn ngữ tự nhiên.',
     },
     {
       id: 'personal',
@@ -103,20 +113,12 @@ export const TECHNOLOGY_CONFIG = {
       highlightedPanels: ['smart', 'network'],
       relatedChips: ['personal'],
       phoneHeadline: 'Gợi ý theo nhu cầu của bạn',
-      phoneSubtitle: 'Minh họa cá nhân hóa danh mục quan tâm, ưu đãi và điểm bán phù hợp.',
+      phoneSubtitle: 'Cá nhân hóa danh mục quan tâm, ưu đãi và điểm bán phù hợp.',
     },
   ] as TechnologyExperienceTab[],
   aiPromptExamples: [
     '“Hôm nay bạn muốn chuẩn bị món gì?”',
     '“Gợi ý thực phẩm cho bữa ăn gia đình.”',
     '“Giúp tôi tìm hiểu nguồn gốc sản phẩm này.”',
-  ],
-  phoneUtilities: [
-    { id: 'shop', label: 'Mua sắm', targetTab: 'sync' as TechnologyExperienceId },
-    { id: 'discover', label: 'Khám phá sản phẩm', targetTab: 'data' as TechnologyExperienceId },
-    { id: 'trace', label: 'Truy xuất nguồn gốc', targetTab: 'data' as TechnologyExperienceId },
-    { id: 'store', label: 'Tìm điểm bán', targetTab: 'sync' as TechnologyExperienceId },
-    { id: 'member', label: 'Ưu đãi & thành viên', targetTab: 'personal' as TechnologyExperienceId },
-    { id: 'assistant', label: 'Trợ lý thông minh', targetTab: 'smart' as TechnologyExperienceId },
   ],
 };

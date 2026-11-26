@@ -113,7 +113,7 @@ export const MartPhoneMockup: React.FC<MartPhoneMockupProps> = ({
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Tìm sản phẩm, cửa hàng..."
-              aria-label="Tìm sản phẩm hoặc điểm bán minh họa"
+              aria-label="Tìm sản phẩm hoặc điểm bán ADIGO Mart"
               className="w-full h-7 pl-7 pr-2.5 rounded-full bg-[#F2F7FB] border border-[#E1ECF4] text-[10px] text-[#112D52] placeholder:text-[#7A8EA3] focus:outline-none focus:border-[#4C9DC6]"
             />
           </div>
@@ -166,7 +166,7 @@ export const MartPhoneMockup: React.FC<MartPhoneMockupProps> = ({
                       Cửa hàng và điểm bán
                     </span>
                     <span className="text-[9px] font-semibold text-[#398441]">
-                      Minh họa
+                      Đang kết nối
                     </span>
                   </div>
 
@@ -230,7 +230,7 @@ export const MartPhoneMockup: React.FC<MartPhoneMockupProps> = ({
                       Đặt hàng trực tuyến
                     </span>
                     <span className="text-[8.5px] font-semibold text-[#345EAA]">
-                      Giỏ minh họa: {cartIds.length}
+                      Giỏ hàng: {cartIds.length}
                     </span>
                   </div>
 
@@ -326,7 +326,7 @@ export const MartPhoneMockup: React.FC<MartPhoneMockupProps> = ({
                       Phương thức nhận hàng
                     </p>
                     <p className="text-[8.5px] text-[#52677D]">
-                      Đơn hàng minh họa · {cartIds.length} sản phẩm
+                      Đơn hàng · {cartIds.length} sản phẩm
                     </p>
                   </div>
                   <Package className="w-4.5 h-4.5 text-[#345EAA]" />
@@ -379,7 +379,7 @@ export const MartPhoneMockup: React.FC<MartPhoneMockupProps> = ({
                 {/* Preparation Steps */}
                 <div className="rounded-[12px] bg-white border border-[#E2ECF4] p-2.5 flex flex-col gap-1.5">
                   <span className="text-[9.5px] font-bold text-[#142F63]">
-                    Trạng thái chuẩn bị minh họa
+                    Trạng thái chuẩn bị đơn hàng
                   </span>
                   {MART_CONFIG.preparationSteps.map((step) => (
                     <div key={step.id} className="flex items-center gap-2">
@@ -429,7 +429,7 @@ export const MartPhoneMockup: React.FC<MartPhoneMockupProps> = ({
                       <span>Điểm bán đã lưu</span>
                     </div>
                     <p className="mt-1 text-[9.5px] font-semibold text-[#142F63] truncate">
-                      Điểm bán minh họa 01
+                      ADIGO Mart – Điểm bán chọn lọc 01
                     </p>
                   </div>
                   <div className="rounded-[12px] bg-white border border-[#E2ECF4] p-2">
