@@ -4,6 +4,7 @@ import { trackEvent } from '../../utils/analytics';
 import { MarketplaceBackground } from './MarketplaceBackground';
 import { SectionIntroduction } from './SectionIntroduction';
 import { MarketplaceShowcase } from './MarketplaceShowcase';
+import { MarketplaceProductCard } from '../product-discovery/MarketplaceProductCard';
 
 export const MarketplaceSection: React.FC = () => {
   const [activeTab, setActiveTab] = useState<MarketplaceTabId>('products');
@@ -31,6 +32,8 @@ export const MarketplaceSection: React.FC = () => {
           activeTab={activeTab}
           onSelectTab={handleSelectTab}
         />
+
+        <MarketplaceProductCard />
       </div>
     </section>
   );

@@ -10,11 +10,13 @@ import {
 interface ConsentBannerProps {
   forceOpen?: boolean;
   onCloseForceOpen?: () => void;
+  onVisibilityChange?: (visible: boolean) => void;
 }
 
 export const ConsentBanner: React.FC<ConsentBannerProps> = ({
   forceOpen = false,
   onCloseForceOpen,
+  onVisibilityChange,
 }) => {
   const [status, setStatus] = useState<ConsentStatus>('unset');
   const [mounted, setMounted] = useState(false);
@@ -28,9 +30,12 @@ export const ConsentBanner: React.FC<ConsentBannerProps> = ({
     }
   }, []);
 
-  if (!mounted) return null;
+  const isVisible = mounted && (forceOpen || status === 'unset');
 
-  const isVisible = forceOpen || status === 'unset';
+  useEffect(() => {
+    onVisibilityChange?.(isVisible);
+  }, [isVisible, onVisibilityChange]);
+
   if (!isVisible) return null;
 
   const handleAccept = () => {

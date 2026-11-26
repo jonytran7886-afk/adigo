@@ -14,6 +14,8 @@ export type AdigoAnalyticsEvent =
   | 'generate_lead'
   | 'app_download_click'
   | 'scroll_depth'
+  | 'product_impression'
+  | 'product_cta_click'
   | 'campaign_banner_view'
   | 'campaign_banner_click'
   | 'preorder_modal_open'

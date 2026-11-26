@@ -59,6 +59,7 @@ var CONFIG = {
     'Thời gian giao dự kiến',    // 22 (Sales updates directly)
     'Ghi chú nội bộ',            // 23 (Sales updates directly)
     'Thời gian cập nhật',        // 24
+    'Điểm tiếp cận (Entry Point)', // 25
   ],
 };
 
@@ -164,6 +165,7 @@ function doPost(e) {
       '',                                         // 22 Thời gian giao dự kiến (do not overwrite)
       '',                                         // 23 Ghi chú nội bộ (do not overwrite)
       registeredAt,                               // 24 Thời gian cập nhật
+      sanitizeFormula_(d.entryPoint),             // 25 Điểm tiếp cận (Entry Point)
     ];
 
     var nextRow = Math.max(sheet.getLastRow() + 1, 2);
@@ -240,6 +242,9 @@ function ensurePreordersSheet_(ss) {
     if (headerEmpty) {
       sheet.getRange(1, 1, 1, CONFIG.HEADERS.length).setValues([CONFIG.HEADERS]);
       formatPreordersSheet_(sheet);
+    } else if (String(currentHeaders[24] || '').trim() === '') {
+      sheet.getRange(1, 25, 1, 1).setValue(CONFIG.HEADERS[24]);
+      sheet.setColumnWidth(25, 190);
     }
   }
 
@@ -292,6 +297,7 @@ function formatPreordersSheet_(sheet) {
     175, // 22 Thời gian giao dự kiến
     240, // 23 Ghi chú nội bộ
     165, // 24 Thời gian cập nhật
+    190, // 25 Điểm tiếp cận (Entry Point)
   ];
 
   for (var i = 0; i < widths.length; i++) {
@@ -470,6 +476,7 @@ function validatePayload_(payload) {
       deliveryMethod: deliveryMethod,
       note: cleanText_(payload.note, 300),
       source: cleanText_(payload.source, 60) || CONFIG.DEFAULT_SOURCE,
+      entryPoint: cleanText_(payload.entryPoint, 50) || 'direct',
       utmSource: cleanText_(payload.utmSource, 80),
       utmMedium: cleanText_(payload.utmMedium, 80),
       utmCampaign: cleanText_(payload.utmCampaign, 80),

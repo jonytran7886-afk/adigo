@@ -117,7 +117,16 @@ export const Footer: React.FC<FooterProps> = ({ onOpenInterest, onOpenInfoDoc })
         {/* Bottom Brand Attribution */}
         <div className="pt-7 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <p className="text-xs sm:text-sm text-[#4A6075]">
-            ADIGO – Sản phẩm công nghệ được phát triển bởi Organic Việt Nam.
+            ADIGO – Sản phẩm công nghệ được phát triển bởi{' '}
+            <a
+              href="https://organicvn.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-[#0C1B2A] hover:text-[#0A74DA] underline underline-offset-4 transition-colors"
+            >
+              Organic Việt Nam
+            </a>
+            .
           </p>
           <OrganicVietnamBadge />
         </div>

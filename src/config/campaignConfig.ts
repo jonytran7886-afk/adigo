@@ -54,11 +54,14 @@ export interface CampaignConfig {
     tagline: string;
     highlights: CampaignHighlight[];
   };
-  bannerAssets: {
-    wholeChickenPlatter: string;
-    vacuumPackedWholeChicken: string;
-    farmLandscape: string;
-    farmCaption: string;
+  bannerMedia: {
+    desktopWebp: string;
+    desktopFallback: string;
+    mobileWebp?: string;
+    mobileFallback?: string;
+    alt: string;
+    width: number;
+    height: number;
   };
   modalAssets: {
     wholeChickenPlatter: string;
@@ -103,9 +106,9 @@ export const CAMPAIGN_CONFIG: CampaignConfig = {
   },
   bannerContent: {
     eyebrow: 'Sản phẩm từ Organic Việt Nam',
-    headline: 'GÀ THỊT',
-    subheadline: 'Được nuôi trồng theo mô hình thảo dược.',
-    tagline: 'Từ vùng nuôi đến bàn ăn gia đình.',
+    headline: 'Gà thịt',
+    subheadline: 'Được nuôi trồng theo mô hình thảo dược',
+    tagline: 'Từ vùng nuôi đến bàn ăn gia đình',
     highlights: [
       { id: 'natural', iconName: 'leaf', label: 'Chăn nuôi tự nhiên' },
       { id: 'controlled', iconName: 'shield', label: 'Kiểm soát chặt chẽ' },
@@ -124,18 +127,20 @@ export const CAMPAIGN_CONFIG: CampaignConfig = {
       { id: 'fresh', iconName: 'utensils', label: 'Thịt gà tươi thơm ngon' },
     ],
   },
-  bannerAssets: {
-    wholeChickenPlatter: '/src/assets/images/chicken_whole_platter_1795655111655.webp',
-    vacuumPackedWholeChicken:
-      '/src/assets/images/chicken_whole_vacuum_pack_1795655111694.webp',
-    farmLandscape: '/src/assets/images/herbal_chicken_farm_1795655112377.webp',
-    farmCaption: 'Vùng nuôi thảo dược',
+  bannerMedia: {
+    desktopWebp: '/src/assets/images/campaign_chicken_visual_1795656758286.webp',
+    desktopFallback: '/src/assets/images/campaign_chicken_visual_1795656758286.jpg',
+    mobileWebp: '',
+    mobileFallback: '',
+    alt: 'Gà thịt nguyên con Organic Việt Nam và bao bì sạch trên nền vùng nuôi thảo dược',
+    width: 1408,
+    height: 768,
   },
   modalAssets: {
-    wholeChickenPlatter: '/src/assets/images/chicken_whole_platter_1795655111655.webp',
+    wholeChickenPlatter: '/src/assets/images/product_whole_chicken_clean_1795656979195.webp',
     farmLandscape: '/src/assets/images/herbal_chicken_farm_1795655112377.webp',
     farmCaption: 'Vùng nuôi thảo dược',
-    productCardThumbnail: '/src/assets/images/chicken_whole_platter_1795655111655.webp',
+    productCardThumbnail: '/src/assets/images/product_whole_chicken_clean_1795656979195.webp',
   },
   product: {
     id: 'CHICKEN-WHOLE',

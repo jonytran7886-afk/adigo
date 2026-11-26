@@ -12,6 +12,7 @@ export interface PreorderRequestPayload {
   deliveryMethod: string;
   note?: string;
   source?: string;
+  entryPoint?: string;
   utmSource?: string;
   utmMedium?: string;
   utmCampaign?: string;
@@ -226,6 +227,7 @@ export function validatePreorderPayload(
       deliveryMethod,
       note: cleanText(body.note, 300),
       source: cleanText(body.source, 60) || 'ADIGO Landing Page',
+      entryPoint: cleanText(body.entryPoint, 50) || 'direct',
       utmSource: cleanText(body.utmSource, 80),
       utmMedium: cleanText(body.utmMedium, 80),
       utmCampaign: cleanText(body.utmCampaign, 80),
@@ -302,6 +304,7 @@ export async function handlePreorderSubmission(
         phone: sanitizeSheetFormula(validated.data.phone),
         address: sanitizeSheetFormula(validated.data.address),
         note: sanitizeSheetFormula(validated.data.note || ''),
+        entryPoint: sanitizeSheetFormula(validated.data.entryPoint || ''),
         utmSource: sanitizeSheetFormula(validated.data.utmSource || ''),
         utmMedium: sanitizeSheetFormula(validated.data.utmMedium || ''),
         utmCampaign: sanitizeSheetFormula(validated.data.utmCampaign || ''),

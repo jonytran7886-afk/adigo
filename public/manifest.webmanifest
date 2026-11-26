@@ -1,7 +1,7 @@
 {
-  "name": "ADIGO – Nền tảng thương mại và tiêu dùng số",
+  "name": "ADIGO – Kết nối sản phẩm, nâng tầm trải nghiệm mua sắm",
   "short_name": "ADIGO",
-  "description": "Khám phá ADIGO, nền tảng kết nối sản phẩm, nhà bán hàng và người tiêu dùng với ADIGO App, Marketplace, Mart và trải nghiệm truy xuất nguồn gốc.",
+  "description": "Khám phá và mua sắm thực phẩm, nông sản từ mô hình nuôi trồng ứng dụng thảo dược. ADIGO kết nối nhà sản xuất, thương hiệu và người tiêu dùng với trải nghiệm mua sắm thuận tiện, minh bạch nguồn gốc.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#EAF5FF",

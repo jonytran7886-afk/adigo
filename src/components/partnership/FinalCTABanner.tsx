@@ -220,7 +220,15 @@ export const FinalCTABanner: React.FC<FinalCTABannerProps> = ({
         <footer className="relative z-10 max-w-[1480px] mx-auto mt-8 pt-4 border-t border-white/18 flex flex-col sm:flex-row items-center justify-between gap-2 text-[11.5px] text-white/80">
           <p>
             ADIGO – Nền tảng thương mại và tiêu dùng số phát triển bởi{' '}
-            <span className="font-semibold text-white">Organic Việt Nam</span>.
+            <a
+              href="https://organicvn.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-white hover:text-[#D9F99D] underline decoration-white/45 hover:decoration-white underline-offset-4 transition-colors"
+            >
+              Organic Việt Nam
+            </a>
+            .
           </p>
           {onOpenConsentSettings && (
             <button

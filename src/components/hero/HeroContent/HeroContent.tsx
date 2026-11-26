@@ -7,14 +7,10 @@ import { HeroActions } from './HeroActions';
 import { FeatureChips } from './FeatureChips';
 
 interface HeroContentProps {
-  onPrimaryCta: () => void;
   onSecondaryCta: () => void;
 }
 
-export const HeroContent: React.FC<HeroContentProps> = ({
-  onPrimaryCta,
-  onSecondaryCta,
-}) => {
+export const HeroContent: React.FC<HeroContentProps> = ({ onSecondaryCta }) => {
   return (
     <div className="flex flex-col items-start">
       <motion.div
@@ -47,10 +43,9 @@ export const HeroContent: React.FC<HeroContentProps> = ({
         transition={{ duration: 0.45, delay: 0.24, ease: [0.16, 1, 0.3, 1] }}
         className="w-full sm:w-auto"
       >
-        <HeroActions onPrimaryClick={onPrimaryCta} onSecondaryClick={onSecondaryCta} />
+        <HeroActions onSecondaryClick={onSecondaryCta} />
       </motion.div>
 
-      {/* Desktop & Tablet inline placement (Mobile places FeatureChips below phones per Section 13) */}
       <motion.div
         initial={{ opacity: 0, y: 14 }}
         animate={{ opacity: 1, y: 0 }}

@@ -19,11 +19,15 @@ import { ConsentCheckbox } from './modal/ConsentCheckbox';
 import { SubmitButton } from './modal/SubmitButton';
 import { SuccessScreen } from './modal/SuccessScreen';
 
+import { ProductEntryPoint } from '../../config/productDiscoveryConfig';
+
 interface PreorderModalProps {
   isOpen: boolean;
+  entryPoint: ProductEntryPoint;
   config: CampaignConfig;
   restoreFocusRef: React.RefObject<HTMLButtonElement | null>;
   onClose: () => void;
+  onSuccessSubmitted?: () => void;
 }
 
 function createInitialValues(config: CampaignConfig): PreorderFormValues {
@@ -41,9 +45,11 @@ function createInitialValues(config: CampaignConfig): PreorderFormValues {
 
 export const PreorderModal: React.FC<PreorderModalProps> = ({
   isOpen,
+  entryPoint,
   config,
   restoreFocusRef,
   onClose,
+  onSuccessSubmitted,
 }) => {
   const [values, setValues] = useState<PreorderFormValues>(() =>
     createInitialValues(config)
@@ -133,6 +139,7 @@ export const PreorderModal: React.FC<PreorderModalProps> = ({
     hasStartedFormRef.current = true;
     const utm = extractUtmMetadata();
     trackEvent('preorder_form_start', {
+      entry_point: entryPoint,
       campaign_id: config.campaignId,
       product_id: config.product.id,
       utm_source: utm.utmSource || undefined,
@@ -161,6 +168,7 @@ export const PreorderModal: React.FC<PreorderModalProps> = ({
     handleFirstInteract();
     handleFieldChange('quantity', nextQuantity);
     trackEvent('preorder_quantity_change', {
+      entry_point: entryPoint,
       campaign_id: config.campaignId,
       product_id: config.product.id,
       quantity: nextQuantity,
@@ -176,6 +184,7 @@ export const PreorderModal: React.FC<PreorderModalProps> = ({
       setFieldErrors(validationErrors);
       setSubmitError(Object.values(validationErrors)[0]);
       trackEvent('preorder_submit_error', {
+        entry_point: entryPoint,
         campaign_id: config.campaignId,
         product_id: config.product.id,
         error_code: 'CLIENT_VALIDATION',
@@ -189,6 +198,7 @@ export const PreorderModal: React.FC<PreorderModalProps> = ({
 
     const utm = extractUtmMetadata();
     trackEvent('preorder_form_submit', {
+      entry_point: entryPoint,
       campaign_id: config.campaignId,
       product_id: config.product.id,
       quantity: values.quantity,
@@ -198,7 +208,7 @@ export const PreorderModal: React.FC<PreorderModalProps> = ({
       utm_campaign: utm.utmCampaign || undefined,
     });
 
-    const result = await submitPreorder(values, requestIdRef.current);
+    const result = await submitPreorder(values, requestIdRef.current, entryPoint);
     setIsSubmitting(false);
 
     if (result.ok === false) {
@@ -207,6 +217,7 @@ export const PreorderModal: React.FC<PreorderModalProps> = ({
       }
       setSubmitError(result.message);
       trackEvent('preorder_submit_error', {
+        entry_point: entryPoint,
         campaign_id: config.campaignId,
         product_id: config.product.id,
         error_code: result.error,
@@ -217,6 +228,7 @@ export const PreorderModal: React.FC<PreorderModalProps> = ({
     // Fire generate_lead strictly AFTER verified Google Sheets write
     trackEvent('generate_lead', {
       lead_type: 'campaign_preorder',
+      entry_point: entryPoint,
       campaign_id: config.campaignId,
       product_id: config.product.id,
       quantity: values.quantity,
@@ -225,6 +237,7 @@ export const PreorderModal: React.FC<PreorderModalProps> = ({
       utm_campaign: utm.utmCampaign || undefined,
     });
 
+    onSuccessSubmitted?.();
     setSuccessData(result);
   };
 

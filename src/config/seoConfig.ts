@@ -12,9 +12,10 @@ export interface SectionSeoTopic {
   relatedKeywords: string[];
 }
 
-const DEFAULT_TITLE = 'ADIGO – Nền tảng thương mại và tiêu dùng số';
+const PRODUCTION_SITE_ORIGIN = 'https://adigo.organicvn.com';
+const DEFAULT_TITLE = 'ADIGO – Kết nối sản phẩm, nâng tầm trải nghiệm mua sắm';
 const DEFAULT_DESCRIPTION =
-  'Khám phá ADIGO, nền tảng kết nối sản phẩm, nhà bán hàng và người tiêu dùng với ADIGO App, Marketplace, Mart và trải nghiệm truy xuất nguồn gốc.';
+  'Khám phá và mua sắm thực phẩm, nông sản từ mô hình nuôi trồng ứng dụng thảo dược. ADIGO kết nối nhà sản xuất, thương hiệu và người tiêu dùng với trải nghiệm mua sắm thuận tiện, minh bạch nguồn gốc.';
 
 function normalizeBaseUrl(rawUrl?: string): string {
   if (!rawUrl) return '';
@@ -39,12 +40,7 @@ export function resolveSiteOrigin(): string {
   const envUrl = normalizeBaseUrl(import.meta.env.VITE_SITE_URL);
   if (envUrl) return envUrl;
 
-  if (typeof window !== 'undefined' && window.location?.origin) {
-    const runtimeOrigin = normalizeBaseUrl(window.location.origin);
-    if (runtimeOrigin) return runtimeOrigin;
-  }
-
-  return '';
+  return PRODUCTION_SITE_ORIGIN;
 }
 
 export function resolveCanonicalUrl(pathname = '/'): string {
@@ -61,6 +57,7 @@ export function isIndexingAllowed(): boolean {
 export const SEO_CONFIG = {
   brandName: 'ADIGO',
   parentBrandName: 'Organic Việt Nam',
+  parentBrandUrl: 'https://organicvn.com',
   siteName: 'ADIGO',
   locale: 'vi_VN',
   language: 'vi',
@@ -68,7 +65,8 @@ export const SEO_CONFIG = {
   defaultTitle: DEFAULT_TITLE,
   defaultDescription: DEFAULT_DESCRIPTION,
   ogImagePath: '/og-adigo.jpg',
-  ogImageAlt: 'ADIGO – Nền tảng thương mại và tiêu dùng số kết nối App, Marketplace, Mart và truy xuất nguồn gốc',
+  ogImageAlt:
+    'ADIGO – Kết nối sản phẩm, nâng tầm trải nghiệm mua sắm với thực phẩm tươi sống và nông sản minh bạch nguồn gốc',
   logoIconPath: '/assets/aistudio/ADIGO_Icon_Nen_Trang_512_4639cde4.png',
   logoHorizontalPath: '/assets/aistudio/ADIGO_Ngang_2400px_872a9a4e.png',
   verification: {
@@ -242,6 +240,7 @@ export function buildStructuredDataGraph(siteOrigin?: string): Record<string, un
     parentOrganization: {
       '@type': 'Organization',
       name: SEO_CONFIG.parentBrandName,
+      url: SEO_CONFIG.parentBrandUrl,
     },
   };
 

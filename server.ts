@@ -1,6 +1,7 @@
 import 'dotenv/config';
 import express from 'express';
 import fs from 'fs';
+import http from 'http';
 import path from 'path';
 import {
   handlePreorderSubmission,
@@ -9,9 +10,53 @@ import {
 
 const PORT = Number(process.env.PORT || 3000);
 const IS_PROD = process.env.NODE_ENV === 'production';
+const IS_HMR_DISABLED =
+  process.env.DISABLE_HMR === 'true' ||
+  Boolean(process.env.APPLET_ID || process.env.K_SERVICE);
+
+const NOOP_VITE_CLIENT = `const sheetsMap = new Map();
+export function updateStyle(id, content) {
+  if (typeof document === 'undefined') return;
+  let style = sheetsMap.get(id);
+  if (!style) {
+    style = document.createElement('style');
+    style.setAttribute('type', 'text/css');
+    style.setAttribute('data-vite-dev-id', id);
+    style.textContent = content;
+    document.head.appendChild(style);
+    sheetsMap.set(id, style);
+  } else if (style.textContent !== content) {
+    style.textContent = content;
+  }
+}
+export function removeStyle(id) {
+  const style = sheetsMap.get(id);
+  if (style) {
+    style.remove();
+    sheetsMap.delete(id);
+  }
+}
+export function createHotContext() {
+  return {
+    accept() {},
+    dispose() {},
+    prune() {},
+    invalidate() {},
+    on() {},
+    off() {},
+    send() {},
+    data: {},
+  };
+}
+export function injectQuery(url) {
+  return url;
+}
+export class ErrorOverlay extends HTMLElement {}
+`;
 
 async function startServer() {
   const app = express();
+  const httpServer = http.createServer(app);
   app.set('trust proxy', true);
   app.use(express.json({ limit: '16kb' }));
 
@@ -38,9 +83,28 @@ async function startServer() {
   });
 
   if (!IS_PROD) {
+    if (IS_HMR_DISABLED) {
+      app.get('/@vite/client', (_req, res) => {
+        res.setHeader('Content-Type', 'application/javascript; charset=utf-8');
+        res.setHeader('Cache-Control', 'no-store');
+        res.send(NOOP_VITE_CLIENT);
+      });
+    }
+
     const { createServer: createViteServer } = await import('vite');
     const vite = await createViteServer({
-      server: { middlewareMode: true },
+      server: IS_HMR_DISABLED
+        ? {
+            middlewareMode: true,
+            hmr: false,
+            ws: false,
+            watch: null,
+          }
+        : {
+            middlewareMode: true,
+            hmr: { server: httpServer },
+            ws: { server: httpServer },
+          },
       appType: 'spa',
     });
     app.use(vite.middlewares);
@@ -59,7 +123,7 @@ async function startServer() {
     }
   }
 
-  app.listen(PORT, '0.0.0.0', () => {
+  httpServer.listen(PORT, '0.0.0.0', () => {
     console.info(`[adigo] Server listening on http://0.0.0.0:${PORT}`);
   });
 }

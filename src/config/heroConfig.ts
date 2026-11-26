@@ -33,8 +33,8 @@ export const HERO_CONFIG = {
     headlineLine2Highlight: 'trải nghiệm.',
     description:
       'Khám phá, mua sắm và kết nối với những sản phẩm bạn quan tâm trên một nền tảng thông minh, thuận tiện và minh bạch.',
-    primaryCta: 'Khám phá ADIGO',
-    secondaryCta: 'Tìm hiểu ứng dụng',
+    primaryCta: 'Đặt mua ngay',
+    secondaryCta: 'Khám phá ADIGO',
     headerCta: 'Trải nghiệm ADIGO',
   },
   featureChips: [

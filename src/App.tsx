@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { MotionConfig } from 'motion/react';
 import { HeroSection } from './components/hero/HeroSection';
 import { ExploreSection } from './components/explore/ExploreSection';
-import { CampaignModule } from './components/campaign/CampaignModule';
+import { ProductDiscoveryModule } from './components/product-discovery/ProductDiscoveryModule';
 import { AdigoAppSection } from './components/app-section/AdigoAppSection';
 import { MarketplaceSection } from './components/marketplace/MarketplaceSection';
 import { AdigoMartSection } from './components/mart/AdigoMartSection';
@@ -20,6 +20,7 @@ export default function App() {
   const [modalMode, setModalMode] = useState<HeroModalMode>(null);
   const [selectedTopic, setSelectedTopic] = useState<string | undefined>(undefined);
   const [consentOpen, setConsentOpen] = useState(false);
+  const [isConsentVisible, setIsConsentVisible] = useState(false);
 
   const trackedMilestonesRef = useRef<Set<number>>(new Set());
   const trackedAppViewRef = useRef(false);
@@ -99,20 +100,12 @@ export default function App() {
     }
   };
 
-  const handlePrimaryExploreCta = () => {
+  const handleExploreCta = () => {
     trackEvent('explore_adigo_click', {
-      cta_location: 'hero',
+      cta_location: 'hero_secondary',
       target_section: 'explore',
     });
     scrollToSection('explore');
-  };
-
-  const handleSecondaryAppCta = () => {
-    trackEvent('explore_adigo_click', {
-      cta_location: 'hero_secondary',
-      target_section: 'app',
-    });
-    scrollToSection('app');
   };
 
   const handleOpenPartnerRegistration = () => {
@@ -128,34 +121,33 @@ export default function App() {
     <MotionConfig reducedMotion="user">
       <SeoHead pathname="/" />
       <div className="min-h-screen bg-[#EAF5FF] text-[#112D52]">
-        <main>
-          <HeroSection
-            activeNav={activeNav}
-            onSelectNav={handleSelectNav}
-            onPrimaryCta={handlePrimaryExploreCta}
-            onSecondaryCta={handleSecondaryAppCta}
-          />
+        <ProductDiscoveryModule isConsentVisible={isConsentVisible}>
+          <main>
+            <HeroSection
+              activeNav={activeNav}
+              onSelectNav={handleSelectNav}
+              onExploreCta={handleExploreCta}
+            />
 
-          <CampaignModule />
+            <ExploreSection />
 
-          <ExploreSection />
+            <AdigoAppSection />
 
-          <AdigoAppSection />
+            <MarketplaceSection />
 
-          <MarketplaceSection />
+            <AdigoMartSection />
 
-          <AdigoMartSection />
+            <TraceabilitySection />
 
-          <TraceabilitySection />
+            <TechnologySection />
 
-          <TechnologySection />
-
-          <PartnershipSection
-            onPartnerCta={handleOpenPartnerRegistration}
-            onExploreApp={() => scrollToSection('app')}
-            onOpenConsentSettings={() => setConsentOpen(true)}
-          />
-        </main>
+            <PartnershipSection
+              onPartnerCta={handleOpenPartnerRegistration}
+              onExploreApp={() => scrollToSection('app')}
+              onOpenConsentSettings={() => setConsentOpen(true)}
+            />
+          </main>
+        </ProductDiscoveryModule>
 
         <HeroPreviewModal
           mode={modalMode}
@@ -167,6 +159,7 @@ export default function App() {
         <ConsentBanner
           forceOpen={consentOpen}
           onCloseForceOpen={() => setConsentOpen(false)}
+          onVisibilityChange={setIsConsentVisible}
         />
       </div>
     </MotionConfig>

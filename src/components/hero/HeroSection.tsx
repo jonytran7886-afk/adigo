@@ -8,15 +8,13 @@ import { ProductShowcase } from './ProductShowcase/ProductShowcase';
 interface HeroSectionProps {
   activeNav: string;
   onSelectNav: (id: string) => void;
-  onPrimaryCta: () => void;
-  onSecondaryCta: () => void;
+  onExploreCta: () => void;
 }
 
 export const HeroSection: React.FC<HeroSectionProps> = ({
   activeNav,
   onSelectNav,
-  onPrimaryCta,
-  onSecondaryCta,
+  onExploreCta,
 }) => {
   return (
     <section
@@ -31,7 +29,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       <Header
         activeNav={activeNav}
         onSelectNav={onSelectNav}
-        onOpenExperience={onPrimaryCta}
+        onOpenExperience={onExploreCta}
       />
 
       {/* Layer 04 & 05: Hero Main Grid (42% Left Content / 58% Right Showcase) */}
@@ -40,17 +38,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 items-center">
             {/* Left ~42% (5 of 12 cols) */}
             <div className="lg:col-span-5">
-              <HeroContent
-                onPrimaryCta={onPrimaryCta}
-                onSecondaryCta={onSecondaryCta}
-              />
+              <HeroContent onSecondaryCta={onExploreCta} />
             </div>
 
             {/* Right ~58% (7 of 12 cols) */}
             <div className="lg:col-span-7 flex flex-col items-center">
-              <ProductShowcase onExploreTap={onPrimaryCta} />
+              <ProductShowcase onExploreTap={onExploreCta} />
 
-              {/* Mobile Feature Chips rendered below smartphones per Section 13 order */}
+              {/* Mobile Feature Chips rendered below smartphones */}
               <div className="md:hidden w-full mt-4 flex justify-center">
                 <FeatureChips />
               </div>

@@ -110,7 +110,8 @@ export function validatePreorderForm(
 
 export async function submitPreorder(
   values: PreorderFormValues,
-  requestId: string
+  requestId: string,
+  entryPoint?: string
 ): Promise<PreorderSubmitSuccess | PreorderSubmitFailure> {
   const utm = extractUtmMetadata();
 
@@ -128,6 +129,7 @@ export async function submitPreorder(
     deliveryMethod: values.deliveryMethod,
     note: values.note.trim(),
     source: CAMPAIGN_CONFIG.sourceName,
+    entryPoint: (entryPoint || '').trim(),
     utmSource: utm.utmSource,
     utmMedium: utm.utmMedium,
     utmCampaign: utm.utmCampaign,

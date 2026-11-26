@@ -78,6 +78,7 @@ export const SeoHead: React.FC<SeoHeadProps> = ({
       }
       link.setAttribute('href', canonicalUrl);
       upsertMetaTag('property', 'og:url', canonicalUrl);
+      upsertMetaTag('name', 'twitter:url', canonicalUrl);
     }
 
     upsertMetaTag('property', 'og:type', 'website');
@@ -86,6 +87,8 @@ export const SeoHead: React.FC<SeoHeadProps> = ({
     upsertMetaTag('property', 'og:title', title);
     upsertMetaTag('property', 'og:description', description);
     upsertMetaTag('property', 'og:image', ogImageUrl);
+    upsertMetaTag('property', 'og:image:secure_url', ogImageUrl);
+    upsertMetaTag('property', 'og:image:type', 'image/jpeg');
     upsertMetaTag('property', 'og:image:width', '1200');
     upsertMetaTag('property', 'og:image:height', '630');
     upsertMetaTag('property', 'og:image:alt', SEO_CONFIG.ogImageAlt);

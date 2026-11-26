@@ -33,7 +33,12 @@ export const AdigoLogo: React.FC<LogoProps> = ({
 
 export const OrganicVietnamBadge: React.FC<{ className?: string }> = ({ className = '' }) => {
   return (
-    <span className={`inline-flex items-center gap-2 text-xs text-[#4A6075] ${className}`}>
+    <a
+      href="https://organicvn.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`inline-flex items-center gap-2 text-xs text-[#4A6075] hover:text-[#0A74DA] transition-colors ${className}`}
+    >
       <svg
         width="18"
         height="18"
@@ -57,6 +62,6 @@ export const OrganicVietnamBadge: React.FC<{ className?: string }> = ({ classNam
         />
       </svg>
       <span className="font-medium text-[#0C1B2A]">Organic Việt Nam</span>
-    </span>
+    </a>
   );
 };
