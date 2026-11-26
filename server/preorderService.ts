@@ -42,9 +42,11 @@ const ALLOWED_DELIVERY_METHODS = new Set([
 ]);
 
 const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000;
-const RATE_LIMIT_MAX_REQUESTS = Number(
-  process.env.CAMPAIGN_PREORDER_RATE_LIMIT || '10'
-);
+export interface PreorderEnvironment {
+  GOOGLE_APPS_SCRIPT_WEBHOOK_URL?: string;
+  PREORDER_WEBHOOK_SECRET?: string;
+  CAMPAIGN_PREORDER_RATE_LIMIT?: string;
+}
 const IDEMPOTENCY_TTL_MS = 30 * 60 * 1000;
 
 interface RateEntry {
@@ -91,13 +93,13 @@ export function isValidVietnamesePhone(normalized: string): boolean {
   return /^0(3|5|7|8|9)\d{8}$/.test(normalized);
 }
 
-function checkRateLimit(clientIp: string): boolean {
+function checkRateLimit(clientIp: string, limit: number): boolean {
   const now = Date.now();
   const key = clientIp || 'unknown';
   const current = rateBuckets.get(key) || { timestamps: [] };
   const recent = current.timestamps.filter((ts) => now - ts < RATE_LIMIT_WINDOW_MS);
 
-  if (recent.length >= RATE_LIMIT_MAX_REQUESTS) {
+  if (recent.length >= limit) {
     rateBuckets.set(key, { timestamps: recent });
     return false;
   }
@@ -236,16 +238,20 @@ export function validatePreorderPayload(
   };
 }
 
-export function isGoogleSheetsConfigured(): boolean {
-  const url = (process.env.GOOGLE_APPS_SCRIPT_WEBHOOK_URL || '').trim();
-  return Boolean(url && url.startsWith('https://'));
+export function isGoogleSheetsConfigured(env: PreorderEnvironment = process.env): boolean {
+  const url = (env.GOOGLE_APPS_SCRIPT_WEBHOOK_URL || '').trim();
+  return /^https:\/\/script\.google\.com\/macros\/s\/[^/]+\/exec$/.test(url)
+    && Boolean(env.PREORDER_WEBHOOK_SECRET?.trim());
 }
 
 export async function handlePreorderSubmission(
   rawBody: unknown,
-  clientIp: string
+  clientIp: string,
+  env: PreorderEnvironment = process.env
 ): Promise<{ statusCode: number; body: PreorderSuccessResult | PreorderErrorResult }> {
-  if (!checkRateLimit(clientIp)) {
+  const configuredLimit = Number(env.CAMPAIGN_PREORDER_RATE_LIMIT || '10');
+  const limit = Number.isFinite(configuredLimit) && configuredLimit > 0 ? configuredLimit : 10;
+  if (!checkRateLimit(clientIp, limit)) {
     return {
       statusCode: 429,
       body: {
@@ -264,15 +270,15 @@ export async function handlePreorderSubmission(
     };
   }
 
-  const webhookUrl = (process.env.GOOGLE_APPS_SCRIPT_WEBHOOK_URL || '').trim();
-  if (!webhookUrl || !webhookUrl.startsWith('https://script.google.com/')) {
+  const webhookUrl = (env.GOOGLE_APPS_SCRIPT_WEBHOOK_URL || '').trim();
+  if (!isGoogleSheetsConfigured(env)) {
     return {
       statusCode: 503,
       body: {
         ok: false,
         error: 'GOOGLE_SHEETS_NOT_CONFIGURED',
         message:
-          'Hệ thống tiếp nhận Google Sheets chưa được kết nối (thiếu GOOGLE_APPS_SCRIPT_WEBHOOK_URL). Vui lòng hoàn tất cấu hình Google Apps Script trước khi nhận đặt trước.',
+          'Hệ thống đặt trước đang được thiết lập. Vui lòng thử lại sau.',
       },
     };
   }
@@ -308,7 +314,7 @@ export async function handlePreorderSubmission(
         utmSource: sanitizeSheetFormula(validated.data.utmSource || ''),
         utmMedium: sanitizeSheetFormula(validated.data.utmMedium || ''),
         utmCampaign: sanitizeSheetFormula(validated.data.utmCampaign || ''),
-        webhookSecret: (process.env.PREORDER_WEBHOOK_SECRET || '').trim(),
+        webhookSecret: (env.PREORDER_WEBHOOK_SECRET || '').trim(),
       };
 
       const upstreamRes = await fetch(webhookUrl, {

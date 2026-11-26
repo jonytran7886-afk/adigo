@@ -118,14 +118,14 @@ export const ProductPreview: React.FC<ProductPreviewProps> = ({ config }) => {
           <div className="relative -mt-8 sm:-mt-10 px-3 pb-3 flex items-end gap-3">
             <div className="w-full rounded-[18px] overflow-hidden border-2 border-white/85 shadow-lg bg-[#F7EFE4]">
               <ResponsiveImage
-                src={modalAssets.wholeChickenPlatter}
-                alt="Gà thịt nguyên con Organic Việt Nam"
+                src={modalAssets.chickenPhoto}
+                alt="Con gà trên đồng cỏ tại vùng nuôi thảo dược Organic Việt Nam"
                 width={960}
-                height={720}
+                height={540}
                 loading="lazy"
                 decoding="async"
                 referrerPolicy="no-referrer"
-                className="w-full h-32 sm:h-40 lg:h-44 object-cover object-center"
+                className="w-full aspect-video object-cover object-center"
               />
             </div>
           </div>

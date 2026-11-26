@@ -64,7 +64,7 @@ export interface CampaignConfig {
     height: number;
   };
   modalAssets: {
-    wholeChickenPlatter: string;
+    chickenPhoto: string;
     farmLandscape: string;
     farmCaption: string;
     productCardThumbnail: string;
@@ -107,7 +107,7 @@ export const CAMPAIGN_CONFIG: CampaignConfig = {
   bannerContent: {
     eyebrow: 'Sản phẩm từ Organic Việt Nam',
     headline: 'Gà thịt',
-    subheadline: 'Được nuôi trồng theo mô hình thảo dược',
+    subheadline: 'Được nuôi dưỡng theo mô hình thảo dược',
     tagline: 'Từ vùng nuôi đến bàn ăn gia đình',
     highlights: [
       { id: 'natural', iconName: 'leaf', label: 'Chăn nuôi tự nhiên' },
@@ -119,7 +119,7 @@ export const CAMPAIGN_CONFIG: CampaignConfig = {
   modalPreviewContent: {
     eyebrow: 'Sản phẩm từ Organic Việt Nam',
     headline: 'Gà thịt',
-    subheadline: 'Được nuôi trồng theo mô hình thảo dược',
+    subheadline: 'Được nuôi dưỡng theo mô hình thảo dược',
     tagline: 'Từ vùng nuôi đến bàn ăn gia đình.',
     highlights: [
       { id: 'natural', iconName: 'leaf', label: 'Chăn nuôi tự nhiên' },
@@ -128,19 +128,19 @@ export const CAMPAIGN_CONFIG: CampaignConfig = {
     ],
   },
   bannerMedia: {
-    desktopWebp: '/src/assets/images/campaign_chicken_visual_1795656758286.webp',
-    desktopFallback: '/src/assets/images/campaign_chicken_visual_1795656758286.jpg',
+    desktopWebp: '/src/assets/images/breed_ga_kien_1795658558247.webp',
+    desktopFallback: '/src/assets/images/breed_ga_kien_1795658558247.jpg',
     mobileWebp: '',
     mobileFallback: '',
-    alt: 'Gà thịt nguyên con Organic Việt Nam và bao bì sạch trên nền vùng nuôi thảo dược',
-    width: 1408,
+    alt: 'Con gà trên đồng cỏ tại vùng nuôi thảo dược Organic Việt Nam',
+    width: 1376,
     height: 768,
   },
   modalAssets: {
-    wholeChickenPlatter: '/src/assets/images/product_whole_chicken_clean_1795656979195.webp',
+    chickenPhoto: '/src/assets/images/breed_ga_kien_1795658558247.webp',
     farmLandscape: '/src/assets/images/herbal_chicken_farm_1795655112377.webp',
     farmCaption: 'Vùng nuôi thảo dược',
-    productCardThumbnail: '/src/assets/images/product_whole_chicken_clean_1795656979195.webp',
+    productCardThumbnail: '/src/assets/images/breed_ga_kien_1795658558247.webp',
   },
   product: {
     id: 'CHICKEN-WHOLE',

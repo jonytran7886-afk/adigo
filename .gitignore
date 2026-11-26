@@ -1,5 +1,7 @@
 node_modules/
 public/assets/responsive/
+.wrangler/
+.dev.vars*
 build/
 dist/
 coverage/

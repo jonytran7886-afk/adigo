@@ -73,6 +73,35 @@ CAMPAIGN_PREORDER_RATE_LIMIT=10
 
 ## Bước 5: Chạy và triển khai API `/api/preorders`
 
+### Cloudflare Workers (website adigo.organicvn.com)
+
+Không triển khai riêng thư mục `dist` bằng chế độ chỉ phục vụ assets: chế độ đó
+không chạy `server.ts` hoặc `api/preorders.ts`, nên `/api/preorders` sẽ không có API.
+
+Repository có `worker.ts` và `wrangler.jsonc` để phục vụ API cùng website:
+
+- Build command: `npm run build`.
+- Deploy command: `npx wrangler deploy` (giữ cấu hình Wrangler trong repository).
+- Trong **Worker → Settings → Variables and Secrets**, đặt hai secret runtime:
+  `GOOGLE_APPS_SCRIPT_WEBHOOK_URL` (URL `/exec` đã triển khai ở Bước 3) và
+  `PREORDER_WEBHOOK_SECRET` (trùng `WEBHOOK_SECRET` trong Apps Script).
+- Không chỉ đặt hai giá trị này trong biến môi trường của bước build; API cần
+  đọc chúng khi xử lý yêu cầu trên Worker. Không dùng tiền tố `VITE_`.
+- `CAMPAIGN_PREORDER_RATE_LIMIT` là biến runtime tùy chọn, mặc định `10`.
+- Sau triển khai, `/api/preorders/health` phải trả JSON
+  `{"ok":true,"configured":true}`. Nếu nhận HTML thì Worker chưa được triển khai
+  hoặc route API đang bị cấu hình phục vụ website tĩnh; nếu `configured:false`
+  thì kiểm tra URL webhook và secret runtime.
+
+Health check chỉ xác nhận có cấu hình đúng định dạng. Để xác nhận quyền ghi
+Google Sheets và webhook hoạt động, cần kiểm tra một đơn đặt trước thực tế theo
+Bước 6. Kiểm thử tự động dùng dữ liệu mô phỏng và không ghi lên Google Sheets:
+`node --import tsx --test tests/preorder.test.ts`.
+
+Giới hạn tốc độ và bộ nhớ chống gửi trùng trong Worker chỉ áp dụng trong mỗi
+isolate; Apps Script tiếp tục chịu trách nhiệm chống ghi trùng theo `requestId`
+trên Google Sheets.
+
 ### Cách A: Hosting Node.js Full-Stack (khuyến nghị — có sẵn `server.ts`)
 - Chế độ phát triển: `npm run dev` (chạy `tsx server.ts`, tự phục vụ `/api/preorders` + Vite HMR/middleware).
 - Build & chạy production:

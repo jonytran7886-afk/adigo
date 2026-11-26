@@ -32,11 +32,11 @@ export const PRODUCT_DISCOVERY_CONFIG = {
   campaignId: 'CHICKEN-PREORDER',
   productId: 'CHICKEN-WHOLE',
   productImage: {
-    webp: '/src/assets/images/product_whole_chicken_clean_1795656979195.webp',
-    fallback: '/src/assets/images/product_whole_chicken_clean_1795656979195.jpg',
-    alt: 'Thịt gà nguyên con đã làm sạch, dáng thon gọn, màu da tự nhiên',
-    width: 1200,
-    height: 900,
+    webp: '/src/assets/images/breed_ga_kien_1795658558247.webp',
+    fallback: '/src/assets/images/breed_ga_kien_1795658558247.jpg',
+    alt: 'Con gà trên đồng cỏ tại vùng nuôi thảo dược',
+    width: 1376,
+    height: 768,
   },
   marketplaceSection: {
     products: [

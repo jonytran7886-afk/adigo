@@ -144,14 +144,23 @@ export async function submitPreorder(
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(body),
+      signal: AbortSignal.timeout(25000),
     });
+
+    if (!response.headers.get('Content-Type')?.includes('application/json')) {
+      return {
+        ok: false,
+        error: 'API_UNAVAILABLE',
+        message: 'Hệ thống đặt trước hiện chưa sẵn sàng. Thông tin bạn nhập vẫn được giữ nguyên, vui lòng thử lại sau.',
+      };
+    }
 
     const data = (await response.json().catch(() => null)) as
       | PreorderSubmitSuccess
       | PreorderSubmitFailure
       | null;
 
-    if (!response.ok || !data || data.ok !== true) {
+    if (!response.ok || !data || data.ok !== true || typeof data.orderCode !== 'string' || !data.orderCode.trim()) {
       return {
         ok: false,
         error: data && !data.ok ? data.error : 'REQUEST_FAILED',
