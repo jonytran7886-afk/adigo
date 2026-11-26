@@ -20,6 +20,9 @@ export const TraceabilityVisual: React.FC = () => {
         <img
           src={EXPLORE_CONFIG.assets.traceabilityProduce}
           alt=""
+          width={960}
+          height={717}
+          decoding="async"
           referrerPolicy="no-referrer"
           loading="lazy"
           className="w-full h-full object-cover object-right"

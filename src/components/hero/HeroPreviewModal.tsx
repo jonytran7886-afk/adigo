@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { X, CheckCircle2, AlertCircle, Smartphone, Compass, QrCode, ArrowRight } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { X, CheckCircle2, AlertCircle, Smartphone, Compass, QrCode, ArrowRight, ExternalLink } from 'lucide-react';
 import { BrandLogo } from './Header/BrandLogo';
+import { SEO_CONFIG } from '../../config/seoConfig';
+import { trackEvent } from '../../utils/analytics';
 
 export type HeroModalMode = 'register' | 'app-tour' | null;
 
@@ -22,13 +24,24 @@ export const HeroPreviewModal: React.FC<HeroPreviewModalProps> = ({
   const [role, setRole] = useState<'consumer' | 'seller' | 'partner'>('consumer');
   const [error, setError] = useState('');
   const [submitted, setSubmitted] = useState(false);
+  const formStartedRef = useRef(false);
 
   useEffect(() => {
     setSubmitted(false);
     setError('');
+    formStartedRef.current = false;
   }, [mode, selectedTopic]);
 
   if (!mode) return null;
+
+  const markFormStarted = () => {
+    if (formStartedRef.current) return;
+    formStartedRef.current = true;
+    trackEvent('partner_form_start', {
+      topic: selectedTopic || 'general',
+      lead_role: role,
+    });
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -46,6 +59,11 @@ export const HeroPreviewModal: React.FC<HeroPreviewModalProps> = ({
     }
 
     setSubmitted(true);
+    trackEvent('generate_lead', {
+      lead_role: role,
+      topic: selectedTopic || 'general',
+      form_location: 'hero_preview_modal',
+    });
   };
 
   return (
@@ -112,7 +130,35 @@ export const HeroPreviewModal: React.FC<HeroPreviewModalProps> = ({
               })}
             </div>
 
-            <div className="mt-6 flex items-center justify-end gap-3">
+            <div className="mt-6 flex flex-wrap items-center justify-end gap-3">
+              {SEO_CONFIG.storeLinks.appStore && (
+                <a
+                  href={SEO_CONFIG.storeLinks.appStore}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() =>
+                    trackEvent('app_download_click', { store: 'app_store' })
+                  }
+                  className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-[#EAF5FF] text-[#142F63] text-xs font-semibold hover:bg-[#DCEEFF] transition-colors"
+                >
+                  <span>App Store</span>
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+              )}
+              {SEO_CONFIG.storeLinks.googlePlay && (
+                <a
+                  href={SEO_CONFIG.storeLinks.googlePlay}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() =>
+                    trackEvent('app_download_click', { store: 'google_play' })
+                  }
+                  className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-[#E8F8F0] text-[#247A4B] text-xs font-semibold hover:bg-[#D4F2E3] transition-colors"
+                >
+                  <span>Google Play</span>
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+              )}
               <button
                 type="button"
                 onClick={onClose}
@@ -152,7 +198,10 @@ export const HeroPreviewModal: React.FC<HeroPreviewModalProps> = ({
                 <button
                   key={tab.id}
                   type="button"
-                  onClick={() => setRole(tab.id)}
+                  onClick={() => {
+                    setRole(tab.id);
+                    markFormStarted();
+                  }}
                   className={`py-2 px-2 rounded-xl text-xs font-semibold transition-colors cursor-pointer ${
                     role === tab.id
                       ? 'bg-white text-[#142F63] shadow-xs'
@@ -173,7 +222,11 @@ export const HeroPreviewModal: React.FC<HeroPreviewModalProps> = ({
                   id="hero-reg-name"
                   type="text"
                   value={name}
-                  onChange={(e) => setName(e.target.value)}
+                  onFocus={markFormStarted}
+                  onChange={(e) => {
+                    markFormStarted();
+                    setName(e.target.value);
+                  }}
                   placeholder="Nguyễn Minh Anh"
                   className="w-full px-4 py-2.5 rounded-xl bg-white border border-[#D4E3F0] focus:border-[#345EAA] focus:outline-none text-sm text-[#112D52]"
                   required
@@ -188,7 +241,11 @@ export const HeroPreviewModal: React.FC<HeroPreviewModalProps> = ({
                   id="hero-reg-email"
                   type="email"
                   value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  onFocus={markFormStarted}
+                  onChange={(e) => {
+                    markFormStarted();
+                    setEmail(e.target.value);
+                  }}
                   placeholder="ban@domain.com"
                   className="w-full px-4 py-2.5 rounded-xl bg-white border border-[#D4E3F0] focus:border-[#345EAA] focus:outline-none text-sm text-[#112D52]"
                   required

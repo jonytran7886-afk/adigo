@@ -3,28 +3,185 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="/assets/aistudio/ADIGO_Icon_Nen_Trang_512_4639cde4.png" />
-    <title>ADIGO — Kết nối sản phẩm. Mở rộng trải nghiệm.</title>
+    <title>ADIGO – Nền tảng thương mại và tiêu dùng số</title>
     <meta
       name="description"
-      content="Khám phá, mua sắm và kết nối với những sản phẩm bạn quan tâm trên một nền tảng thông minh, thuận tiện và minh bạch."
+      content="Khám phá ADIGO, nền tảng kết nối sản phẩm, nhà bán hàng và người tiêu dùng với ADIGO App, Marketplace, Mart và trải nghiệm truy xuất nguồn gốc."
     />
-    <meta property="og:title" content="ADIGO — Kết nối sản phẩm. Mở rộng trải nghiệm." />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#142F63" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="/assets/aistudio/ADIGO_Icon_Nen_Trang_512_4639cde4.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="/assets/aistudio/ADIGO_Icon_Nen_Trang_512_4639cde4.png"
+    />
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ADIGO" />
+    <meta property="og:locale" content="vi_VN" />
+    <meta property="og:title" content="ADIGO – Nền tảng thương mại và tiêu dùng số" />
     <meta
       property="og:description"
-      content="Khám phá, mua sắm và kết nối với những sản phẩm bạn quan tâm trên một nền tảng thông minh, thuận tiện và minh bạch."
+      content="Khám phá ADIGO, nền tảng kết nối sản phẩm, nhà bán hàng và người tiêu dùng với ADIGO App, Marketplace, Mart và trải nghiệm truy xuất nguồn gốc."
     />
-    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/og-adigo.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="ADIGO – Nền tảng thương mại và tiêu dùng số kết nối App, Marketplace, Mart và truy xuất nguồn gốc"
+    />
+
+    <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ADIGO – Nền tảng thương mại và tiêu dùng số" />
+    <meta
+      name="twitter:description"
+      content="Khám phá ADIGO, nền tảng kết nối sản phẩm, nhà bán hàng và người tiêu dùng với ADIGO App, Marketplace, Mart và trải nghiệm truy xuất nguồn gốc."
+    />
+    <meta name="twitter:image" content="/og-adigo.jpg" />
+    <meta
+      name="twitter:image:alt"
+      content="ADIGO – Nền tảng thương mại và tiêu dùng số kết nối App, Marketplace, Mart và truy xuất nguồn gốc"
+    />
+
+    <!-- Fonts & Critical LCP Preloads -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="preload"
+      as="image"
+      href="/assets/aistudio/ADIGO_Ngang_2400px_872a9a4e.png"
+    />
+
+    <!-- Structured Data (JSON-LD) -->
+    <script id="adigo-jsonld" type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "#organization",
+            "name": "ADIGO",
+            "description": "Khám phá ADIGO, nền tảng kết nối sản phẩm, nhà bán hàng và người tiêu dùng với ADIGO App, Marketplace, Mart và trải nghiệm truy xuất nguồn gốc.",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "/assets/aistudio/ADIGO_Icon_Nen_Trang_512_4639cde4.png",
+              "width": 512,
+              "height": 512
+            },
+            "parentOrganization": {
+              "@type": "Organization",
+              "name": "Organic Việt Nam"
+            }
+          },
+          {
+            "@type": "Brand",
+            "@id": "#brand",
+            "name": "ADIGO",
+            "slogan": "Kết nối sản phẩm. Mở rộng trải nghiệm.",
+            "logo": "/assets/aistudio/ADIGO_Ngang_2400px_872a9a4e.png"
+          },
+          {
+            "@type": "WebSite",
+            "@id": "#website",
+            "name": "ADIGO",
+            "inLanguage": "vi-VN",
+            "publisher": { "@id": "#organization" }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "#webpage",
+            "name": "ADIGO – Nền tảng thương mại và tiêu dùng số",
+            "description": "Khám phá ADIGO, nền tảng kết nối sản phẩm, nhà bán hàng và người tiêu dùng với ADIGO App, Marketplace, Mart và trải nghiệm truy xuất nguồn gốc.",
+            "inLanguage": "vi-VN",
+            "isPartOf": { "@id": "#website" },
+            "about": { "@id": "#brand" },
+            "primaryImageOfPage": {
+              "@type": "ImageObject",
+              "url": "/og-adigo.jpg",
+              "width": 1200,
+              "height": 630
+            }
+          }
+        ]
+      }
+    </script>
+
+    <!-- Google Tag Manager (GTM-WWZDSKTC with Consent Mode v2) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        analytics_storage: 'denied',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied'
+      });
+      window.dataLayer.push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      gtag('js', new Date());
+    </script>
+    <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-WWZDSKTC"></script>
   </head>
   <body class="bg-[#EAF5FF] text-[#112D52] antialiased selection:bg-[#345EAA]/15 selection:text-[#142F63]">
     <div id="root"></div>
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-WWZDSKTC"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"
+        title="Google Tag Manager"
+      ></iframe>
+      <main style="max-width:960px;margin:0 auto;padding:32px 20px;font-family:sans-serif;color:#112D52;">
+        <h1>Kết nối sản phẩm. Mở rộng trải nghiệm.</h1>
+        <p>
+          ADIGO là nền tảng thương mại và tiêu dùng số thuộc hệ sinh thái Organic Việt Nam, giúp người dùng khám phá, mua sắm và kết nối với những sản phẩm quan tâm trên một nền tảng thông minh, thuận tiện và minh bạch.
+        </p>
+        <section>
+          <h2>Một nền tảng, nhiều trải nghiệm.</h2>
+          <p>Khám phá sản phẩm dễ dàng, mua sắm thuận tiện, tiếp cận thông tin sản phẩm minh bạch và kết nối đa dạng sản phẩm cùng nhà bán hàng.</p>
+        </section>
+        <section>
+          <h2>ADIGO App – Mua sắm thông minh trên từng điểm chạm.</h2>
+          <p>Ứng dụng ADIGO giúp tìm kiếm sản phẩm, lựa chọn danh mục thực phẩm tươi sống, nông sản, thực phẩm chế biến và theo dõi đơn hàng dễ dàng.</p>
+        </section>
+        <section>
+          <h2>ADIGO Marketplace – Khám phá nhiều hơn. Kết nối rộng hơn.</h2>
+          <p>Kết nối sản phẩm, thương hiệu và nhà bán hàng trên một không gian thương mại số trực quan, linh hoạt và mở rộng.</p>
+        </section>
+        <section>
+          <h2>ADIGO Mart – Mua sắm theo cách bạn muốn.</h2>
+          <p>Kết nối không gian bán lẻ trực tiếp với trải nghiệm mua sắm số, hỗ trợ tìm điểm bán, đặt hàng trực tuyến và nhận hàng linh hoạt.</p>
+        </section>
+        <section>
+          <h2>Truy xuất nguồn gốc – Minh bạch nguồn gốc, yên tâm lựa chọn.</h2>
+          <p>Quét mã QR để theo dõi hành trình sản phẩm từ vùng sản xuất, sơ chế đóng gói, vận chuyển đến điểm bán.</p>
+        </section>
+        <section>
+          <h2>Công nghệ ADIGO – Công nghệ thông minh, kết nối toàn chuỗi.</h2>
+          <p>Kết nối dữ liệu, đồng bộ trải nghiệm và cá nhân hóa gợi ý mua sắm trên hệ sinh thái ADIGO.</p>
+        </section>
+        <section>
+          <h2>Hợp tác cùng ADIGO – Cùng kiến tạo hệ sinh thái giá trị bền vững.</h2>
+          <p>Cơ hội đồng hành dành cho nhà sản xuất, chủ cửa hàng, đơn vị phân phối và đối tác chiến lược cùng Organic Việt Nam.</p>
+        </section>
+      </main>
+    </noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

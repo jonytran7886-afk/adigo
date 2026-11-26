@@ -59,6 +59,10 @@ export const MartStorefront: React.FC = () => {
             <img
               src={MART_CONFIG.assets.storeInterior}
               alt="Không gian trưng bày sản phẩm bên trong mô hình ADIGO Mart"
+              width={960}
+              height={536}
+              loading="lazy"
+              decoding="async"
               referrerPolicy="no-referrer"
               onError={() => setInteriorError(true)}
               className="w-full h-full object-cover object-[28%_90%] scale-[1.35] origin-bottom"
@@ -106,7 +110,11 @@ export const MartStorefront: React.FC = () => {
               {!posterError ? (
                 <img
                   src={MART_CONFIG.assets.posterProduce}
-                  alt="Sản phẩm tươi ngon trưng bày tại cửa hàng"
+                  alt="Sản phẩm tươi ngon trưng bày tại cửa hàng ADIGO Mart"
+                  width={960}
+                  height={536}
+                  loading="lazy"
+                  decoding="async"
                   referrerPolicy="no-referrer"
                   onError={() => setPosterError(true)}
                   className="w-full h-full object-cover object-center"

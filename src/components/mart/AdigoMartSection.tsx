@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { MART_CONFIG, MartExperienceId } from '../../config/martConfig';
+import { trackEvent } from '../../utils/analytics';
 import { MartBackground } from './MartBackground';
 import { MartContent, MartFeatureChipsGrid } from './MartContent';
 import { OmnichannelShowcase } from './OmnichannelShowcase';
@@ -8,6 +9,14 @@ import { OmnichannelExperienceBar } from './OmnichannelExperienceBar';
 export const AdigoMartSection: React.FC = () => {
   const [activeExperience, setActiveExperience] =
     useState<MartExperienceId>('store');
+
+  const handleSelectExperience = (exp: MartExperienceId) => {
+    setActiveExperience(exp);
+    trackEvent('mart_feature_select', {
+      section_id: 'mart',
+      experience_id: exp,
+    });
+  };
 
   return (
     <section
@@ -35,7 +44,7 @@ export const AdigoMartSection: React.FC = () => {
           <div className="w-full lg:col-span-7 xl:col-span-8">
             <OmnichannelShowcase
               activeExperience={activeExperience}
-              onSelectExperience={setActiveExperience}
+              onSelectExperience={handleSelectExperience}
             />
           </div>
 
@@ -48,7 +57,7 @@ export const AdigoMartSection: React.FC = () => {
         {/* Vùng C – Bottom Omnichannel Experience Bar */}
         <OmnichannelExperienceBar
           activeExperience={activeExperience}
-          onSelectExperience={setActiveExperience}
+          onSelectExperience={handleSelectExperience}
         />
       </div>
     </section>

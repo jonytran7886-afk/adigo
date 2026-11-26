@@ -42,9 +42,9 @@ export const MART_CONFIG = {
   description:
     'ADIGO Mart hướng đến kết nối không gian bán lẻ trực tiếp với trải nghiệm mua sắm số, mang đến sự thuận tiện trong việc khám phá, lựa chọn và tiếp cận sản phẩm.',
   assets: {
-    storeInterior: '/src/assets/images/adigo_mart_concept_1795602232694.jpg',
-    posterProduce: '/src/assets/images/adigo_marketplace_variety_1795602233383.jpg',
-    shopperPortrait: '/src/assets/images/adigo_consumer_lifestyle_1795602233057.jpg',
+    storeInterior: '/src/assets/images/adigo_mart_concept_1795602232694.webp',
+    posterProduce: '/src/assets/images/adigo_marketplace_variety_1795602233383.webp',
+    shopperPortrait: '/src/assets/images/adigo_consumer_lifestyle_1795602233057.webp',
   },
   featureChips: [
     {

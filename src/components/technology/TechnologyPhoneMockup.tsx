@@ -62,6 +62,10 @@ export const TechnologyPhoneMockup: React.FC<TechnologyPhoneMockupProps> = ({
                 <img
                   src={HERO_CONFIG.assets.lifestylePhoto}
                   alt="Người tiêu dùng ADIGO"
+                  width={120}
+                  height={90}
+                  loading="lazy"
+                  decoding="async"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover object-top"
                 />

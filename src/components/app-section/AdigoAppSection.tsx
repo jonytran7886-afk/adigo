@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { APP_SECTION_CONFIG, AppTabId } from '../../config/appSectionConfig';
+import { trackEvent } from '../../utils/analytics';
 import { SectionBackground } from './SectionBackground';
 import { SectionIntroduction } from './SectionIntroduction';
 import { InteractiveProductShowcase } from './InteractiveProductShowcase/InteractiveProductShowcase';
@@ -8,6 +9,14 @@ import { ExperienceDock } from './ExperienceDock';
 export const AdigoAppSection: React.FC = () => {
   const [activeTab, setActiveTab] = useState<AppTabId>('home');
 
+  const handleSelectTab = (tab: AppTabId) => {
+    setActiveTab(tab);
+    trackEvent('app_feature_select', {
+      section_id: 'app',
+      feature_tab: tab,
+    });
+  };
+
   const activeConfig =
     APP_SECTION_CONFIG.tabs.find((t) => t.id === activeTab) ||
     APP_SECTION_CONFIG.tabs[0];
@@ -15,7 +24,8 @@ export const AdigoAppSection: React.FC = () => {
   return (
     <section
       id={APP_SECTION_CONFIG.sectionId}
-      className="relative isolate w-full py-16 sm:py-20 lg:py-24 overflow-x-clip"
+      aria-labelledby="app-section-heading"
+      className="relative isolate w-full scroll-mt-20 py-16 sm:py-20 lg:py-24 overflow-x-clip"
     >
       <SectionBackground />
 
@@ -25,8 +35,8 @@ export const AdigoAppSection: React.FC = () => {
         <InteractiveProductShowcase
           activeTab={activeTab}
           highlightedCard={activeConfig.relatedCard}
-          onSelectTab={setActiveTab}
-          dockSlot={<ExperienceDock activeTab={activeTab} onSelectTab={setActiveTab} />}
+          onSelectTab={handleSelectTab}
+          dockSlot={<ExperienceDock activeTab={activeTab} onSelectTab={handleSelectTab} />}
         />
       </div>
     </section>

@@ -236,6 +236,54 @@
   box-shadow: 0 20px 44px rgba(20, 47, 99, 0.08);
 }
 
+.partnership-section {
+  position: relative;
+  isolation: isolate;
+  overflow-x: clip;
+  background:
+    radial-gradient(
+      ellipse at 74% 34%,
+      rgba(97, 177, 238, 0.28),
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse at 12% 22%,
+      rgba(255, 255, 255, 0.8),
+      transparent 48%
+    ),
+    linear-gradient(
+      125deg,
+      #F2F8FF 0%,
+      #DFEEFC 45%,
+      #C4E4F7 80%,
+      #CDEFE6 100%
+    );
+}
+
+.final-cta-banner {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      ellipse at 82% 52%,
+      rgba(76, 209, 178, 0.32),
+      transparent 46%
+    ),
+    radial-gradient(
+      ellipse at 20% 25%,
+      rgba(76, 157, 198, 0.28),
+      transparent 52%
+    ),
+    linear-gradient(
+      108deg,
+      #103068 0%,
+      #1B5199 44%,
+      #1981A6 76%,
+      #22A18A 100%
+    );
+}
+
 @theme {
   --font-display: "Be Vietnam Pro", ui-sans-serif, system-ui, sans-serif;
   --font-sans: "Be Vietnam Pro", ui-sans-serif, system-ui, sans-serif;

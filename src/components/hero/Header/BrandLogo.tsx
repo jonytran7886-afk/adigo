@@ -6,6 +6,7 @@ interface BrandLogoProps {
   compact?: boolean;
   variant?: 'horizontal' | 'vertical' | 'icon';
   size?: 'sm' | 'md' | 'lg';
+  priority?: boolean;
 }
 
 export const BrandLogo: React.FC<BrandLogoProps> = ({
@@ -13,6 +14,7 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
   compact = false,
   variant = 'horizontal',
   size = 'md',
+  priority = false,
 }) => {
   const effectiveVariant = compact ? 'icon' : variant;
 
@@ -35,6 +37,13 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
       ? 'h-10 w-auto'
       : 'h-8 sm:h-[34px] w-auto';
 
+  const dimensions =
+    effectiveVariant === 'icon'
+      ? { width: 512, height: 512 }
+      : effectiveVariant === 'vertical'
+      ? { width: 2400, height: 2003 }
+      : { width: 2400, height: 499 };
+
   const src =
     effectiveVariant === 'icon'
       ? HERO_CONFIG.brand.logos.icon
@@ -46,7 +55,12 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
     <span className={`inline-flex items-center select-none shrink-0 ${className}`}>
       <img
         src={src}
-        alt="ADIGO"
+        alt="Logo ADIGO"
+        width={dimensions.width}
+        height={dimensions.height}
+        decoding="async"
+        loading={priority ? 'eager' : 'lazy'}
+        fetchPriority={priority ? 'high' : undefined}
         referrerPolicy="no-referrer"
         className={`${sizeClasses} object-contain block`}
       />

@@ -94,6 +94,10 @@ export const MartPhoneMockup: React.FC<MartPhoneMockupProps> = ({
                 <img
                   src={MART_CONFIG.assets.shopperPortrait}
                   alt="Tài khoản ADIGO"
+                  width={120}
+                  height={90}
+                  loading="lazy"
+                  decoding="async"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover object-top"
                 />
@@ -130,9 +134,9 @@ export const MartPhoneMockup: React.FC<MartPhoneMockupProps> = ({
                 {/* Store Finder Banner */}
                 <div className="relative rounded-[16px] overflow-hidden border border-[#C6E6D4] bg-gradient-to-br from-[#237B4E] via-[#2F8C58] to-[#4CA768] text-white p-3 flex items-center justify-between gap-2 shrink-0">
                   <div className="max-w-[60%] z-10">
-                    <h4 className="font-display font-bold text-[12.5px] leading-snug">
+                    <p className="font-display font-bold text-[12.5px] leading-snug">
                       Tìm cửa hàng ADIGO Mart gần bạn
-                    </h4>
+                    </p>
                     <button
                       type="button"
                       onClick={() => onSelectExperience('online')}
@@ -182,6 +186,10 @@ export const MartPhoneMockup: React.FC<MartPhoneMockupProps> = ({
                             <img
                               src={MART_CONFIG.assets.storeInterior}
                               alt={store.name}
+                              width={160}
+                              height={90}
+                              loading="lazy"
+                              decoding="async"
                               referrerPolicy="no-referrer"
                               className="w-full h-full object-cover object-bottom"
                             />

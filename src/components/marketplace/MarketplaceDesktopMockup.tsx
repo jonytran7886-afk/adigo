@@ -143,6 +143,10 @@ export const MarketplaceDesktopMockup: React.FC<MarketplaceDesktopMockupProps> =
               <img
                 src={HERO_CONFIG.assets.lifestylePhoto}
                 alt="Người dùng ADIGO"
+                width={120}
+                height={90}
+                loading="lazy"
+                decoding="async"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover object-top"
               />
@@ -190,9 +194,9 @@ export const MarketplaceDesktopMockup: React.FC<MarketplaceDesktopMockupProps> =
                       <ShieldCheck className="w-2.5 h-2.5" />
                       Thông tin nguồn gốc
                     </span>
-                    <h4 className="mt-1.5 font-display text-[14px] xl:text-[15px] font-bold text-[#142F63] leading-snug">
+                    <p className="mt-1.5 font-display text-[14px] xl:text-[15px] font-bold text-[#142F63] leading-snug">
                       Đa dạng sản phẩm. Thêm nhiều lựa chọn.
-                    </h4>
+                    </p>
                     <p className="mt-0.5 text-[10px] text-[#4E647B] line-clamp-1">
                       Khám phá những sản phẩm phù hợp với nhu cầu mỗi ngày.
                     </p>
@@ -210,6 +214,10 @@ export const MarketplaceDesktopMockup: React.FC<MarketplaceDesktopMockupProps> =
                     <img
                       src={HERO_CONFIG.assets.freshBannerPhoto}
                       alt="Thực phẩm đa dạng trên ADIGO Marketplace"
+                      width={640}
+                      height={357}
+                      loading="lazy"
+                      decoding="async"
                       referrerPolicy="no-referrer"
                       className="w-full h-full object-cover object-center"
                     />
@@ -394,9 +402,9 @@ export const MarketplaceDesktopMockup: React.FC<MarketplaceDesktopMockupProps> =
                 <div className="flex items-center justify-between">
                   <div>
                     <div className="flex items-center gap-2">
-                      <h4 className="font-display text-[15px] font-bold text-[#142F63]">
+                      <p className="font-display text-[15px] font-bold text-[#142F63]">
                         Khám phá gian hàng
-                      </h4>
+                      </p>
                       <span className="px-2 py-0.5 rounded-full bg-[#EAF5FF] text-[#345EAA] text-[9px] font-semibold">
                         Dữ liệu minh họa
                       </span>
@@ -489,9 +497,9 @@ export const MarketplaceDesktopMockup: React.FC<MarketplaceDesktopMockupProps> =
                 <div className="flex items-center justify-between gap-2">
                   <div>
                     <div className="flex items-center gap-2">
-                      <h4 className="font-display text-[15px] font-bold text-[#142F63]">
+                      <p className="font-display text-[15px] font-bold text-[#142F63]">
                         Khám phá thương hiệu
-                      </h4>
+                      </p>
                       <span className="px-2 py-0.5 rounded-full bg-[#EAF5FF] text-[#345EAA] text-[9px] font-semibold">
                         Minh họa danh mục
                       </span>
@@ -583,9 +591,9 @@ export const MarketplaceDesktopMockup: React.FC<MarketplaceDesktopMockupProps> =
                 <div className="flex items-center justify-between">
                   <div>
                     <div className="flex items-center gap-2">
-                      <h4 className="font-display text-[15px] font-bold text-[#142F63]">
+                      <p className="font-display text-[15px] font-bold text-[#142F63]">
                         Khám phá ưu đãi
-                      </h4>
+                      </p>
                       <span className="px-2 py-0.5 rounded-full bg-[#E8F8F0] text-[#398441] text-[9px] font-semibold">
                         Trải nghiệm thành viên
                       </span>
@@ -607,9 +615,9 @@ export const MarketplaceDesktopMockup: React.FC<MarketplaceDesktopMockupProps> =
                           <Tag className="w-2.5 h-2.5" />
                           {offer.tag}
                         </span>
-                        <h5 className="mt-2 font-display text-[12px] font-bold text-[#142F63] leading-snug">
+                        <p className="mt-2 font-display text-[12px] font-bold text-[#142F63] leading-snug">
                           {offer.title}
-                        </h5>
+                        </p>
                         <p className="mt-1 text-[10px] text-[#52677D] leading-relaxed">
                           {offer.desc}
                         </p>

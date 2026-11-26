@@ -1,0 +1,18 @@
+{
+  "name": "ADIGO – Nền tảng thương mại và tiêu dùng số",
+  "short_name": "ADIGO",
+  "description": "Khám phá ADIGO, nền tảng kết nối sản phẩm, nhà bán hàng và người tiêu dùng với ADIGO App, Marketplace, Mart và trải nghiệm truy xuất nguồn gốc.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#EAF5FF",
+  "theme_color": "#142F63",
+  "lang": "vi-VN",
+  "icons": [
+    {
+      "src": "/assets/aistudio/ADIGO_Icon_Nen_Trang_512_4639cde4.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

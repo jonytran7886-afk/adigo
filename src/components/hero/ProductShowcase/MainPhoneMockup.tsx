@@ -78,7 +78,11 @@ export const MainPhoneMockup: React.FC<{ onExploreTap?: () => void }> = ({
         <div className="relative h-[126px] rounded-2xl overflow-hidden border border-[#E2ECF4] shrink-0">
           <img
             src={HERO_CONFIG.assets.freshBannerPhoto}
-            alt="Thực phẩm tươi ngon cho mỗi ngày"
+            alt="Thực phẩm tươi ngon cho mỗi ngày trên ADIGO"
+            width={960}
+            height={536}
+            decoding="async"
+            fetchPriority="high"
             referrerPolicy="no-referrer"
             className="w-full h-full object-cover object-center"
           />

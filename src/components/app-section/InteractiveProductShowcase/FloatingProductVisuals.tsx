@@ -9,6 +9,9 @@ export const FloatingProductVisuals: React.FC = () => {
         <img
           src={HERO_CONFIG.assets.freshBannerPhoto}
           alt=""
+          width={400}
+          height={224}
+          decoding="async"
           referrerPolicy="no-referrer"
           loading="lazy"
           className="w-full h-full object-cover object-[86%_22%] scale-125"

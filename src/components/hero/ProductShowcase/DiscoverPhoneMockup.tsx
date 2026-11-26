@@ -9,9 +9,9 @@ export const DiscoverPhoneMockup: React.FC = () => {
     <PhoneShell size="side">
       <div className="flex-1 px-3.5 pt-2 pb-4 flex flex-col gap-2.5 bg-white">
         <div className="flex items-center justify-between">
-          <h3 className="font-display text-base font-bold text-[#112D52]">
+          <p className="font-display text-base font-bold text-[#112D52]">
             {HERO_CONFIG.discoverPhone.title}
-          </h3>
+          </p>
           <Search className="w-3.5 h-3.5 text-[#52677D]" />
         </div>
 

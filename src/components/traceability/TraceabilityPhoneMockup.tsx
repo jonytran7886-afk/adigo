@@ -61,6 +61,10 @@ export const TraceabilityPhoneMockup: React.FC<
               <img
                 src={HERO_CONFIG.assets.lifestylePhoto}
                 alt="Người tiêu dùng ADIGO"
+                width={120}
+                height={90}
+                loading="lazy"
+                decoding="async"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover object-top"
               />
@@ -74,6 +78,10 @@ export const TraceabilityPhoneMockup: React.FC<
             <img
               src={HERO_CONFIG.assets.freshBannerPhoto}
               alt={TRACEABILITY_CONFIG.demoProduct.name}
+              width={600}
+              height={335}
+              loading="lazy"
+              decoding="async"
               referrerPolicy="no-referrer"
               className="w-full h-full object-cover object-[86%_22%] scale-125"
             />

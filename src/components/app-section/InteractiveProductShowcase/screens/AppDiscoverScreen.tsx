@@ -37,7 +37,7 @@ export const AppDiscoverScreen: React.FC<ScreenProps> = ({ onNavigate }) => {
   return (
     <div className="flex-1 flex flex-col overflow-hidden bg-white px-3.5 pt-2 pb-4 gap-2.5">
       <div className="flex items-center justify-between">
-        <h4 className="font-display text-sm font-bold text-[#112D52]">Khám phá sản phẩm</h4>
+        <p className="font-display text-sm font-bold text-[#112D52]">Khám phá sản phẩm</p>
         <SlidersHorizontal className="w-4 h-4 text-[#52677D]" />
       </div>
 

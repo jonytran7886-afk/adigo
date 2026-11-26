@@ -60,9 +60,9 @@ export const DiscoverVisual: React.FC = () => {
             </div>
           </div>
 
-          <h4 className="font-display text-[13px] font-bold text-[#112D52] mb-1.5">
+          <p className="font-display text-[13px] font-bold text-[#112D52] mb-1.5">
             Khám phá
-          </h4>
+          </p>
 
           {/* Search bar */}
           <div className="flex items-center justify-between gap-1.5 bg-[#F4F7FA] border border-[#E2ECF4] rounded-lg px-2 py-1.5 mb-2">

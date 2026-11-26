@@ -13,9 +13,9 @@ export const TraceabilityPhoneMockup: React.FC = () => {
         {/* Header */}
         <div className="flex items-center gap-1.5">
           <ChevronLeft className="w-4 h-4 text-[#112D52]" />
-          <h3 className="font-display text-[13px] font-bold text-[#112D52]">
+          <p className="font-display text-[13px] font-bold text-[#112D52]">
             {HERO_CONFIG.traceabilityPhone.title}
-          </h3>
+          </p>
         </div>
 
         {/* Packaged Chicken with QR */}

@@ -21,6 +21,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   return (
     <section
       id="top"
+      aria-labelledby="hero-section-heading"
       className="relative w-full min-h-0 lg:min-h-[max(760px,100svh)] flex flex-col overflow-x-clip"
     >
       {/* Layer 01 & 02: Soft Blue-Mint Gradient Background + Luminous Curves */}

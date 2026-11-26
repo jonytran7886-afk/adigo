@@ -17,9 +17,9 @@ export const EXPLORE_CONFIG = {
   description:
     'ADIGO kết nối sản phẩm, thương hiệu, nhà bán hàng và hệ thống bán lẻ, giúp người dùng dễ dàng khám phá, lựa chọn và mua sắm theo nhu cầu.',
   assets: {
-    shoppingLifestyle: '/src/assets/images/adigo_mart_concept_1795602232694.jpg',
-    marketplaceVariety: '/src/assets/images/adigo_marketplace_variety_1795602233383.jpg',
-    traceabilityProduce: '/src/assets/images/adigo_traceability_produce_1795602233534.jpg',
+    shoppingLifestyle: '/src/assets/images/adigo_mart_concept_1795602232694.webp',
+    marketplaceVariety: '/src/assets/images/adigo_marketplace_variety_1795602233383.webp',
+    traceabilityProduce: '/src/assets/images/adigo_traceability_produce_1795602233534.webp',
   },
   cards: [
     {

@@ -83,7 +83,11 @@ export const AppHomeScreen: React.FC<ScreenProps> = ({ onNavigate }) => {
         <div className="relative h-[120px] rounded-2xl overflow-hidden border border-[#E2ECF4] shrink-0">
           <img
             src={HERO_CONFIG.assets.freshBannerPhoto}
-            alt="Thực phẩm tươi ngon cho mỗi ngày"
+            alt="Thực phẩm tươi ngon cho mỗi ngày trên ADIGO App"
+            width={600}
+            height={335}
+            loading="lazy"
+            decoding="async"
             referrerPolicy="no-referrer"
             className="w-full h-full object-cover"
           />

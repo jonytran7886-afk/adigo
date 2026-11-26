@@ -21,7 +21,11 @@ export const ShopperVisual: React.FC = () => {
           {!imgError ? (
             <img
               src={MART_CONFIG.assets.shopperPortrait}
-              alt="Người tiêu dùng sử dụng ứng dụng ADIGO khi mua sắm"
+              alt="Người tiêu dùng sử dụng ứng dụng ADIGO khi mua sắm tại cửa hàng"
+              width={960}
+              height={717}
+              loading="lazy"
+              decoding="async"
               referrerPolicy="no-referrer"
               onError={() => setImgError(true)}
               className="w-full h-full object-cover object-[56%_22%]"

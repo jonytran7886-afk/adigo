@@ -43,7 +43,7 @@ export const Header: React.FC<HeaderProps> = ({
           className="focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#345EAA] rounded-lg shrink-0"
           aria-label="ADIGO Trang chủ"
         >
-          <BrandLogo />
+          <BrandLogo priority />
         </a>
 
         <DesktopNavigation activeNav={activeNav} onSelectNav={onSelectNav} />

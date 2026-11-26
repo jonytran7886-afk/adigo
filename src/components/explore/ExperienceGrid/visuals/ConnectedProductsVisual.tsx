@@ -31,7 +31,10 @@ export const ConnectedProductsVisual: React.FC = () => {
           <div className="h-16 sm:h-[72px] rounded-xl overflow-hidden">
             <img
               src={EXPLORE_CONFIG.assets.marketplaceVariety}
-              alt="Thịt bò tươi"
+              alt="Thịt bò tươi kết nối trên nền tảng ADIGO"
+              width={400}
+              height={224}
+              decoding="async"
               referrerPolicy="no-referrer"
               loading="lazy"
               className="w-full h-full object-cover object-[86%_22%] scale-125"
@@ -44,7 +47,10 @@ export const ConnectedProductsVisual: React.FC = () => {
           <div className="h-16 sm:h-[72px] rounded-xl overflow-hidden">
             <img
               src={EXPLORE_CONFIG.assets.traceabilityProduce}
-              alt="Rau củ và thực phẩm tươi"
+              alt="Rau củ và thực phẩm tươi trên ADIGO"
+              width={400}
+              height={299}
+              decoding="async"
               referrerPolicy="no-referrer"
               loading="lazy"
               className="w-full h-full object-cover object-center"
@@ -71,7 +77,10 @@ export const ConnectedProductsVisual: React.FC = () => {
           <div className="h-16 sm:h-[72px] rounded-xl overflow-hidden">
             <img
               src={EXPLORE_CONFIG.assets.marketplaceVariety}
-              alt="Nông sản đa dạng"
+              alt="Nông sản đa dạng trên ADIGO Marketplace"
+              width={400}
+              height={224}
+              decoding="async"
               referrerPolicy="no-referrer"
               loading="lazy"
               className="w-full h-full object-cover object-[72%_80%] scale-125"

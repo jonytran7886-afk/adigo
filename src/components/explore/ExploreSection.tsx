@@ -8,7 +8,8 @@ export const ExploreSection: React.FC = () => {
   return (
     <section
       id={EXPLORE_CONFIG.sectionId}
-      className="relative isolate w-full explore-section-bg py-16 sm:py-20 lg:py-24 overflow-x-clip"
+      aria-labelledby="explore-section-heading"
+      className="relative isolate w-full explore-section-bg scroll-mt-20 py-16 sm:py-20 lg:py-24 overflow-x-clip"
     >
       <SectionBackground />
 

@@ -11,8 +11,9 @@ export const ShoppingVisual: React.FC = () => {
         alt="Người tiêu dùng sử dụng smartphone mua sắm thuận tiện trong cửa hàng thực phẩm hiện đại"
         referrerPolicy="no-referrer"
         loading="lazy"
+        decoding="async"
         width={960}
-        height={540}
+        height={536}
         className="w-full h-full object-cover object-[64%_22%] transition-transform duration-500 ease-out group-hover:scale-[1.025]"
       />
 

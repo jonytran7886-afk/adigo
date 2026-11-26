@@ -58,6 +58,9 @@ export const FoodThumbnail: React.FC<{
           <img
             src={HERO_CONFIG.assets.freshBannerPhoto}
             alt="Thịt tươi"
+            width={400}
+            height={224}
+            decoding="async"
             referrerPolicy="no-referrer"
             className="w-full h-full object-cover object-[85%_22%] scale-125"
           />
@@ -70,6 +73,9 @@ export const FoodThumbnail: React.FC<{
           <img
             src={HERO_CONFIG.assets.freshBannerPhoto}
             alt="Rau củ tươi"
+            width={400}
+            height={224}
+            decoding="async"
             referrerPolicy="no-referrer"
             className="w-full h-full object-cover object-[24%_48%] scale-125"
           />
@@ -122,6 +128,9 @@ export const FoodThumbnail: React.FC<{
           <img
             src={HERO_CONFIG.assets.freshBannerPhoto}
             alt="Nông sản"
+            width={400}
+            height={224}
+            decoding="async"
             referrerPolicy="no-referrer"
             className="w-full h-full object-cover object-[74%_78%] scale-125"
           />
@@ -134,6 +143,9 @@ export const FoodThumbnail: React.FC<{
           <img
             src={HERO_CONFIG.assets.freshBannerPhoto}
             alt="Thực phẩm chế biến"
+            width={400}
+            height={224}
+            decoding="async"
             referrerPolicy="no-referrer"
             className="w-full h-full object-cover object-[28%_82%] scale-125"
           />

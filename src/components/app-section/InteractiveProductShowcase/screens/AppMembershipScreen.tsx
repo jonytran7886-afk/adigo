@@ -24,7 +24,7 @@ export const AppMembershipScreen: React.FC<ScreenProps> = ({ onNavigate }) => {
           MA
         </div>
         <div>
-          <h4 className="font-display text-sm font-bold text-[#112D52]">Minh Anh</h4>
+          <p className="font-display text-sm font-bold text-[#112D52]">Minh Anh</p>
           <p className="text-[10px] text-[#52677D]">Tài khoản thành viên minh họa</p>
         </div>
       </div>

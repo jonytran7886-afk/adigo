@@ -35,9 +35,9 @@ export const AppProductDetailScreen: React.FC<ScreenProps> = ({ onNavigate }) =>
           <span className="text-[9.5px] font-semibold text-[#398441]">
             Đơn vị sản xuất liên kết (Thông tin minh họa)
           </span>
-          <h4 className="font-display text-sm font-bold text-[#112D52] mt-0.5">
+          <p className="font-display text-sm font-bold text-[#112D52] mt-0.5">
             Thịt gà ta
-          </h4>
+          </p>
           <p className="text-[10.5px] text-[#52677D] mt-0.5">
             Khay 1 kg · Đóng gói màng giữ lạnh theo lô
           </p>

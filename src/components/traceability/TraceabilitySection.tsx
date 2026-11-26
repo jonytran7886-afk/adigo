@@ -3,6 +3,7 @@ import {
   TRACEABILITY_CONFIG,
   TraceabilityStageId,
 } from '../../config/traceabilityConfig';
+import { trackEvent } from '../../utils/analytics';
 import { TechnologyBackground } from './TechnologyBackground';
 import {
   TraceabilityContent,
@@ -13,6 +14,14 @@ import { TraceabilityTimeline } from './TraceabilityTimeline';
 
 export const TraceabilitySection: React.FC = () => {
   const [activeStage, setActiveStage] = useState<TraceabilityStageId>('farm');
+
+  const handleSelectStage = (stage: TraceabilityStageId) => {
+    setActiveStage(stage);
+    trackEvent('traceability_interaction', {
+      section_id: 'traceability',
+      stage_id: stage,
+    });
+  };
 
   return (
     <section
@@ -32,7 +41,7 @@ export const TraceabilitySection: React.FC = () => {
           <div className="w-full lg:col-span-7 xl:col-span-8">
             <TraceabilityShowcase
               activeStage={activeStage}
-              onSelectStage={setActiveStage}
+              onSelectStage={handleSelectStage}
             />
           </div>
 
@@ -45,7 +54,7 @@ export const TraceabilitySection: React.FC = () => {
         {/* Bottom Glass Traceability Timeline */}
         <TraceabilityTimeline
           activeStage={activeStage}
-          onSelectStage={setActiveStage}
+          onSelectStage={handleSelectStage}
         />
       </div>
     </section>

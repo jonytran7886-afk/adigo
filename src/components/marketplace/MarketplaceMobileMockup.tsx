@@ -90,7 +90,11 @@ export const MarketplaceMobileMockup: React.FC<MarketplaceMobileMockupProps> = (
               <div className="w-6 h-6 rounded-full overflow-hidden border border-[#CDE1F2]">
                 <img
                   src={HERO_CONFIG.assets.lifestylePhoto}
-                  alt="Tài khoản"
+                  alt="Tài khoản người dùng ADIGO"
+                  width={120}
+                  height={90}
+                  loading="lazy"
+                  decoding="async"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover object-top"
                 />
@@ -174,7 +178,11 @@ export const MarketplaceMobileMockup: React.FC<MarketplaceMobileMockupProps> = (
                   <div className="w-[42%] h-[68px] rounded-[10px] overflow-hidden border border-white/80 shrink-0">
                     <img
                       src={HERO_CONFIG.assets.freshBannerPhoto}
-                      alt="Sản phẩm tươi ngon"
+                      alt="Sản phẩm tươi ngon trên ADIGO Marketplace"
+                      width={480}
+                      height={268}
+                      loading="lazy"
+                      decoding="async"
                       referrerPolicy="no-referrer"
                       className="w-full h-full object-cover"
                     />

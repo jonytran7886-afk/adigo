@@ -43,9 +43,9 @@ export const HERO_CONFIG = {
     { id: 'connected', label: 'Kết nối', icon: 'network' as const },
   ],
   assets: {
-    freshBannerPhoto: '/src/assets/images/adigo_marketplace_variety_1795602233383.jpg',
-    produceQrPhoto: '/src/assets/images/adigo_traceability_produce_1795602233534.jpg',
-    lifestylePhoto: '/src/assets/images/adigo_consumer_lifestyle_1795602233057.jpg',
+    freshBannerPhoto: '/src/assets/images/adigo_marketplace_variety_1795602233383.webp',
+    produceQrPhoto: '/src/assets/images/adigo_traceability_produce_1795602233534.webp',
+    lifestylePhoto: '/src/assets/images/adigo_consumer_lifestyle_1795602233057.webp',
   },
   mainPhone: {
     searchPlaceholder: 'Tìm sản phẩm, thương hiệu...',
