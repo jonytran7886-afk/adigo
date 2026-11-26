@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { MotionConfig } from 'motion/react';
 import { HeroSection } from './components/hero/HeroSection';
 import { ExploreSection } from './components/explore/ExploreSection';
+import { CampaignModule } from './components/campaign/CampaignModule';
 import { AdigoAppSection } from './components/app-section/AdigoAppSection';
 import { MarketplaceSection } from './components/marketplace/MarketplaceSection';
 import { AdigoMartSection } from './components/mart/AdigoMartSection';
@@ -134,6 +135,8 @@ export default function App() {
             onPrimaryCta={handlePrimaryExploreCta}
             onSecondaryCta={handleSecondaryAppCta}
           />
+
+          <CampaignModule />
 
           <ExploreSection />
 

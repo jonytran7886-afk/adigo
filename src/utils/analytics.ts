@@ -13,7 +13,14 @@ export type AdigoAnalyticsEvent =
   | 'partner_form_start'
   | 'generate_lead'
   | 'app_download_click'
-  | 'scroll_depth';
+  | 'scroll_depth'
+  | 'campaign_banner_view'
+  | 'campaign_banner_click'
+  | 'preorder_modal_open'
+  | 'preorder_form_start'
+  | 'preorder_quantity_change'
+  | 'preorder_form_submit'
+  | 'preorder_submit_error';
 
 const CONSENT_STORAGE_KEY = 'adigo_analytics_consent_v1';
 const PII_KEYS = new Set([
