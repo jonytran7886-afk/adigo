@@ -8,7 +8,7 @@ interface ScreenProps {
 }
 
 const DISCOVER_ITEMS: { id: string; name: string; group: string; groupLabel: string; visual: FoodVisualType }[] = [
-  { id: 'd1', name: 'Thịt gà ta đóng khay', group: 'meat', groupLabel: 'Thịt tươi', visual: 'chicken' },
+  { id: 'd1', name: 'Thịt gà đóng khay', group: 'meat', groupLabel: 'Thịt tươi', visual: 'chicken' },
   { id: 'd2', name: 'Cá hồi tươi cắt lát', group: 'seafood', groupLabel: 'Hải sản', visual: 'seafood' },
   { id: 'd3', name: 'Rau củ tươi theo mùa', group: 'veggies', groupLabel: 'Rau củ', visual: 'veggies' },
   { id: 'd4', name: 'Cam sành chọn lọc', group: 'fruits', groupLabel: 'Trái cây', visual: 'orange' },

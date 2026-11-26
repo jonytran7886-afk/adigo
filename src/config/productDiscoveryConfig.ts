@@ -34,7 +34,7 @@ export const PRODUCT_DISCOVERY_CONFIG = {
   productImage: {
     webp: '/src/assets/images/product_whole_chicken_clean_1795656979195.webp',
     fallback: '/src/assets/images/product_whole_chicken_clean_1795656979195.jpg',
-    alt: 'Gà ta nguyên con đã làm sạch, dáng thon gọn, màu da tự nhiên',
+    alt: 'Thịt gà nguyên con đã làm sạch, dáng thon gọn, màu da tự nhiên',
     width: 1200,
     height: 900,
   },

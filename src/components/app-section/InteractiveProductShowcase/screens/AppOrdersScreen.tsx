@@ -61,7 +61,7 @@ export const AppOrdersScreen: React.FC = () => {
       <div className="rounded-xl bg-[#F6F9FC] border border-[#E2ECF4] p-2.5 flex items-center justify-between gap-2 text-[9.5px] text-[#52677D]">
         <div className="flex items-center gap-1.5 min-w-0">
           <Package className="w-3.5 h-3.5 text-[#345EAA] shrink-0" />
-          <span className="truncate font-medium text-[#112D52]">Thịt gà ta, Trứng gà, Rau củ</span>
+          <span className="truncate font-medium text-[#112D52]">Thịt gà, Trứng gà, Rau củ</span>
         </div>
         <div className="flex items-center gap-1 shrink-0 text-[#398441] font-semibold">
           <MapPin className="w-3 h-3" />

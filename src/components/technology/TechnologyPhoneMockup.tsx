@@ -42,7 +42,7 @@ export const TechnologyPhoneMockup: React.FC<TechnologyPhoneMockupProps> = ({
     {
       title: 'Thực đơn gia đình cân bằng dinh dưỡng',
       items: [
-        { name: 'Gà ta thảo dược', img: TECHNOLOGY_CONFIG.assets.chickenPlatterPhoto },
+        { name: 'Thịt gà thảo dược', img: TECHNOLOGY_CONFIG.assets.chickenPlatterPhoto },
         { name: 'Rau củ theo mùa', img: TECHNOLOGY_CONFIG.assets.veggiesProcessedPhoto },
       ],
     },
@@ -212,7 +212,7 @@ export const TechnologyPhoneMockup: React.FC<TechnologyPhoneMockupProps> = ({
                   <div className="grid grid-cols-2 gap-1.5">
                     {[
                       {
-                        name: 'Gà ta nguyên con',
+                        name: 'Thịt gà nguyên con',
                         price: '129.000 đ',
                         img: TECHNOLOGY_CONFIG.assets.chickenPlatterPhoto,
                       },

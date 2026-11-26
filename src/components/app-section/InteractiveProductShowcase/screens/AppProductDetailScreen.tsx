@@ -36,7 +36,7 @@ export const AppProductDetailScreen: React.FC<ScreenProps> = ({ onNavigate }) =>
             Đơn vị sản xuất liên kết
           </span>
           <p className="font-display text-sm font-bold text-[#112D52] mt-0.5">
-            Thịt gà ta
+            Thịt gà
           </p>
           <p className="text-[10.5px] text-[#52677D] mt-0.5">
             Khay 1 kg · Đóng gói màng giữ lạnh theo lô

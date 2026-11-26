@@ -182,7 +182,7 @@ export const SmartExperiencePanel: React.FC<PanelProps> = ({
             <div className="h-[46px] rounded-[7px] overflow-hidden">
               <img
                 src={TECHNOLOGY_CONFIG.assets.chickenPlatterPhoto}
-                alt="Gà ta nguyên con cho bữa ăn gia đình"
+                alt="Thịt gà nguyên con cho bữa ăn gia đình"
                 width={200}
                 height={150}
                 loading="lazy"
@@ -191,7 +191,7 @@ export const SmartExperiencePanel: React.FC<PanelProps> = ({
               />
             </div>
             <p className="mt-1 text-[8.5px] font-bold text-[#142F63] truncate">
-              Gà ta thảo dược
+              Thịt gà thảo dược
             </p>
           </div>
           <div className="rounded-[10px] overflow-hidden bg-white border border-[#E2ECF4] p-1">

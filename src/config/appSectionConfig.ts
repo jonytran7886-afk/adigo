@@ -60,7 +60,7 @@ export const APP_SECTION_CONFIG = {
     { id: 'processed', label: 'Chế biến', visual: 'processed' as const },
   ],
   cartInitialItems: [
-    { id: 'c1', name: 'Thịt gà ta', unit: 'Khay 1 kg', price: 129000, qty: 1, visual: 'chicken' as const },
+    { id: 'c1', name: 'Thịt gà', unit: 'Khay 1 kg', price: 129000, qty: 1, visual: 'chicken' as const },
     { id: 'c2', name: 'Trứng gà', unit: 'Vỉ 10 quả', price: 39000, qty: 1, visual: 'eggs' as const },
     { id: 'c3', name: 'Rau củ tươi', unit: 'Gói 400 g', price: 28000, qty: 1, visual: 'veggies' as const },
     { id: 'c4', name: 'Cam tươi', unit: 'Túi 1 kg', price: 45000, qty: 1, visual: 'orange' as const },

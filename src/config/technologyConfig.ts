@@ -24,7 +24,7 @@ export const TECHNOLOGY_CONFIG = {
     varietyPhoto: '/src/assets/images/adigo_marketplace_variety_1795602233383.webp',
     traceabilityBeefPhoto: '/src/assets/images/traceability_beef_pack_1795655579958.webp',
     martConceptPhoto: '/src/assets/images/adigo_mart_concept_1795602232694.webp',
-    chickenPlatterPhoto: '/src/assets/images/chicken_whole_platter_1795655111655.webp',
+    chickenPlatterPhoto: '/src/assets/images/product_whole_chicken_clean_1795656979195.webp',
     veggiesProcessedPhoto: '/src/assets/images/marketplace_veggies_processed_1795655578984.webp',
     porkBeefPhoto: '/src/assets/images/marketplace_pork_beef_cuts_1795655577544.webp',
     eggsCitrusPhoto: '/src/assets/images/marketplace_eggs_citrus_1795655578585.webp',

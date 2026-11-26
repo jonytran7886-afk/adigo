@@ -104,7 +104,7 @@ export const MARKETPLACE_CONFIG = {
   demoProducts: [
     {
       id: 'mp-1',
-      name: 'Thịt gà ta nguyên con',
+      name: 'Thịt gà nguyên con',
       unit: 'Khay 1 kg',
       priceVnd: '129.000 đ',
       category: 'meat-eggs',
@@ -230,7 +230,7 @@ export const MARKETPLACE_CONFIG = {
       title: 'Bộ sưu tập thực phẩm tươi mỗi ngày',
       desc: 'Kết hợp gà thảo dược, thịt bò cắt lát và rau củ theo mùa từ các gian hàng đối tác.',
       tag: 'Bộ sưu tập tuần',
-      image: '/src/assets/images/chicken_whole_platter_1795655111655.webp',
+      image: '/src/assets/images/product_whole_chicken_clean_1795656979195.webp',
       ctaLabel: 'Xem bộ sưu tập',
     },
     {

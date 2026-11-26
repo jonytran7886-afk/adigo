@@ -24,8 +24,8 @@ const FOOD_PHOTO_MAP: Record<
   { src: string; alt: string; objectPosition?: string; bgClass: string }
 > = {
   chicken: {
-    src: '/src/assets/images/chicken_whole_platter_1795655111655.webp',
-    alt: 'Thịt gà ta tươi',
+    src: '/src/assets/images/product_whole_chicken_clean_1795656979195.webp',
+    alt: 'Thịt gà tươi',
     objectPosition: 'object-center',
     bgClass: 'bg-[#FAF3EB]',
   },

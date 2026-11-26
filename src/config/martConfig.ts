@@ -125,7 +125,7 @@ export const MART_CONFIG = {
   demoProducts: [
     {
       id: 'mp-mart-1',
-      name: 'Thịt gà ta đóng khay',
+      name: 'Thịt gà đóng khay',
       unit: 'Khay 1 kg',
       category: 'meat-eggs',
       visual: 'chicken',

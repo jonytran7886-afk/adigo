@@ -438,7 +438,7 @@ export const MartPhoneMockup: React.FC<MartPhoneMockupProps> = ({
                       <span>Sản phẩm quan tâm</span>
                     </div>
                     <p className="mt-1 text-[9.5px] font-semibold text-[#142F63] truncate">
-                      Thịt gà ta đóng khay
+                      Thịt gà đóng khay
                     </p>
                   </div>
                 </div>

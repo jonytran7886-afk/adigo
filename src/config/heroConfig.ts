@@ -62,7 +62,7 @@ export const HERO_CONFIG = {
     featuredProducts: [
       {
         id: 'chicken',
-        name: 'Gà ta nguyên con',
+        name: 'Thịt gà nguyên con',
         subtitle: 'Organic Việt Nam',
         visualType: 'chicken' as const,
       },
@@ -111,7 +111,7 @@ export const HERO_CONFIG = {
   },
   traceabilityPhone: {
     title: 'Nguồn gốc sản phẩm',
-    productName: 'Thịt gà ta',
+    productName: 'Thịt gà',
     infoBadge: 'Thông tin sản phẩm',
     timeline: [
       {
