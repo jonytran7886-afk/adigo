@@ -4,6 +4,9 @@ import { HeroSection } from './components/hero/HeroSection';
 import { ExploreSection } from './components/explore/ExploreSection';
 import { AdigoAppSection } from './components/app-section/AdigoAppSection';
 import { MarketplaceSection } from './components/marketplace/MarketplaceSection';
+import { AdigoMartSection } from './components/mart/AdigoMartSection';
+import { TraceabilitySection } from './components/traceability/TraceabilitySection';
+import { TechnologySection } from './components/technology/TechnologySection';
 import { HeroPreviewModal, HeroModalMode } from './components/hero/HeroPreviewModal';
 import { HERO_CONFIG } from './config/heroConfig';
 
@@ -22,7 +25,14 @@ export default function App() {
 
   const handleSelectNav = (id: string) => {
     setActiveNav(id);
-    if (id === 'explore' || id === 'app' || id === 'marketplace') {
+    if (
+      id === 'explore' ||
+      id === 'app' ||
+      id === 'marketplace' ||
+      id === 'mart' ||
+      id === 'traceability' ||
+      id === 'technology'
+    ) {
       scrollToSection(id);
       return;
     }
@@ -50,6 +60,12 @@ export default function App() {
           <AdigoAppSection />
 
           <MarketplaceSection />
+
+          <AdigoMartSection />
+
+          <TraceabilitySection />
+
+          <TechnologySection />
         </main>
 
         <HeroPreviewModal

@@ -1,0 +1,1334 @@
+# PROMPT – PHÁT TRIỂN SECTION 04: ADIGO MART
+
+## 01. Vai trò và nhiệm vụ
+
+Đóng vai trò Senior UI/UX Designer, Creative Director, Product Designer, Retail Experience Designer và Senior Frontend Developer.
+
+Tiếp tục phát triển Section 04 – ADIGO Mart cho landing page ADIGO hiện tại, bám sát hình ảnh thiết kế tham chiếu được cung cấp.
+
+Kế thừa toàn bộ Design System và ngôn ngữ thiết kế từ:
+
+- Section 00 – Hero Banner.
+- Section 01 – Khám phá ADIGO.
+- Section 02 – ADIGO App.
+- Section 03 – ADIGO Marketplace.
+
+Không thiết kế lại các section đã hoàn thành.
+
+Section 04 cần thể hiện ADIGO Mart như một thành phần trong hệ sinh thái thương mại ADIGO, kết nối trải nghiệm mua sắm tại cửa hàng với trải nghiệm mua sắm trực tuyến.
+
+Tập trung vào giá trị sản phẩm, trải nghiệm người tiêu dùng, khả năng kết nối điểm bán và tiềm năng phát triển hệ sinh thái bán lẻ.
+
+Không thiết kế theo hướng giới thiệu phần mềm quản lý cửa hàng, POS, quản lý kho hàng hoặc quản trị hệ thống phân phối.
+
+---
+
+## 02. Mục tiêu truyền thông
+
+Sau khi xem Section 04, người truy cập cần hiểu:
+
+- ADIGO Mart là gì.
+- ADIGO Mart kết nối với ADIGO App như thế nào.
+- Người tiêu dùng có thể khám phá sản phẩm tại cửa hàng và trên ứng dụng.
+- Có thể tìm kiếm cửa hàng và điểm bán phù hợp.
+- Có thể lựa chọn phương thức mua sắm và nhận hàng.
+- Có thể tiếp cận các tiện ích và chương trình thành viên trong hệ sinh thái.
+- ADIGO có khả năng kết nối giữa thương mại trực tuyến và bán lẻ trực tiếp.
+- ADIGO Mart có tiềm năng phát triển thành mạng lưới bán lẻ kết nối với nhiều thương hiệu và đối tác.
+
+Không mặc định tất cả cửa hàng trong hệ sinh thái đều thuộc sở hữu của ADIGO.
+
+Không tự công bố số lượng cửa hàng, phạm vi hoạt động hoặc mô hình nhượng quyền khi chưa được xác nhận.
+
+---
+
+## 03. Định hướng thiết kế
+
+Áp dụng kết hợp các phong cách:
+
+- Premium Consumer Technology.
+- Omnichannel Commerce.
+- Modern Retail Experience.
+- Glassmorphism.
+- Lifestyle Product Showcase.
+- Architectural Visualization.
+- Abstract Technology Geometry.
+- Modern Light Mode.
+- Dynamic Glass Layers.
+- Immersive Product Experience.
+
+Section phải tạo cảm giác ADIGO Mart là một mô hình bán lẻ được kết nối bằng công nghệ, không phải một cửa hàng thực phẩm thông thường.
+
+### Nguyên tắc thị giác
+
+- Cửa hàng là hình ảnh không gian thương mại.
+- Smartphone là điểm kết nối công nghệ.
+- Người tiêu dùng là trung tâm trải nghiệm.
+- Glass elements thể hiện sự kết nối giữa trực tuyến và trực tiếp.
+- Background hình học tạo bản sắc công nghệ.
+- Logo ADIGO xuất hiện nhất quán.
+
+Không sử dụng quá nhiều smartphone như Section 02.
+
+Không sử dụng màn hình Marketplace lớn như Section 03.
+
+Section 04 phải có ngôn ngữ bố cục riêng, tránh lặp lại cấu trúc của các section trước.
+
+---
+
+## 04. Cấu trúc tổng thể
+
+Thiết kế Section 04 full-width, gồm hai vùng chính và một thanh trải nghiệm phía dưới.
+
+### Vùng A – Nội dung giới thiệu
+
+Nằm bên trái, chiếm khoảng 35–38% chiều rộng.
+
+Bao gồm:
+
+- Glass eyebrow label.
+- Headline chính.
+- Nội dung mô tả.
+- Bốn Glass Feature Chips.
+
+### Vùng B – Omnichannel Product Showcase
+
+Nằm bên phải, chiếm khoảng 62–65% chiều rộng.
+
+Bao gồm:
+
+- Hình ảnh cửa hàng ADIGO Mart.
+- Smartphone hiển thị giao diện tìm kiếm cửa hàng.
+- Floating Glass Map Card.
+- Hình ảnh người tiêu dùng.
+- Giỏ mua sắm chứa các sản phẩm.
+- Glass Platform.
+- Các lớp hình học và đường ánh sáng kết nối.
+
+### Vùng C – Omnichannel Experience Bar
+
+Nằm phía dưới, trải dài gần toàn bộ chiều rộng section.
+
+Thể hiện bốn trải nghiệm:
+
+1. Khám phá tại cửa hàng.
+2. Đặt hàng trực tuyến.
+3. Nhận hàng linh hoạt.
+4. Trải nghiệm liền mạch.
+
+### Kích thước tham chiếu
+
+- Section width: 100%.
+- Content max-width: 1680px.
+- Section padding-top: 70–90px.
+- Section padding-bottom: 60–80px.
+- Horizontal padding: 4–6%.
+- Main showcase height: 650–760px.
+- Tổng chiều cao desktop: khoảng 850–1000px.
+
+Không ép chiều cao cố định khi nội dung hoặc viewport không phù hợp.
+
+Section 04 cần có chiều cao và nhịp điệu thị giác tương đương các section trước.
+
+---
+
+## 05. Nội dung giới thiệu bên trái
+
+### 5.1. Glass Eyebrow Label
+
+Nội dung:
+
+ADIGO Mart
+
+Icon:
+
+Store hoặc Shopping Store dạng line.
+
+Thiết kế:
+
+- Background trắng bán trong suốt.
+- Border trắng sáng.
+- Backdrop blur: 16–24px.
+- Border radius: 100px.
+- Shadow xanh lam nhẹ.
+- Chiều cao khoảng 44–48px.
+- Padding ngang: 22–26px.
+
+Kế thừa trực tiếp Glass Eyebrow component từ các section trước.
+
+Căn trái theo headline.
+
+### 5.2. Headline
+
+Sử dụng chính xác nội dung:
+
+Mua sắm theo cách
+bạn muốn.
+
+Dòng thứ nhất sử dụng màu Deep Navy.
+
+Dòng thứ hai sử dụng gradient từ xanh ngọc sang xanh lá nhận diện ADIGO.
+
+Typography:
+
+- Font chữ kế thừa từ Hero.
+- Font size desktop: 52–68px.
+- Font weight: 700–800.
+- Line height: 1.12–1.2.
+- Letter spacing: điều chỉnh nhẹ.
+- Text align: left.
+
+Headline phải có sức nặng thị giác, mạnh mẽ, dễ đọc.
+
+Không thêm các slogan phụ gây phân tán nội dung.
+
+### 5.3. Nội dung mô tả
+
+Sử dụng nội dung:
+
+ADIGO Mart hướng đến kết nối không gian bán lẻ trực tiếp với trải nghiệm mua sắm số, mang đến sự thuận tiện trong việc khám phá, lựa chọn và tiếp cận sản phẩm.
+
+Thiết kế:
+
+- Font size desktop: 18–21px.
+- Line height: 1.6.
+- Màu xanh xám đậm.
+- Max-width: 560px.
+- Khoảng cách với headline: 20–26px.
+
+Không sử dụng đoạn văn dài giới thiệu mô hình quản trị cửa hàng.
+
+---
+
+## 06. Glass Feature Chips
+
+Bên dưới nội dung mô tả, bố trí bốn thẻ kính theo dạng grid 2 × 2.
+
+Không thiết kế thành bốn card lớn như Section 01.
+
+Mỗi thẻ chỉ có icon và nội dung ngắn.
+
+### Feature 01 – Khám phá sản phẩm tại cửa hàng
+
+Icon: Store.
+
+Nội dung:
+
+Khám phá sản phẩm
+tại cửa hàng
+
+### Feature 02 – Tìm điểm bán phù hợp
+
+Icon: Map Pin.
+
+Nội dung:
+
+Tìm điểm bán
+phù hợp
+
+### Feature 03 – Đặt hàng trực tuyến
+
+Icon: Shopping Cart.
+
+Nội dung:
+
+Đặt hàng
+trực tuyến
+
+### Feature 04 – Ưu đãi và thành viên
+
+Icon: Gift hoặc Crown.
+
+Nội dung:
+
+Ưu đãi và
+thành viên
+
+### Thiết kế chung
+
+- Grid columns: 2.
+- Gap: 16–20px.
+- Card min-height: 85–100px.
+- Background trắng trong suốt: 35–60%.
+- Backdrop blur: 16–24px.
+- Border trắng: 1.5px.
+- Border radius: 22–26px.
+- Shadow mềm.
+- Padding: 14–18px.
+
+Icon nằm trong một khối kính vuông bo góc.
+
+- Icon container: 52–64px.
+- Icon color: xanh ngọc hoặc xanh lá.
+- Icon style: line icon.
+- Icon border radius: 16–18px.
+
+Nội dung sử dụng:
+
+- Font size: 16–18px.
+- Font weight: 600–700.
+- Màu Deep Navy.
+- Tối đa hai hoặc ba dòng.
+
+Không thêm mô tả dài vào từng chip.
+
+Nếu các chip không có chức năng điều hướng, không tạo hiệu ứng khiến người dùng hiểu nhầm đây là các nút bấm.
+
+---
+
+## 07. Omnichannel Product Showcase
+
+Đây là vùng hình ảnh chính của Section 04.
+
+Thiết kế theo nhiều lớp, tạo chiều sâu và thể hiện sự kết nối giữa không gian bán lẻ thực tế và ứng dụng ADIGO.
+
+### Cấu trúc hình ảnh
+
+Layer 01 – Background hình học công nghệ.
+
+Layer 02 – Hình ảnh kiến trúc cửa hàng.
+
+Layer 03 – Glass Platform.
+
+Layer 04 – Smartphone mockup.
+
+Layer 05 – Floating Glass Map Card.
+
+Layer 06 – Người tiêu dùng và giỏ hàng.
+
+Layer 07 – Đường ánh sáng kết nối và hiệu ứng phản chiếu.
+
+Các lớp phải hòa quyện tự nhiên, không tạo cảm giác ghép nhiều ảnh rời rạc.
+
+---
+
+## 08. Hình ảnh cửa hàng ADIGO Mart
+
+### 8.1. Vị trí
+
+Hình ảnh cửa hàng nằm phía sau smartphone và người tiêu dùng, chiếm phần lớn vùng bên phải.
+
+Cửa hàng tạo bối cảnh thương mại nhưng không lấn át toàn bộ section.
+
+### 8.2. Phong cách kiến trúc
+
+Thiết kế theo phong cách:
+
+- Modern Retail Store.
+- Premium Fresh Food Market.
+- Contemporary Commercial Architecture.
+- Minimalist Storefront.
+- Clean and Professional Retail Space.
+
+Đặc điểm:
+
+- Mặt tiền kính rộng.
+- Biển hiệu ADIGO Mart rõ ràng.
+- Hệ thống ánh sáng hiện đại.
+- Không gian bên trong sáng và sạch.
+- Kệ trưng bày sản phẩm chuyên nghiệp.
+- Quầy thực phẩm tươi sống.
+- Khu vực rau củ và trái cây.
+- Khu vực thực phẩm đóng gói.
+- Hệ thống nhận diện đồng nhất.
+
+Không thiết kế cửa hàng giống quán café, chợ truyền thống hoặc cửa hàng tạp hóa nhỏ lẻ.
+
+Không sử dụng mô hình cửa hàng có quá nhiều chi tiết gỗ, cây xanh hoặc phong cách rustic.
+
+Ưu tiên bản sắc thương mại hiện đại và công nghệ.
+
+### 8.3. Nhận diện cửa hàng
+
+Sử dụng:
+
+ADIGO Mart
+
+Màu sắc nhận diện:
+
+- Xanh lam công nghệ.
+- Xanh navy.
+- Xanh ngọc.
+- Xanh lá lime làm điểm nhấn.
+- Trắng.
+
+Biển hiệu cửa hàng:
+
+- Background xanh lam đậm.
+- Logo ADIGO đúng bản gốc.
+- Chữ Mart rõ ràng.
+- Có thể sử dụng dải màu chuyển xanh ngọc sang xanh lá ở phần chân biển hiệu.
+
+Không tự thiết kế lại biểu tượng chữ A.
+
+Không lặp chữ A khi biểu tượng được sử dụng thay thế chữ A đầu tiên trong wordmark ngang.
+
+Hình ảnh cửa hàng ADIGO Mart trong phạm vi section này là concept nhận diện và trải nghiệm sản phẩm nếu chưa có cửa hàng thực tế được xác nhận.
+
+Không sử dụng hình ảnh concept để tuyên bố ADIGO đã triển khai hệ thống cửa hàng tại các địa phương.
+
+---
+
+## 09. Smartphone Mockup – Tìm kiếm cửa hàng
+
+### 9.1. Vị trí và kích thước
+
+Smartphone đặt phía trước cửa hàng, hơi lệch về bên trái của Product Showcase.
+
+Thiết kế:
+
+- Chiều cao desktop: 480–600px.
+- Viền graphite hoặc titanium.
+- Góc nghiêng nhẹ: khoảng 5–8 độ.
+- Phản chiếu ánh sáng tinh tế.
+- Shadow mềm.
+- Màn hình sáng, rõ ràng.
+- Thiết bị đặt trên Glass Platform.
+
+Chỉ sử dụng một smartphone chính.
+
+Không bổ sung nhiều điện thoại làm bố cục trở nên giống Section 02.
+
+### 9.2. Nội dung giao diện
+
+Smartphone hiển thị giao diện tìm kiếm cửa hàng và điểm bán trong hệ sinh thái ADIGO.
+
+Kế thừa Product UI Design System đã xây dựng.
+
+#### Header ứng dụng
+
+- Logo ADIGO.
+- Icon thông báo.
+- Avatar minh họa.
+- Thanh tìm kiếm.
+
+Placeholder:
+
+Tìm sản phẩm, cửa hàng...
+
+#### Banner tìm kiếm cửa hàng
+
+Headline:
+
+Tìm cửa hàng ADIGO Mart gần bạn
+
+Visual:
+
+- Bản đồ minh họa.
+- Map Pin.
+- Gradient xanh lam và xanh lá.
+- Icon cửa hàng.
+
+CTA minh họa:
+
+Khám phá cửa hàng →
+
+#### Danh sách điểm bán
+
+Tiêu đề:
+
+Cửa hàng và điểm bán
+
+Hiển thị các Store Cards gồm:
+
+- Hình ảnh cửa hàng.
+- Tên điểm bán.
+- Khu vực.
+- Khoảng cách nếu có dữ liệu vị trí thực tế.
+- Trạng thái hoạt động nếu đã xác minh.
+- Nút xem thông tin.
+
+Nếu chưa có danh sách cửa hàng chính thức, sử dụng dữ liệu minh họa trung tính:
+
+- Điểm bán minh họa 01.
+- Điểm bán minh họa 02.
+- Điểm bán minh họa 03.
+
+Không tự tạo địa chỉ hoặc tên cửa hàng tại Cầu Giấy, Nam Từ Liêm, Hà Đông hoặc các khu vực khác rồi trình bày như cửa hàng đang hoạt động.
+
+Không sử dụng khoảng cách, giờ mở cửa hoặc trạng thái mở cửa giả.
+
+#### Bottom Navigation
+
+Kế thừa hệ thống điều hướng của ADIGO App.
+
+Có thể sử dụng:
+
+- Trang chủ.
+- Khám phá.
+- Mart.
+- Đơn hàng.
+- Tài khoản.
+
+Tab Mart ở trạng thái active.
+
+Cấu trúc này cần điều chỉnh theo UI chính thức của ADIGO nếu đã có, không tự thay đổi hệ thống navigation của sản phẩm chỉ để phục vụ landing page.
+
+---
+
+## 10. Floating Glass Map Card
+
+Bố trí một thẻ bản đồ kính nổi bên cạnh smartphone.
+
+### Mục đích
+
+Thể hiện khả năng kết nối giữa ứng dụng ADIGO và các cửa hàng, điểm bán trong môi trường thực tế.
+
+### Thiết kế
+
+- Width desktop: 230–290px.
+- Height: 170–220px.
+- Background trắng trong suốt.
+- Backdrop blur: 20–28px.
+- Border trắng sáng.
+- Border radius: 24–32px.
+- Góc nghiêng nhẹ.
+- Shadow xanh lam.
+- Glass reflection.
+
+### Nội dung
+
+Phần trên:
+
+- Bản đồ đường phố minh họa.
+- Map Pin 3D màu xanh ngọc hoặc xanh lá.
+- Các đường giao thông đơn giản.
+
+Phần dưới:
+
+- Store icon.
+- Tên điểm bán minh họa.
+- Icon vị trí.
+- Mũi tên chỉ hướng.
+
+Có thể sử dụng nội dung:
+
+ADIGO Mart
+
+Khám phá điểm bán phù hợp
+
+Không hiển thị vị trí thực tế, khoảng cách cụ thể hoặc thông tin điều hướng giả.
+
+Không yêu cầu quyền truy cập vị trí người dùng trong phạm vi landing page.
+
+Không bắt buộc tích hợp Google Maps API hoặc dịch vụ bản đồ chỉ để dựng hình ảnh minh họa.
+
+Bản đồ thực tế chỉ được triển khai khi có dữ liệu điểm bán và yêu cầu chức năng cụ thể.
+
+---
+
+## 11. Hình ảnh người tiêu dùng
+
+### 11.1. Vị trí
+
+Nhân vật nằm ở phía ngoài cùng bên phải Product Showcase.
+
+Có thể chồng nhẹ lên hình ảnh cửa hàng để tạo chiều sâu.
+
+Không che:
+
+- Biển hiệu ADIGO Mart.
+- Màn hình smartphone.
+- Nội dung bên trái.
+- Glass Map Card.
+
+### 11.2. Phong cách hình ảnh
+
+Sử dụng Lifestyle Photography chất lượng cao.
+
+Nhân vật:
+
+- Người tiêu dùng Việt Nam hoặc châu Á.
+- Trang phục hiện đại, tự nhiên.
+- Biểu cảm thoải mái.
+- Đang sử dụng smartphone.
+- Có giỏ mua sắm thực phẩm.
+- Tư thế tự nhiên, không giống người mẫu quảng cáo tạo dáng quá mức.
+
+Hình ảnh phải thể hiện sự thuận tiện khi mua sắm, không chỉ đơn thuần là hình ảnh người cầm điện thoại.
+
+### 11.3. Giỏ mua sắm
+
+Sử dụng giỏ mua sắm hiện đại theo màu nhận diện ADIGO.
+
+Bên trong có các nhóm sản phẩm:
+
+- Thịt đóng gói.
+- Trứng.
+- Rau củ.
+- Trái cây.
+- Thực phẩm chế biến.
+
+Sản phẩm phải có tỷ lệ thực tế, hình ảnh sắc nét.
+
+Thịt tươi cần được đóng gói phù hợp, không đặt thịt sống trực tiếp chung với các sản phẩm khác.
+
+Có thể bố trí biểu tượng ADIGO trên giỏ mua sắm bằng asset logo chính thức.
+
+Không tạo logo sai hình học hoặc sai tỷ lệ.
+
+---
+
+## 12. Glass Platform
+
+Thiết kế bệ kính bên dưới smartphone và Floating Map Card.
+
+Không cần đặt toàn bộ cửa hàng lên bệ kính.
+
+Cửa hàng đóng vai trò không gian kiến trúc phía sau, còn bệ kính đại diện cho lớp kết nối công nghệ phía trước.
+
+### Đặc điểm
+
+- Hình ellipse kéo dài.
+- Chất liệu kính trong suốt.
+- Các lớp kính xếp chồng mỏng.
+- Viền cyan nhẹ.
+- Gradient xanh lam và xanh ngọc.
+- Phản chiếu ánh sáng mềm.
+- Shadow lan tỏa.
+
+Thiết kế bệ kính mạnh mẽ, tinh tế.
+
+Không sử dụng hiệu ứng sân khấu khoa học viễn tưởng.
+
+Có thể dựng bằng CSS, SVG hoặc asset WebP/PNG tách nền.
+
+Không bắt buộc sử dụng Three.js hoặc WebGL.
+
+---
+
+## 13. Omnichannel Experience Bar
+
+Thiết kế một thanh trải nghiệm nằm phía dưới toàn bộ section.
+
+Đây là thành phần tổng kết sự kết nối giữa cửa hàng và nền tảng trực tuyến.
+
+Không sử dụng lại nguyên dạng sáu tab của Section 02 hoặc bốn tab Marketplace của Section 03.
+
+### Cấu trúc
+
+Gồm bốn trải nghiệm:
+
+#### Experience 01
+
+Icon: Store.
+
+Nội dung:
+
+Khám phá tại cửa hàng
+
+#### Experience 02
+
+Icon: Smartphone.
+
+Nội dung:
+
+Đặt hàng trực tuyến
+
+#### Experience 03
+
+Icon: Truck hoặc Package.
+
+Nội dung:
+
+Nhận hàng linh hoạt
+
+#### Experience 04
+
+Icon: Crown hoặc Network.
+
+Nội dung:
+
+Trải nghiệm liền mạch
+
+### Thiết kế
+
+- Width: 100%.
+- Max-width: 1500px.
+- Height desktop: 85–105px.
+- Background kính trắng bán trong suốt.
+- Border trắng sáng.
+- Backdrop blur: 20–28px.
+- Border radius: 40–60px.
+- Shadow xanh lam nhẹ.
+- Padding: 12–18px.
+- Căn giữa section.
+
+Bốn nhóm nội dung bố trí ngang, ngăn cách bằng các chấm xanh nhỏ hoặc đường kết nối tinh tế.
+
+Không sử dụng đường kẻ dày chia thành bốn ô cứng nhắc.
+
+Mỗi nhóm có:
+
+- Icon line kích thước 28–36px.
+- Font size: 16–19px.
+- Font weight: 600.
+- Text color: Deep Navy.
+
+Trạng thái nhấn mạnh có thể sử dụng nền xanh mint nhạt.
+
+### Hành vi tương tác
+
+Ưu tiên triển khai thanh này dưới dạng Experience Navigation có thể tương tác nếu đã có đủ màn hình minh họa.
+
+Khi chọn một trải nghiệm, smartphone có thể chuyển sang giao diện tương ứng.
+
+- Khám phá tại cửa hàng: giao diện danh sách điểm bán.
+- Đặt hàng trực tuyến: giao diện sản phẩm và giỏ hàng.
+- Nhận hàng linh hoạt: giao diện lựa chọn hình thức nhận hàng.
+- Trải nghiệm liền mạch: giao diện thành viên và đơn hàng.
+
+Floating Map Card cũng có thể thay đổi nội dung minh họa phù hợp với từng trạng thái.
+
+Không thay đổi hình ảnh cửa hàng hoặc vị trí nhân vật mỗi khi chuyển tab.
+
+Nếu chưa có đủ UI minh họa, triển khai Experience Bar dưới dạng nội dung tĩnh, không tạo nút bấm không có chức năng.
+
+Không tạo quy trình đặt hàng, thanh toán hoặc tìm cửa hàng thực tế trong phạm vi landing page.
+
+---
+
+## 14. Thiết kế các trạng thái Smartphone
+
+Nếu triển khai Experience Navigation tương tác, xây dựng bốn màn hình đồng nhất.
+
+### Screen 01 – Store Discovery
+
+- Thanh tìm kiếm.
+- Banner khám phá điểm bán.
+- Danh sách cửa hàng.
+- Thông tin điểm bán.
+- Bản đồ minh họa.
+- Tab Mart.
+
+### Screen 02 – Online Shopping
+
+- Danh mục sản phẩm.
+- Sản phẩm nổi bật.
+- Chi tiết sản phẩm.
+- Giỏ hàng.
+- Thông tin đơn hàng.
+
+Không hiển thị giá bán chính thức nếu chưa được cung cấp.
+
+### Screen 03 – Flexible Fulfillment
+
+- Thông tin đơn hàng.
+- Lựa chọn nhận tại điểm bán.
+- Lựa chọn giao hàng.
+- Thông tin nhận hàng minh họa.
+- Trạng thái chuẩn bị sản phẩm.
+
+Các hình thức nhận hàng phải được trình bày phù hợp với phạm vi dịch vụ thực tế hoặc định hướng phát triển.
+
+Không cam kết giao hàng nhanh, giao hàng miễn phí hoặc thời gian giao hàng cụ thể.
+
+### Screen 04 – Connected Experience
+
+- Tài khoản người dùng.
+- Lịch sử đơn hàng.
+- Sản phẩm yêu thích.
+- Tiện ích thành viên.
+- Kết nối cửa hàng.
+- Ưu đãi minh họa.
+
+Không tự tạo điểm thưởng, cấp bậc thành viên hoặc chương trình khách hàng thân thiết chưa được phê duyệt.
+
+---
+
+## 15. Background Design – Mạnh mẽ và hiện đại
+
+Đây là yêu cầu bắt buộc.
+
+Kế thừa định hướng background công nghệ đã sử dụng từ Section 03.
+
+Tuyệt đối không sử dụng:
+
+- Hoa trang trí tại các góc.
+- Lá cây trang trí.
+- Lá cây làm mờ ở foreground.
+- Cành cây.
+- Dây leo.
+- Họa tiết thực vật.
+- Hình ảnh trang trại làm background.
+
+Các sản phẩm rau củ hoặc trái cây chỉ xuất hiện bên trong cửa hàng, smartphone hoặc giỏ mua sắm với vai trò sản phẩm thương mại.
+
+### Layer 01 – Base Gradient
+
+Sử dụng nền chuyển từ trắng xanh sang xanh lam và xanh ngọc.
+
+Vùng bên trái sáng hơn để nội dung dễ đọc.
+
+Vùng bên phải có sắc xanh lam mạnh hơn để làm nổi bật không gian cửa hàng.
+
+Màu tham chiếu:
+
+- #F0F7FF.
+- #DCEEFF.
+- #BEDDF7.
+- #A9D9F1.
+- #C0EFE5.
+
+### Layer 02 – Abstract Glass Architecture
+
+Sử dụng các khối kính hình học phía sau cửa hàng.
+
+Có thể kết hợp:
+
+- Khối chữ nhật đứng.
+- Các mặt phẳng kính trong suốt.
+- Khối hình thang.
+- Dải kính chéo.
+- Các lớp kính lấy cảm hứng từ kiến trúc đô thị hiện đại.
+- Đường cong lấy cảm hứng từ biểu tượng chữ A của ADIGO.
+
+Các khối hình học nên có kích thước lớn và số lượng ít để tạo sức mạnh thị giác.
+
+Không tạo quá nhiều hình khối nhỏ gây rối.
+
+### Layer 03 – Connection Light Trails
+
+Sử dụng một hoặc hai dải ánh sáng chạy phía sau smartphone và bao quanh cửa hàng.
+
+Mục đích:
+
+Thể hiện sự kết nối giữa không gian thương mại vật lý và nền tảng số.
+
+Đường sáng có thể chuyển từ cyan sang xanh ngọc.
+
+Không tạo đường neon quá mạnh.
+
+### Layer 04 – Glass Reflection
+
+Tạo ánh sáng phản chiếu tại:
+
+- Cạnh Glass Platform.
+- Viền Floating Map Card.
+- Viền smartphone.
+- Các cạnh khối hình học background.
+
+### Layer 05 – Bottom Transition
+
+Sử dụng các dải kính cong hoặc gradient nhẹ ở chân section để chuyển tiếp sang Section 05.
+
+Không sử dụng đường phân cách cứng.
+
+### CSS tham chiếu
+
+```css
+.adigo-mart-section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      ellipse at 78% 40%,
+      rgba(97, 177, 238, 0.28),
+      transparent 48%
+    ),
+    radial-gradient(
+      ellipse at 95% 85%,
+      rgba(99, 218, 183, 0.20),
+      transparent 40%
+    ),
+    linear-gradient(
+      120deg,
+      #F0F7FF 0%,
+      #DCEEFF 45%,
+      #BEDDF7 75%,
+      #C0EFE5 100%
+    );
+}
+
+.mart-glass-geometry {
+  position: absolute;
+  pointer-events: none;
+
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.32),
+    rgba(96, 174, 223, 0.08)
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  border-radius: 24px;
+}
+```
+
+Các thông số chỉ mang tính tham chiếu.
+
+Ưu tiên kế thừa Design Token đã có trong dự án.
+
+---
+
+## 16. Hệ thống màu sắc
+
+Kế thừa màu nhận diện ADIGO chính thức.
+
+### Brand Colors
+
+- Deep Navy: #142F63.
+- Brand Blue: #345EAA.
+- Technology Blue: #4C9DC6.
+- Brand Green: #398441.
+- Lime Green: #A4CE46.
+
+### Mart Experience Colors
+
+- Ice Blue: #F0F7FF.
+- Soft Blue: #DCEEFF.
+- Glass Blue: #BEDDF7.
+- Soft Cyan: #A9D9F1.
+- Soft Mint: #C0EFE5.
+
+### Glass Components
+
+- Background: rgba(255,255,255,0.45).
+- Border: rgba(255,255,255,0.85).
+- Backdrop blur: 20px.
+- Border radius: 24–32px.
+- Shadow mềm.
+
+Không sử dụng màu tím.
+
+Không sử dụng quá nhiều màu xanh lá khiến ADIGO giống website nông nghiệp truyền thống.
+
+Màu xanh lam phải tiếp tục giữ vai trò chủ đạo.
+
+---
+
+## 17. Animation và Micro-interactions
+
+### 17.1. Scroll Reveal
+
+Khi section xuất hiện:
+
+- Eyebrow label fade-in.
+- Headline fade-up.
+- Nội dung mô tả xuất hiện.
+- Bốn Glass Feature Chips xuất hiện lần lượt.
+- Hình ảnh cửa hàng reveal nhẹ.
+- Smartphone chuyển động từ dưới lên.
+- Floating Map Card xuất hiện.
+- Hình ảnh người tiêu dùng fade-in.
+- Experience Bar xuất hiện cuối cùng.
+
+Tổng hiệu ứng khoảng 0,8–1,2 giây.
+
+Không để người dùng phải chờ animation mới đọc được nội dung.
+
+### 17.2. Smartphone Animation
+
+- Floating motion rất nhẹ.
+- Biên độ tối đa khoảng 4–6px.
+- Không xoay liên tục.
+- Không thay đổi vị trí quá nhiều.
+
+### 17.3. Floating Map Card
+
+- Chuyển động nhẹ theo trục dọc.
+- Map Pin có thể pulse nhẹ khi section xuất hiện.
+- Không sử dụng hiệu ứng nhấp nháy liên tục.
+
+### 17.4. Connection Light Trails
+
+Có thể tạo chuyển động ánh sáng mềm theo đường dẫn.
+
+Ưu tiên SVG stroke animation hoặc CSS transform.
+
+Không sử dụng hiệu ứng neon hoặc hạt sáng dày đặc.
+
+### 17.5. Experience Bar
+
+Nếu có tương tác:
+
+- Active indicator chuyển động mượt.
+- Smartphone screen crossfade.
+- Floating Map Card thay đổi nội dung phù hợp.
+- Duration: 250–350ms.
+- Không gây layout shift.
+
+Hỗ trợ prefers-reduced-motion.
+
+Tắt các hiệu ứng không cần thiết trên mobile hoặc thiết bị có hiệu năng thấp.
+
+---
+
+## 18. Responsive Design
+
+### Desktop từ 1440px
+
+- Nội dung bên trái khoảng 35–38%.
+- Product Showcase bên phải khoảng 62–65%.
+- Bốn Glass Feature Chips dạng grid 2 × 2.
+- Cửa hàng, smartphone, bản đồ và người tiêu dùng hiển thị đầy đủ.
+- Experience Bar nằm ngang phía dưới.
+
+### Laptop 1024–1439px
+
+- Giảm headline bằng clamp().
+- Giảm kích thước smartphone.
+- Điều chỉnh tỷ lệ cửa hàng và người tiêu dùng.
+- Giảm kích thước Floating Map Card.
+- Giữ bố cục cân bằng.
+- Không để hình ảnh đè lên nội dung.
+
+### Tablet 768–1023px
+
+Có thể chuyển thành bố cục hai hàng:
+
+Hàng trên:
+
+- Eyebrow.
+- Headline.
+- Nội dung giới thiệu.
+- Bốn Glass Feature Chips.
+
+Hàng dưới:
+
+- Cửa hàng.
+- Smartphone.
+- Floating Map Card.
+- Hình ảnh người tiêu dùng.
+
+Experience Bar nằm phía dưới.
+
+Giảm số lượng các khối kính trang trí nếu cần.
+
+### Mobile dưới 768px
+
+Thiết kế riêng theo thứ tự:
+
+1. Glass Eyebrow.
+2. Headline.
+3. Nội dung mô tả.
+4. Omnichannel Product Showcase.
+5. Bốn Glass Feature Chips.
+6. Omnichannel Experience Bar.
+
+Yêu cầu:
+
+- Headline khoảng 34–42px.
+- Nội dung mô tả khoảng 15–17px.
+- Smartphone đủ lớn để đọc.
+- Hình ảnh cửa hàng vẫn nhận diện được ADIGO Mart.
+- Có thể giảm kích thước hoặc ẩn người tiêu dùng trên màn hình rất nhỏ nếu hình ảnh trở nên chật chội.
+- Floating Map Card không che màn hình smartphone.
+- Feature Chips sử dụng grid 2 × 2 hoặc một cột tùy chiều rộng.
+- Experience Bar có thể chuyển thành grid 2 × 2.
+- Không tràn ngang.
+- Không ép section bằng 100vh.
+- Không tạo khoảng trắng bất thường.
+- Không thu nhỏ nguyên toàn bộ hình ảnh desktop.
+
+Trải nghiệm mobile phải được thiết kế độc lập, không chỉ là phiên bản thu nhỏ của desktop.
+
+---
+
+## 19. Quản lý hình ảnh và Assets
+
+Sử dụng hình ảnh thiết kế được cung cấp làm tham chiếu về:
+
+- Bố cục.
+- Màu sắc.
+- Nhận diện cửa hàng.
+- Cách bố trí smartphone.
+- Floating Glass Map Card.
+- Lifestyle Photography.
+- Glass Platform.
+- Background hình học.
+
+Không sử dụng toàn bộ hình ảnh tham chiếu làm một background duy nhất.
+
+Tách riêng các asset để dễ dàng thay đổi, tối ưu và responsive.
+
+Cấu trúc thư mục tham chiếu:
+
+```text
+assets/
+└── sections/
+    └── section-04-mart/
+        ├── brand/
+        │   ├── adigo-logo.png
+        │   └── adigo-mart-wordmark.svg
+        │
+        ├── storefront/
+        │   ├── mart-storefront-concept.webp
+        │   └── mart-interior.webp
+        │
+        ├── lifestyle/
+        │   ├── shopper-transparent.webp
+        │   └── shopping-basket.webp
+        │
+        ├── screens/
+        │   ├── store-discovery.webp
+        │   ├── online-shopping.webp
+        │   ├── fulfillment.webp
+        │   └── membership.webp
+        │
+        ├── devices/
+        │   └── smartphone-frame.webp
+        │
+        └── decorations/
+            ├── glass-platform.svg
+            ├── map-preview.svg
+            ├── map-pin.webp
+            ├── architectural-glass.svg
+            └── connection-trails.svg
+```
+
+Điều chỉnh cấu trúc theo source code hiện tại.
+
+Không tạo file asset rỗng hoặc đường dẫn ảnh không tồn tại.
+
+### Yêu cầu hình ảnh
+
+- Sử dụng ảnh chất lượng cao.
+- Tách nền các đối tượng cần chồng lớp.
+- Không sử dụng ảnh có watermark.
+- Không kéo giãn sai tỷ lệ.
+- Tối ưu WebP hoặc AVIF.
+- Giữ alpha transparency nếu cần.
+- Lazy loading cho hình ảnh ngoài viewport.
+- Khai báo kích thước để hạn chế layout shift.
+- Alt text phù hợp.
+
+Logo ADIGO phải sử dụng đúng file chính thức đã cung cấp:
+
+ADIGO_Dung_2400px.png
+
+Không dùng ảnh AI để thay thế asset logo chính thức trong giao diện thật.
+
+Nếu chưa có wordmark ADIGO Mart được phê duyệt, sử dụng logo ADIGO gốc kết hợp chữ Mart bằng typography phù hợp và quản lý dưới dạng cấu hình nhận diện minh họa.
+
+---
+
+## 20. Cấu trúc Component
+
+Tổ chức Section 04 thành component độc lập.
+
+```text
+AdigoMartSection
+│
+├── MartBackground
+│   ├── GradientLayer
+│   ├── ArchitecturalGlassShapes
+│   ├── ConnectionLightTrails
+│   └── RadialGlow
+│
+├── MartContent
+│   ├── GlassEyebrow
+│   ├── SectionHeadline
+│   ├── SectionDescription
+│   └── MartFeatureGrid
+│       ├── StoreDiscoveryChip
+│       ├── StoreLocatorChip
+│       ├── OnlineShoppingChip
+│       └── MembershipChip
+│
+├── OmnichannelShowcase
+│   ├── MartStorefront
+│   ├── GlassPlatform
+│   ├── MartPhoneMockup
+│   │   └── InteractiveMartScreen
+│   ├── FloatingMapCard
+│   ├── ShopperVisual
+│   └── ShoppingBasketVisual
+│
+└── OmnichannelExperienceBar
+    ├── StoreExperience
+    ├── OnlineExperience
+    ├── FulfillmentExperience
+    └── ConnectedExperience
+```
+
+Tái sử dụng các component từ section trước:
+
+- GlassEyebrow.
+- SectionHeadline.
+- GlassIcon.
+- GlassCard.
+- DeviceMockup.
+- ScrollReveal.
+- GlassNavigation.
+
+Không sao chép các component giống nhau nếu có thể tái sử dụng.
+
+Không thay đổi global Design System gây ảnh hưởng các section đã hoàn thành.
+
+---
+
+## 21. Quản lý dữ liệu tương tác
+
+Nếu Experience Bar có tương tác, quản lý trạng thái active tập trung.
+
+Cấu trúc dữ liệu tham chiếu:
+
+```js
+const martExperiences = [
+  {
+    id: 'store',
+    label: 'Khám phá tại cửa hàng',
+    icon: 'store',
+    screen: 'store-discovery'
+  },
+  {
+    id: 'online',
+    label: 'Đặt hàng trực tuyến',
+    icon: 'smartphone',
+    screen: 'online-shopping'
+  },
+  {
+    id: 'fulfillment',
+    label: 'Nhận hàng linh hoạt',
+    icon: 'truck',
+    screen: 'fulfillment'
+  },
+  {
+    id: 'connected',
+    label: 'Trải nghiệm liền mạch',
+    icon: 'network',
+    screen: 'membership'
+  }
+];
+```
+
+Sử dụng cùng một state để đồng bộ:
+
+- Experience Bar.
+- Smartphone screen.
+- Floating Map Card.
+- Feature Chip highlight nếu phù hợp.
+
+Mặc định active trải nghiệm Store Discovery.
+
+Nếu triển khai dạng tab, hỗ trợ:
+
+- Click.
+- Touch.
+- Keyboard navigation.
+- Focus-visible.
+- Active state.
+- ARIA tabs.
+
+Không tự động chuyển trạng thái liên tục.
+
+---
+
+## 22. Điều hướng
+
+Gắn ID:
+
+```html
+<section id="mart">
+```
+
+Menu Mart trên Header phải điều hướng đến Section 04.
+
+Sử dụng smooth scrolling và scroll-margin-top phù hợp với sticky Header hiện tại.
+
+Không tạo Header mới.
+
+Không bổ sung CTA đăng ký hoặc tải ứng dụng trong Section 04 nếu không cần thiết.
+
+CTA chuyển đổi chính sẽ được xử lý ở section cuối của landing page.
+
+---
+
+## 23. Phạm vi kỹ thuật
+
+Trước khi triển khai:
+
+- Kiểm tra source code hiện tại.
+- Kiểm tra framework đang sử dụng.
+- Kiểm tra Design System.
+- Kiểm tra component có thể tái sử dụng.
+- Kiểm tra thư mục assets.
+- Kiểm tra responsive breakpoints.
+- Kiểm tra hệ thống animation đã có.
+
+Chỉ thực hiện Section 04.
+
+Không xây dựng:
+
+- Backend quản lý cửa hàng.
+- Database.
+- POS.
+- Hệ thống quản lý kho.
+- Hệ thống quản lý nhà phân phối.
+- Tính năng định vị cửa hàng thực tế khi chưa có dữ liệu.
+- Thanh toán.
+- Checkout.
+- Hệ thống đăng nhập.
+- Hệ thống thành viên thực tế.
+
+Không tự ý cài đặt thư viện nặng nếu CSS, SVG và các component hiện tại đủ đáp ứng yêu cầu.
+
+Ưu tiên hiệu năng tải trang và chất lượng hình ảnh.
+
+---
+
+## 24. Kiểm soát nội dung và nhận diện
+
+- ADIGO là thương hiệu chủ đạo.
+- Sử dụng logo đúng bản gốc.
+- Không sử dụng màu tím.
+- Không sử dụng hoa lá làm background.
+- Không dùng từ “hữu cơ” để mô tả sản phẩm.
+- Không tạo địa chỉ cửa hàng giả.
+- Không tạo số lượng cửa hàng giả.
+- Không tự công bố mạng lưới ADIGO Mart trên toàn quốc.
+- Không tạo khoảng cách đến điểm bán giả.
+- Không tạo giờ mở cửa giả.
+- Không tự tạo chương trình ưu đãi.
+- Không tạo quyền lợi thành viên chưa được phê duyệt.
+- Không cam kết giao hàng nhanh hoặc giao hàng miễn phí.
+- Không tuyên bố cửa hàng concept đã đi vào hoạt động.
+- Không đưa dashboard quản lý vào section.
+- Không giới thiệu chức năng POS.
+- Không làm ADIGO Mart giống website bán hàng thực phẩm thông thường.
+- Không giới hạn ADIGO Mart trong sản phẩm của Organic Việt Nam.
+
+Hình ảnh concept cửa hàng và UI minh họa phải được phân biệt với hình ảnh, dữ liệu và giao diện đã triển khai thực tế.
+
+---
+
+## 25. Tiêu chí nghiệm thu
+
+Sau khi hoàn thành, tự kiểm tra:
+
+1. Section 04 bám sát hình ảnh thiết kế tham chiếu.
+2. Thể hiện rõ định vị ADIGO Mart.
+3. Người dùng hiểu sự kết nối giữa cửa hàng và ứng dụng.
+4. Bố cục khác biệt với Section 02 và Section 03.
+5. Không gian cửa hàng đẹp, hiện đại và chuyên nghiệp.
+6. Smartphone hiển thị giao diện rõ ràng.
+7. Floating Map Card có chiều sâu.
+8. Hình ảnh người tiêu dùng tự nhiên.
+9. Bốn Glass Feature Chips cân đối.
+10. Experience Bar rõ ràng.
+11. Background hình học công nghệ mạnh mẽ.
+12. Không có hoa lá trang trí các góc.
+13. Không có hiệu ứng neon quá mạnh.
+14. Glassmorphism đồng nhất với các section trước.
+15. Logo ADIGO đúng bản gốc.
+16. Không sử dụng thông tin cửa hàng chưa xác minh.
+17. Không có lỗi tiếng Việt.
+18. Không có hình ảnh bị vỡ.
+19. Không tràn chiều ngang.
+20. Responsive tốt trên desktop, tablet và mobile.
+21. Các thành phần tương tác hoạt động đúng nếu được triển khai.
+22. Không có nút bấm hoặc đường dẫn giả.
+23. Không gây layout shift đáng kể.
+24. Không thay đổi các section đã hoàn thành.
+25. Tổng thể mang bản sắc của một nền tảng công nghệ thương mại và bán lẻ hiện đại.
+
+Hãy triển khai Section 04 hoàn chỉnh bằng code thực tế, không chỉ trả về wireframe hoặc bản mô tả.
+
+Mục tiêu cuối cùng:
+
+Thể hiện ADIGO Mart như một trải nghiệm bán lẻ được kết nối bằng công nghệ, nơi người tiêu dùng có thể khám phá sản phẩm, kết nối điểm bán, mua sắm trực tuyến và lựa chọn phương thức nhận hàng phù hợp trong hệ sinh thái ADIGO.
+
+Nguyên tắc thiết kế: Connect physical retail with digital commerce.
