@@ -1,3 +1,4 @@
+import { ResponsiveImage } from '../../ResponsiveImage';
 import React from 'react';
 import { QrCode } from 'lucide-react';
 import { BrandLogo } from '../Header/BrandLogo';
@@ -123,8 +124,9 @@ export const FoodThumbnail: React.FC<{
 
   return (
     <div className={`w-full h-full overflow-hidden relative ${item.bgClass} ${className}`}>
-      <img
+      <ResponsiveImage
         src={item.src}
+        sizes="160px"
         alt={item.alt}
         width={420}
         height={420}
@@ -141,8 +143,9 @@ export const PackagedChickenQrVisual: React.FC = () => {
   return (
     <div className="relative w-full h-24 rounded-2xl bg-gradient-to-br from-[#F1F5F9] to-[#E2E8F0] p-2 flex items-center justify-center overflow-hidden border border-[#E2ECF4]">
       <div className="relative w-full h-full rounded-xl bg-white border border-[#CBD5E1] shadow-sm overflow-hidden flex items-center justify-between">
-        <img
+        <ResponsiveImage
           src="/src/assets/images/chicken_whole_vacuum_pack_1795655111694.webp"
+          sizes="300px"
           alt="Sản phẩm đóng gói kèm mã QR truy xuất nguồn gốc ADIGO"
           width={480}
           height={360}

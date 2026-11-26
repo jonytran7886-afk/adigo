@@ -1,3 +1,4 @@
+import { ResponsiveImage } from '../../ResponsiveImage';
 import React from 'react';
 import { HERO_CONFIG } from '../../../config/heroConfig';
 
@@ -6,7 +7,7 @@ export const FloatingProductVisuals: React.FC = () => {
     <div className="pointer-events-none select-none hidden sm:block" aria-hidden="true">
       {/* Left Pedestal Accent: Fresh meat cut */}
       <div className="absolute bottom-6 left-2 lg:left-6 z-40 w-[96px] h-[64px] rounded-2xl overflow-hidden border-2 border-white/90 shadow-[0_14px_28px_rgba(20,47,99,0.16)] bg-white animate-float-slow">
-        <img
+        <ResponsiveImage
           src={HERO_CONFIG.assets.freshBannerPhoto}
           alt=""
           width={400}

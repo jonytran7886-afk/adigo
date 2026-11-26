@@ -1,3 +1,4 @@
+import { ResponsiveImage } from '../ResponsiveImage';
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import {
@@ -135,7 +136,7 @@ export const MarketplaceDesktopMockup: React.FC<MarketplaceDesktopMockupProps> =
             </span>
 
             <div className="w-7 h-7 rounded-full overflow-hidden border border-[#CBE0F2] bg-[#EAF5FF] shrink-0">
-              <img
+              <ResponsiveImage
                 src={HERO_CONFIG.assets.lifestylePhoto}
                 alt="Người dùng ADIGO"
                 width={120}
@@ -206,7 +207,7 @@ export const MarketplaceDesktopMockup: React.FC<MarketplaceDesktopMockupProps> =
                   </div>
 
                   <div className="w-[41%] h-[84px] rounded-[12px] overflow-hidden border border-white/80 shadow-xs shrink-0">
-                    <img
+                    <ResponsiveImage
                       src={HERO_CONFIG.assets.freshBannerPhoto}
                       alt="Thực phẩm đa dạng trên ADIGO Marketplace"
                       width={640}
@@ -324,7 +325,7 @@ export const MarketplaceDesktopMockup: React.FC<MarketplaceDesktopMockupProps> =
                     >
                       <div className="flex items-center gap-2 min-w-0">
                         <div className="w-7 h-7 rounded-lg overflow-hidden border border-[#DCEAF5] shrink-0">
-                          <img
+                          <ResponsiveImage
                             src="/src/assets/images/marketplace_retail_stall_1795655579789.webp"
                             alt="Gian hàng thực phẩm tươi"
                             width={80}
@@ -366,7 +367,7 @@ export const MarketplaceDesktopMockup: React.FC<MarketplaceDesktopMockupProps> =
                         onClick={() => onSelectTab('brands')}
                         className="rounded-[9px] bg-[#F7FAFC] border border-[#E3EDF5] px-2.5 py-1.5 flex items-center gap-2 hover:border-[#398441]/50 transition-colors cursor-pointer text-left"
                       >
-                        <img
+                        <ResponsiveImage
                           src="/assets/organic-vietnam-logo.png"
                           alt="Organic Việt Nam"
                           width={175}
@@ -435,7 +436,7 @@ export const MarketplaceDesktopMockup: React.FC<MarketplaceDesktopMockupProps> =
                         <div>
                           {/* Real Retail Stall Photo (60%+ visual prominence) */}
                           <div className="relative h-[108px] rounded-[12px] overflow-hidden bg-[#EAF4FC]">
-                            <img
+                            <ResponsiveImage
                               src={store.image}
                               alt={store.name}
                               width={480}
@@ -548,7 +549,7 @@ export const MarketplaceDesktopMockup: React.FC<MarketplaceDesktopMockupProps> =
                       className="rounded-[16px] bg-white border border-[#E1ECF4] p-2 flex flex-col justify-between gap-2 shadow-[0_4px_12px_rgba(20,47,99,0.05)] overflow-hidden"
                     >
                       <div className="relative h-[86px] rounded-[12px] overflow-hidden bg-[#F1F7FD]">
-                        <img
+                        <ResponsiveImage
                           src={brand.image}
                           alt={brand.name}
                           width={480}
@@ -560,7 +561,7 @@ export const MarketplaceDesktopMockup: React.FC<MarketplaceDesktopMockupProps> =
                         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#112D52]/35 via-transparent to-transparent" />
                         <div className="absolute top-2 left-2 px-2 py-1 rounded-lg bg-white/95 border border-white shadow-xs flex items-center">
                           {brand.logoType === 'organic-vn' ? (
-                            <img
+                            <ResponsiveImage
                               src="/assets/organic-vietnam-logo.png"
                               alt="Organic Việt Nam"
                               width={175}
@@ -632,7 +633,7 @@ export const MarketplaceDesktopMockup: React.FC<MarketplaceDesktopMockupProps> =
                     >
                       <div>
                         <div className="relative h-[104px] rounded-[12px] overflow-hidden bg-[#F4F8FB]">
-                          <img
+                          <ResponsiveImage
                             src={offer.image}
                             alt={offer.title}
                             width={480}

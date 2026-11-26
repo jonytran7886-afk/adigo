@@ -1,3 +1,4 @@
+import { ResponsiveImage } from '../ResponsiveImage';
 import React, { useEffect, useRef, useState } from 'react';
 import { ArrowRight, ShoppingCart, Sprout } from 'lucide-react';
 import {
@@ -25,7 +26,7 @@ const BreedPortraitCard: React.FC<{
       ) : (
         <picture className="block w-full h-full">
           <source type="image/webp" srcSet={breed.imageWebp} />
-          <img
+          <ResponsiveImage
             src={breed.imageFallback}
             alt={breed.imageAlt}
             width={960}
@@ -108,7 +109,7 @@ const MarketplaceSingleSpotlight: React.FC<{
       >
         <picture className="block w-full h-full">
           <source type="image/webp" srcSet={product.backdropImageWebp} />
-          <img
+          <ResponsiveImage
             src={product.backdropImageFallback}
             alt=""
             width={1408}
@@ -146,7 +147,7 @@ const MarketplaceSingleSpotlight: React.FC<{
         {/* Left 40% (5 cols on lg): Brand + Editorial Copy + Glossy Glass CTA */}
         <div className="lg:col-span-5 relative z-20 px-6 pt-7 pb-4 sm:px-10 sm:pt-9 sm:pb-5 lg:py-10 lg:pl-12 lg:pr-4 flex flex-col items-start">
           {/* Official Organic Việt Nam Logo */}
-          <img
+          <ResponsiveImage
             src={product.producerLogo}
             alt={product.producer}
             width={171}

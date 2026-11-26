@@ -1,3 +1,4 @@
+import { ResponsiveImage } from '../ResponsiveImage';
 import React, { useState } from 'react';
 import {
   Search,
@@ -261,7 +262,7 @@ export const ProductDetailScreen: React.FC = () => {
   return (
     <div className="flex flex-col gap-3 p-3.5 pb-5">
       <div className="h-32 rounded-2xl overflow-hidden border border-[#E2ECF4] relative bg-white">
-        <img
+        <ResponsiveImage
           src={ADIGO_CONFIG.images.traceabilityProduce}
           alt="Cà chua bi đỏ đóng hộp"
           referrerPolicy="no-referrer"
@@ -530,7 +531,7 @@ export const TraceabilityScreen: React.FC<{ scanned?: boolean }> = ({ scanned = 
 
       <div className="bg-white border border-[#E2ECF4] rounded-xl p-2.5 flex items-center gap-2.5">
         <div className="w-11 h-11 rounded-lg overflow-hidden shrink-0">
-          <img
+          <ResponsiveImage
             src={ADIGO_CONFIG.images.traceabilityProduce}
             alt="Sản phẩm truy xuất"
             referrerPolicy="no-referrer"

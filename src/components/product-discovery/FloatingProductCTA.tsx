@@ -1,3 +1,4 @@
+import { ResponsiveImage } from '../ResponsiveImage';
 import React, { useEffect, useRef } from 'react';
 import { ArrowRight, X } from 'lucide-react';
 import { PRODUCT_DISCOVERY_CONFIG } from '../../config/productDiscoveryConfig';
@@ -37,7 +38,7 @@ export const FloatingProductCTA: React.FC = () => {
           <div className="w-10 h-9 sm:w-13 sm:h-11 rounded-[10px] sm:rounded-[12px] overflow-hidden bg-[#F7FAFC] border border-[#E6F0F8] shrink-0">
             <picture className="block w-full h-full">
               <source type="image/webp" srcSet={productImage.webp} />
-              <img
+              <ResponsiveImage
                 src={productImage.fallback}
                 alt={productImage.alt}
                 width={productImage.width}

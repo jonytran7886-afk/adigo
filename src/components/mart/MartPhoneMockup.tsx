@@ -1,3 +1,4 @@
+import { ResponsiveImage } from '../ResponsiveImage';
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import {
@@ -91,7 +92,7 @@ export const MartPhoneMockup: React.FC<MartPhoneMockupProps> = ({
               </span>
 
               <div className="w-6 h-6 rounded-full overflow-hidden border border-[#CBE0F2] bg-[#EAF5FF] shrink-0">
-                <img
+                <ResponsiveImage
                   src={MART_CONFIG.assets.shopperPortrait}
                   alt="Tài khoản ADIGO"
                   width={120}
@@ -183,7 +184,7 @@ export const MartPhoneMockup: React.FC<MartPhoneMockupProps> = ({
                       >
                         <div className="flex items-center gap-2 min-w-0">
                           <div className="w-10 h-10 rounded-[10px] overflow-hidden border border-[#DCEAF5] bg-[#EAF5FF] shrink-0 relative">
-                            <img
+                            <ResponsiveImage
                               src={MART_CONFIG.assets.storeInterior}
                               alt={store.name}
                               width={160}

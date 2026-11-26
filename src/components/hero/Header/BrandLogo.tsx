@@ -1,3 +1,4 @@
+import { ResponsiveImage } from '../../ResponsiveImage';
 import React from 'react';
 import { HERO_CONFIG } from '../../../config/heroConfig';
 
@@ -53,7 +54,7 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
 
   return (
     <span className={`inline-flex items-center select-none shrink-0 ${className}`}>
-      <img
+      <ResponsiveImage
         src={src}
         alt="Logo ADIGO"
         width={dimensions.width}

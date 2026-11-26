@@ -1,3 +1,4 @@
+import { ResponsiveImage } from '../../ResponsiveImage';
 import React from 'react';
 import { Leaf, ShieldCheck, Utensils } from 'lucide-react';
 import { CampaignConfig, CampaignHighlightIcon } from '../../../config/campaignConfig';
@@ -43,7 +44,7 @@ export const ProductPreview: React.FC<ProductPreviewProps> = ({ config }) => {
       {/* Top Header: Dual Official Logos + Product Headline */}
       <div className="relative z-10 flex flex-col items-start gap-2.5 sm:gap-3">
         <div className="inline-flex items-center gap-3 px-3.5 py-2 rounded-2xl bg-white shadow-[0_8px_20px_rgba(6,55,39,0.28)]">
-          <img
+          <ResponsiveImage
             src={brandLogos.organicVietnam}
             alt="Organic Việt Nam"
             width={175}
@@ -53,7 +54,7 @@ export const ProductPreview: React.FC<ProductPreviewProps> = ({ config }) => {
             className="h-6 sm:h-7 w-auto object-contain"
           />
           <span aria-hidden="true" className="w-px h-5 bg-[#D6E3EE]" />
-          <img
+          <ResponsiveImage
             src={brandLogos.adigo}
             alt="ADIGO"
             width={2400}
@@ -94,7 +95,7 @@ export const ProductPreview: React.FC<ProductPreviewProps> = ({ config }) => {
         <div className="relative rounded-[22px] overflow-hidden border border-white/35 bg-white/10 backdrop-blur-md shadow-[0_16px_34px_rgba(4,47,36,0.35)]">
           {/* Farm Panorama Layer */}
           <div className="relative h-24 sm:h-32 lg:h-36 overflow-hidden">
-            <img
+            <ResponsiveImage
               src={modalAssets.farmLandscape}
               alt="Vùng nuôi thảo dược Organic Việt Nam"
               width={960}
@@ -116,7 +117,7 @@ export const ProductPreview: React.FC<ProductPreviewProps> = ({ config }) => {
           {/* Whole Chicken Foreground Focus */}
           <div className="relative -mt-8 sm:-mt-10 px-3 pb-3 flex items-end gap-3">
             <div className="w-full rounded-[18px] overflow-hidden border-2 border-white/85 shadow-lg bg-[#F7EFE4]">
-              <img
+              <ResponsiveImage
                 src={modalAssets.wholeChickenPlatter}
                 alt="Gà thịt nguyên con Organic Việt Nam"
                 width={960}

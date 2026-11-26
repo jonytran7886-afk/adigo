@@ -1,3 +1,4 @@
+import { ResponsiveImage } from '../../ResponsiveImage';
 import React from 'react';
 import { CheckCircle2 } from 'lucide-react';
 import { CampaignConfig } from '../../../config/campaignConfig';
@@ -16,7 +17,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ config }) => {
     >
       <div className="flex items-center gap-3 min-w-0">
         <div className="w-16 h-12 sm:w-20 sm:h-14 rounded-xl overflow-hidden bg-[#F3ECE2] border border-[#DCFCE7] shrink-0">
-          <img
+          <ResponsiveImage
             src={modalAssets.productCardThumbnail}
             alt={product.name}
             width={160}

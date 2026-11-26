@@ -1,3 +1,4 @@
+import { ResponsiveImage } from '../ResponsiveImage';
 import React from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import {
@@ -58,7 +59,7 @@ export const TraceabilityPhoneMockup: React.FC<
             </span>
 
             <div className="w-6 h-6 rounded-full overflow-hidden border border-[#CBE0F2] bg-[#EAF5FF] shrink-0">
-              <img
+              <ResponsiveImage
                 src={HERO_CONFIG.assets.lifestylePhoto}
                 alt="Người tiêu dùng ADIGO"
                 width={120}
@@ -75,7 +76,7 @@ export const TraceabilityPhoneMockup: React.FC<
         {/* Product Photo + QR Stamp */}
         <div className="px-3.5 pt-2.5 shrink-0">
           <div className="relative h-[112px] sm:h-[124px] rounded-[18px] overflow-hidden border border-[#DCEAF5] bg-[#FDF2F2] shadow-2xs">
-            <img
+            <ResponsiveImage
               src={HERO_CONFIG.assets.freshBannerPhoto}
               alt={TRACEABILITY_CONFIG.demoProduct.name}
               width={600}

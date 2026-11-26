@@ -1,3 +1,4 @@
+import { ResponsiveImage } from '../ResponsiveImage';
 import React, { useState } from 'react';
 import { Store } from 'lucide-react';
 import { BrandLogo } from '../hero/Header/BrandLogo';
@@ -56,7 +57,7 @@ export const MartStorefront: React.FC = () => {
         {/* Main Retail Interior View Behind Glass Mullions */}
         <div className="col-span-8 sm:col-span-8 relative overflow-hidden border-r-[4px] border-[#1F3147]">
           {!interiorError ? (
-            <img
+            <ResponsiveImage
               src={MART_CONFIG.assets.storeInterior}
               alt="Không gian trưng bày sản phẩm bên trong mô hình ADIGO Mart"
               width={960}
@@ -108,7 +109,7 @@ export const MartStorefront: React.FC = () => {
             </div>
             <div className="relative flex-1 min-h-[110px] overflow-hidden">
               {!posterError ? (
-                <img
+                <ResponsiveImage
                   src={MART_CONFIG.assets.posterProduce}
                   alt="Sản phẩm tươi ngon trưng bày tại cửa hàng ADIGO Mart"
                   width={960}

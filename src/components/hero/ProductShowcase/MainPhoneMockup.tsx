@@ -1,3 +1,4 @@
+import { ResponsiveImage } from '../../ResponsiveImage';
 import React, { useState } from 'react';
 import {
   Bell,
@@ -76,8 +77,9 @@ export const MainPhoneMockup: React.FC<{ onExploreTap?: () => void }> = ({
 
         {/* Multi-Sector Platform Banner inside App */}
         <div className="relative h-[126px] rounded-2xl overflow-hidden border border-[#E2ECF4] shrink-0">
-          <img
+          <ResponsiveImage
             src={HERO_CONFIG.assets.heroPlatformBannerPhoto}
+            sizes="280px"
             alt="Hệ sinh thái sản phẩm đa dạng trên ADIGO"
             width={720}
             height={405}

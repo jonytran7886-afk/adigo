@@ -1,3 +1,4 @@
+import { ResponsiveImage } from '../../../ResponsiveImage';
 import React from 'react';
 import { EXPLORE_CONFIG } from '../../../../config/exploreConfig';
 import { FoodThumbnail } from '../../../hero/ProductShowcase/ProductVisuals';
@@ -29,7 +30,7 @@ export const ConnectedProductsVisual: React.FC = () => {
         {/* Tile 1: Thịt bò */}
         <div className="rounded-2xl bg-white/85 backdrop-blur-md border-2 border-white p-1.5 shadow-[0_12px_24px_rgba(31,84,130,0.12)] -rotate-[4deg] translate-y-2">
           <div className="h-16 sm:h-[72px] rounded-xl overflow-hidden">
-            <img
+            <ResponsiveImage
               src={EXPLORE_CONFIG.assets.marketplaceVariety}
               alt="Thịt bò tươi kết nối trên nền tảng ADIGO"
               width={400}
@@ -45,7 +46,7 @@ export const ConnectedProductsVisual: React.FC = () => {
         {/* Tile 2: Rau củ & thực phẩm tươi */}
         <div className="rounded-2xl bg-white/90 backdrop-blur-md border-2 border-white p-1.5 shadow-[0_14px_28px_rgba(31,84,130,0.14)] rotate-[2deg] -translate-y-2">
           <div className="h-16 sm:h-[72px] rounded-xl overflow-hidden">
-            <img
+            <ResponsiveImage
               src={EXPLORE_CONFIG.assets.traceabilityProduce}
               alt="Rau củ và thực phẩm tươi trên ADIGO"
               width={400}
@@ -75,7 +76,7 @@ export const ConnectedProductsVisual: React.FC = () => {
         {/* Tile 5: Nông sản */}
         <div className="rounded-2xl bg-white/88 backdrop-blur-md border-2 border-white p-1.5 shadow-[0_14px_26px_rgba(31,84,130,0.13)] -rotate-[2deg] -translate-y-1">
           <div className="h-16 sm:h-[72px] rounded-xl overflow-hidden">
-            <img
+            <ResponsiveImage
               src={EXPLORE_CONFIG.assets.marketplaceVariety}
               alt="Nông sản đa dạng trên ADIGO Marketplace"
               width={400}
@@ -91,7 +92,7 @@ export const ConnectedProductsVisual: React.FC = () => {
         {/* Tile 6: Cửa hàng bán lẻ ADIGO Mart */}
         <div className="rounded-2xl bg-white/92 backdrop-blur-md border-2 border-white p-1.5 shadow-[0_14px_28px_rgba(31,84,130,0.14)] rotate-[4deg] translate-y-2">
           <div className="h-16 sm:h-[72px] rounded-xl overflow-hidden bg-[#F0F7FF]">
-            <img
+            <ResponsiveImage
               src="/src/assets/images/adigo_mart_concept_1795602232694.webp"
               alt="Hệ thống điểm bán ADIGO Mart"
               width={400}

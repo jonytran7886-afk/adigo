@@ -1,3 +1,4 @@
+import { ResponsiveImage } from '../ResponsiveImage';
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import {
@@ -138,7 +139,7 @@ export const TechnologyPhoneMockup: React.FC<TechnologyPhoneMockupProps> = ({
                   <ShoppingCart className="w-3 h-3" />
                 </span>
                 <div className="w-6 h-6 rounded-full overflow-hidden border border-[#CBE0F2] bg-[#EAF5FF] shrink-0">
-                  <img
+                  <ResponsiveImage
                     src={TECHNOLOGY_CONFIG.assets.lifestylePhoto}
                     alt="Người tiêu dùng ADIGO"
                     width={120}
@@ -173,7 +174,7 @@ export const TechnologyPhoneMockup: React.FC<TechnologyPhoneMockupProps> = ({
                 >
                   {/* Photorealistic Shopping Hero Banner */}
                   <div className="relative h-[86px] rounded-[14px] overflow-hidden border border-[#CBE4F5] shrink-0">
-                    <img
+                    <ResponsiveImage
                       src={TECHNOLOGY_CONFIG.assets.varietyPhoto}
                       alt="Thực phẩm tươi chọn lọc trên ứng dụng ADIGO"
                       width={400}
@@ -227,7 +228,7 @@ export const TechnologyPhoneMockup: React.FC<TechnologyPhoneMockupProps> = ({
                         className="rounded-[12px] bg-white border border-[#E2ECF4] p-1.5 flex flex-col justify-between"
                       >
                         <div className="h-[54px] rounded-[8px] overflow-hidden bg-[#F4F8FB]">
-                          <img
+                          <ResponsiveImage
                             src={prod.img}
                             alt={prod.name}
                             width={180}
@@ -288,7 +289,7 @@ export const TechnologyPhoneMockup: React.FC<TechnologyPhoneMockupProps> = ({
                   className="flex flex-col justify-between h-full gap-2"
                 >
                   <div className="relative h-[96px] rounded-[14px] overflow-hidden border border-[#CBE4F5] shrink-0">
-                    <img
+                    <ResponsiveImage
                       src={TECHNOLOGY_CONFIG.assets.martConceptPhoto}
                       alt="Hệ thống điểm bán ADIGO Mart"
                       width={400}
@@ -379,7 +380,7 @@ export const TechnologyPhoneMockup: React.FC<TechnologyPhoneMockupProps> = ({
                           className="rounded-lg bg-white border border-[#DCEAF5] p-1"
                         >
                           <div className="h-[46px] rounded-md overflow-hidden">
-                            <img
+                            <ResponsiveImage
                               src={item.img}
                               alt={item.name}
                               width={160}
@@ -420,7 +421,7 @@ export const TechnologyPhoneMockup: React.FC<TechnologyPhoneMockupProps> = ({
                   <div className="grid grid-cols-2 gap-1.5">
                     <div className="rounded-[12px] bg-white border border-[#E2ECF4] p-1.5">
                       <div className="h-[52px] rounded-lg overflow-hidden">
-                        <img
+                        <ResponsiveImage
                           src={TECHNOLOGY_CONFIG.assets.porkBeefPhoto}
                           alt="Thực phẩm tươi yêu thích"
                           width={160}
@@ -436,7 +437,7 @@ export const TechnologyPhoneMockup: React.FC<TechnologyPhoneMockupProps> = ({
                     </div>
                     <div className="rounded-[12px] bg-white border border-[#E2ECF4] p-1.5">
                       <div className="h-[52px] rounded-lg overflow-hidden">
-                        <img
+                        <ResponsiveImage
                           src={TECHNOLOGY_CONFIG.assets.eggsCitrusPhoto}
                           alt="Trứng và trái cây"
                           width={160}

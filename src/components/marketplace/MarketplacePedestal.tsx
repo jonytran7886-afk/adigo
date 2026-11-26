@@ -1,3 +1,4 @@
+import { ResponsiveImage } from '../ResponsiveImage';
 import React from 'react';
 import { BrandLogo } from '../hero/Header/BrandLogo';
 
@@ -39,7 +40,7 @@ export const MarketplacePedestal: React.FC = () => {
       {/* Left Foreground Photorealistic Product Props: Fresh Cuts + Eggs & Citrus */}
       <div className="hidden sm:flex items-end gap-2 absolute left-1 md:left-3 -top-7 z-20">
         <div className="w-[106px] h-[72px] rounded-2xl overflow-hidden bg-white p-1 border border-white shadow-[0_14px_24px_rgba(20,47,99,0.18)] -rotate-3">
-          <img
+          <ResponsiveImage
             src="/src/assets/images/marketplace_pork_beef_cuts_1795655577544.webp"
             alt=""
             width={240}
@@ -51,7 +52,7 @@ export const MarketplacePedestal: React.FC = () => {
         </div>
 
         <div className="w-[92px] h-[66px] -ml-5 rounded-2xl overflow-hidden bg-white p-1 border border-white shadow-[0_12px_22px_rgba(20,47,99,0.16)] rotate-2">
-          <img
+          <ResponsiveImage
             src="/src/assets/images/marketplace_eggs_citrus_1795655578585.webp"
             alt=""
             width={240}
@@ -66,7 +67,7 @@ export const MarketplacePedestal: React.FC = () => {
       {/* Right Foreground Photorealistic Product Props: Vacuum-Packed Chicken + Prepared Fresh Tray */}
       <div className="hidden sm:flex items-end gap-2 absolute right-1 md:right-3 -top-7 z-20">
         <div className="w-[98px] h-[68px] rounded-2xl overflow-hidden bg-white p-1 border border-white shadow-[0_12px_22px_rgba(20,47,99,0.16)] -rotate-2">
-          <img
+          <ResponsiveImage
             src="/src/assets/images/chicken_whole_vacuum_pack_1795655111694.webp"
             alt=""
             width={240}
@@ -78,7 +79,7 @@ export const MarketplacePedestal: React.FC = () => {
         </div>
 
         <div className="relative w-[112px] h-[74px] -ml-4 rounded-2xl overflow-hidden bg-white border border-white shadow-[0_14px_26px_rgba(20,47,99,0.18)] p-1 rotate-2">
-          <img
+          <ResponsiveImage
             src="/src/assets/images/marketplace_veggies_processed_1795655578984.webp"
             alt=""
             width={240}

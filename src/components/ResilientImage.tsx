@@ -1,3 +1,4 @@
+import { ResponsiveImage } from './ResponsiveImage';
 import React, { useState } from 'react';
 import { ImageOff } from 'lucide-react';
 
@@ -32,7 +33,7 @@ export const ResilientImage: React.FC<ResilientImageProps> = ({
   }
 
   return (
-    <img
+    <ResponsiveImage
       src={src}
       alt={alt}
       referrerPolicy="no-referrer"

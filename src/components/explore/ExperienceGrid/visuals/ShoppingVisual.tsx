@@ -1,3 +1,4 @@
+import { ResponsiveImage } from '../../../ResponsiveImage';
 import React from 'react';
 import { ShoppingCart, Check } from 'lucide-react';
 import { EXPLORE_CONFIG } from '../../../../config/exploreConfig';
@@ -6,7 +7,7 @@ export const ShoppingVisual: React.FC = () => {
   return (
     <div className="relative w-full h-full min-h-[220px] lg:min-h-full overflow-hidden select-none pointer-events-none">
       {/* Lifestyle photography positioned cleanly on right half */}
-      <img
+      <ResponsiveImage
         src={EXPLORE_CONFIG.assets.shoppingLifestyle}
         alt="Người tiêu dùng sử dụng smartphone mua sắm thuận tiện trong cửa hàng thực phẩm hiện đại"
         referrerPolicy="no-referrer"

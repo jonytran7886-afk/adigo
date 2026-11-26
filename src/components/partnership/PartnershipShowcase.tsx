@@ -1,3 +1,4 @@
+import { ResponsiveImage } from '../ResponsiveImage';
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { Handshake, TrendingUp } from 'lucide-react';
@@ -68,7 +69,7 @@ export const PartnershipShowcase: React.FC = () => {
           {/* Middle Visual: Authentic Partners Photography + Central Handshake Medallion */}
           <div className="relative h-[180px] sm:h-[220px] rounded-[22px] overflow-hidden border border-white/90 shadow-[0_12px_28px_rgba(20,47,99,0.12)] bg-[#EAF5FF]">
             {!imgError ? (
-              <img
+              <ResponsiveImage
                 src={PARTNERSHIP_CONFIG.assets.partnerCommunity}
                 alt="Đối tác sản xuất và kinh doanh đồng hành cùng ADIGO"
                 width={960}

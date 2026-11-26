@@ -1,3 +1,4 @@
+import { ResponsiveImage } from './ResponsiveImage';
 import React from 'react';
 
 interface LogoProps {
@@ -21,7 +22,7 @@ export const AdigoLogo: React.FC<LogoProps> = ({
         inverted ? 'bg-white/95 px-2.5 py-1.5 rounded-xl' : ''
       } ${className}`}
     >
-      <img
+      <ResponsiveImage
         src={src}
         alt="ADIGO"
         referrerPolicy="no-referrer"

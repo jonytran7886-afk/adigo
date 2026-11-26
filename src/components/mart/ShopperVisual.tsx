@@ -1,3 +1,4 @@
+import { ResponsiveImage } from '../ResponsiveImage';
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { UserCheck } from 'lucide-react';
@@ -19,7 +20,7 @@ export const ShopperVisual: React.FC = () => {
       <div className="relative w-[176px] sm:w-[210px] xl:w-[232px] h-[250px] sm:h-[300px] xl:h-[332px] rounded-t-[116px] rounded-b-[28px] p-1.5 bg-white/75 backdrop-blur-md border border-white shadow-[0_22px_48px_rgba(20,47,99,0.18)] overflow-hidden">
         <div className="w-full h-full rounded-t-[110px] rounded-b-[22px] overflow-hidden bg-[#EAF5FF] relative">
           {!imgError ? (
-            <img
+            <ResponsiveImage
               src={MART_CONFIG.assets.shopperPortrait}
               alt="Người tiêu dùng sử dụng ứng dụng ADIGO khi mua sắm tại cửa hàng"
               width={960}

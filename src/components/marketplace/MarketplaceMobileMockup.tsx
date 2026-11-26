@@ -1,3 +1,4 @@
+import { ResponsiveImage } from '../ResponsiveImage';
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import {
@@ -86,7 +87,7 @@ export const MarketplaceMobileMockup: React.FC<MarketplaceMobileMockupProps> = (
                 )}
               </span>
               <div className="w-6 h-6 rounded-full overflow-hidden border border-[#CDE1F2]">
-                <img
+                <ResponsiveImage
                   src={HERO_CONFIG.assets.lifestylePhoto}
                   alt="Tài khoản người dùng ADIGO"
                   width={120}
@@ -174,7 +175,7 @@ export const MarketplaceMobileMockup: React.FC<MarketplaceMobileMockupProps> = (
                     </button>
                   </div>
                   <div className="w-[42%] h-[68px] rounded-[10px] overflow-hidden border border-white/80 shrink-0">
-                    <img
+                    <ResponsiveImage
                       src={HERO_CONFIG.assets.freshBannerPhoto}
                       alt="Sản phẩm tươi ngon trên ADIGO Marketplace"
                       width={480}
@@ -287,7 +288,7 @@ export const MarketplaceMobileMockup: React.FC<MarketplaceMobileMockupProps> = (
                     >
                       <div className="flex items-center gap-2 min-w-0">
                         <div className="w-12 h-11 rounded-lg overflow-hidden border border-[#DCEAF5] shrink-0">
-                          <img
+                          <ResponsiveImage
                             src={store.image}
                             alt={store.name}
                             width={140}
@@ -345,7 +346,7 @@ export const MarketplaceMobileMockup: React.FC<MarketplaceMobileMockupProps> = (
                       className="rounded-[12px] bg-white border border-[#E2ECF4] p-1.5 text-left flex flex-col gap-1.5 cursor-pointer hover:border-[#4C9DC6]"
                     >
                       <div className="relative h-14 rounded-lg overflow-hidden bg-[#F1F7FD]">
-                        <img
+                        <ResponsiveImage
                           src={brand.image}
                           alt={brand.name}
                           width={180}
@@ -356,7 +357,7 @@ export const MarketplaceMobileMockup: React.FC<MarketplaceMobileMockupProps> = (
                         />
                         <div className="absolute top-1 left-1 px-1.5 py-0.5 rounded bg-white/95 flex items-center">
                           {brand.logoType === 'organic-vn' ? (
-                            <img
+                            <ResponsiveImage
                               src="/assets/organic-vietnam-logo.png"
                               alt="Organic Việt Nam"
                               width={175}
@@ -401,7 +402,7 @@ export const MarketplaceMobileMockup: React.FC<MarketplaceMobileMockupProps> = (
                       className="rounded-[12px] bg-white border border-[#E2ECF4] p-1.5 flex items-center gap-2"
                     >
                       <div className="w-16 h-14 rounded-lg overflow-hidden shrink-0">
-                        <img
+                        <ResponsiveImage
                           src={offer.image}
                           alt={offer.title}
                           width={160}

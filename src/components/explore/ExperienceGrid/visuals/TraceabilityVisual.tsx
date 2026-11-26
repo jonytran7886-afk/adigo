@@ -1,3 +1,4 @@
+import { ResponsiveImage } from '../../../ResponsiveImage';
 import React from 'react';
 import { ChevronLeft, Sprout, ShieldCheck, Package, Store } from 'lucide-react';
 import { EXPLORE_CONFIG } from '../../../../config/exploreConfig';
@@ -17,7 +18,7 @@ export const TraceabilityVisual: React.FC = () => {
         className="absolute inset-0 opacity-25"
         aria-hidden="true"
       >
-        <img
+        <ResponsiveImage
           src={EXPLORE_CONFIG.assets.traceabilityProduce}
           alt=""
           width={960}

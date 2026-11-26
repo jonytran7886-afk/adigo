@@ -1,3 +1,4 @@
+import { ResponsiveImage } from '../../../ResponsiveImage';
 import React, { useState } from 'react';
 import {
   Bell,
@@ -81,8 +82,9 @@ export const AppHomeScreen: React.FC<ScreenProps> = ({ onNavigate }) => {
 
         {/* Fresh Produce Banner */}
         <div className="relative h-[120px] rounded-2xl overflow-hidden border border-[#E2ECF4] shrink-0">
-          <img
+          <ResponsiveImage
             src={HERO_CONFIG.assets.freshBannerPhoto}
+            sizes="280px"
             alt="Thực phẩm tươi ngon cho mỗi ngày trên ADIGO App"
             width={600}
             height={335}

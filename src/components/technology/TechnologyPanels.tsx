@@ -1,3 +1,4 @@
+import { ResponsiveImage } from '../ResponsiveImage';
 import React from 'react';
 import { motion } from 'motion/react';
 import {
@@ -45,7 +46,7 @@ export const ConnectedProductPanel: React.FC<PanelProps> = ({
     >
       {/* Unified Commercial Showcase Visual (75% visual area) */}
       <div className="relative h-[112px] sm:h-[128px] xl:h-[140px] rounded-[18px] overflow-hidden border border-white bg-[#EAF4FC]">
-        <img
+        <ResponsiveImage
           src={TECHNOLOGY_CONFIG.assets.varietyPhoto}
           alt="Hệ sinh thái sản phẩm tươi sống và nông sản kết nối trên ADIGO"
           width={560}
@@ -99,7 +100,7 @@ export const TraceabilityPanel: React.FC<PanelProps> = ({
     >
       {/* Photorealistic Vacuum-Sealed Beef Tray + Official ADIGO Vertical Brand & QR Label */}
       <div className="relative h-[112px] sm:h-[128px] xl:h-[140px] rounded-[18px] overflow-hidden border border-white bg-[#F7FAFE]">
-        <img
+        <ResponsiveImage
           src={TECHNOLOGY_CONFIG.assets.traceabilityBeefPhoto}
           alt="Thịt bò đóng gói hút chân không gắn tem QR truy xuất nguồn gốc ADIGO"
           width={560}
@@ -180,7 +181,7 @@ export const SmartExperiencePanel: React.FC<PanelProps> = ({
         <div className="grid grid-cols-2 gap-1.5">
           <div className="rounded-[10px] overflow-hidden bg-white border border-[#E2ECF4] p-1">
             <div className="h-[46px] rounded-[7px] overflow-hidden">
-              <img
+              <ResponsiveImage
                 src={TECHNOLOGY_CONFIG.assets.chickenPlatterPhoto}
                 alt="Thịt gà nguyên con cho bữa ăn gia đình"
                 width={200}
@@ -196,7 +197,7 @@ export const SmartExperiencePanel: React.FC<PanelProps> = ({
           </div>
           <div className="rounded-[10px] overflow-hidden bg-white border border-[#E2ECF4] p-1">
             <div className="h-[46px] rounded-[7px] overflow-hidden">
-              <img
+              <ResponsiveImage
                 src={TECHNOLOGY_CONFIG.assets.veggiesProcessedPhoto}
                 alt="Rau củ tươi cho bữa ăn gia đình"
                 width={200}
@@ -268,7 +269,7 @@ export const RetailNetworkPanel: React.FC<PanelProps> = ({
         <div className="h-[3px] bg-gradient-to-r from-[#65B848] via-[#A4CE46] to-[#42C8EF] shrink-0" />
 
         <div className="relative flex-1 overflow-hidden">
-          <img
+          <ResponsiveImage
             src={TECHNOLOGY_CONFIG.assets.martConceptPhoto}
             alt="Không gian cửa hàng bán lẻ hiện đại ADIGO Mart"
             width={480}
