@@ -82,6 +82,21 @@ Repository có `worker.ts` và `wrangler.jsonc` để phục vụ API cùng webs
 
 - Build command: `npm run build`.
 - Deploy command: `npx wrangler deploy` (giữ cấu hình Wrangler trong repository).
+- Nếu log chuyển thẳng từ cài dependencies sang deploy và báo thiếu `dist`,
+  vào **Settings → Builds → Build configuration** và đặt **Build command** là
+  `npm run build`, giữ **Deploy command** là `npx wrangler deploy`, rồi build lại.
+- Có thể dùng cách gộp: để trống **Build command** và đặt **Deploy command** là
+  `npm run deploy`. Script này luôn build website trước khi gọi Wrangler.
+- Source dùng mô hình **Worker + Static Assets** của Cloudflare:
+  `main: "worker.ts"`, `assets.directory: "./dist"`, `assets.binding: "ASSETS"`.
+  Các route `/api/*` chạy Worker trước; các trang còn lại được phục vụ từ assets.
+  `upload_source_maps: true` giúp Cloudflare ánh xạ lỗi về mã Worker gốc.
+- Khuyến nghị dùng `npm run deploy` làm Deploy command: script chọn rõ
+  `wrangler.jsonc`, tránh triển khai nhầm cấu hình chỉ có assets. Dùng
+  `npm run deploy:check` để build và đóng gói thử, không triển khai.
+- Nếu Settings vẫn báo **only has static assets**, kiểm tra deployment production
+  mới nhất đã triển khai đúng `worker.ts` và Worker đang chọn có domain
+  `adigo.organicvn.com`. Thay đổi source chưa có hiệu lực trước khi deploy thành công.
 - Trong **Worker → Settings → Variables and Secrets**, đặt hai secret runtime:
   `GOOGLE_APPS_SCRIPT_WEBHOOK_URL` (URL `/exec` đã triển khai ở Bước 3) và
   `PREORDER_WEBHOOK_SECRET` (trùng `WEBHOOK_SECRET` trong Apps Script).
