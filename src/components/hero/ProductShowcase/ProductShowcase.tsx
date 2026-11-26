@@ -19,7 +19,7 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({
     const prefersReduced =
       typeof window !== 'undefined' &&
       window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (prefersReduced) return;
+    if (prefersReduced || !window.matchMedia('(min-width: 1024px) and (pointer: fine)').matches) return;
 
     const handleMouseMove = (e: MouseEvent) => {
       if (window.innerWidth < 1024) return;
@@ -46,7 +46,7 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({
       >
         {/* Left Background Phone: Khám phá */}
         <motion.div
-          initial={{ opacity: 0, x: 40, y: 28, rotate: 0 }}
+          initial={false}
           animate={{ opacity: 1, x: 0, y: 0, rotate: -7 }}
           transition={{ duration: 0.65, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
           className="relative z-10 -mr-[164px] sm:-mr-[128px] lg:-mr-[118px] translate-y-6 scale-[0.72] sm:scale-[0.86] lg:scale-[0.88] origin-bottom-right"
@@ -56,7 +56,7 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({
 
         {/* Center Foreground Main Phone: ADIGO App Home */}
         <motion.div
-          initial={{ opacity: 0, y: 36 }}
+          initial={false}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.12, ease: [0.16, 1, 0.3, 1] }}
           className="relative z-30 scale-[0.9] sm:scale-[0.96] lg:scale-[0.98]"
@@ -69,7 +69,7 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({
 
         {/* Right Background Phone: Nguồn gốc sản phẩm */}
         <motion.div
-          initial={{ opacity: 0, x: -40, y: 28, rotate: 0 }}
+          initial={false}
           animate={{ opacity: 1, x: 0, y: 0, rotate: 7 }}
           transition={{ duration: 0.65, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
           className="relative z-20 -ml-[164px] sm:-ml-[128px] lg:-ml-[118px] translate-y-6 scale-[0.72] sm:scale-[0.86] lg:scale-[0.88] origin-bottom-left"

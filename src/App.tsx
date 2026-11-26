@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { lazy, Suspense, useEffect, useRef, useState } from 'react';
 import { MotionConfig } from 'motion/react';
 import { HeroSection } from './components/hero/HeroSection';
 import { ExploreSection } from './components/explore/ExploreSection';
@@ -9,11 +9,17 @@ import { AdigoMartSection } from './components/mart/AdigoMartSection';
 import { TraceabilitySection } from './components/traceability/TraceabilitySection';
 import { TechnologySection } from './components/technology/TechnologySection';
 import { PartnershipSection } from './components/partnership/PartnershipSection';
-import { HeroPreviewModal, HeroModalMode } from './components/hero/HeroPreviewModal';
+import type { HeroModalMode } from './components/hero/HeroPreviewModal';
 import { SeoHead } from './components/seo/SeoHead';
 import { ConsentBanner } from './components/seo/ConsentBanner';
 import { HERO_CONFIG } from './config/heroConfig';
 import { trackEvent } from './utils/analytics';
+
+const HeroPreviewModal = lazy(() =>
+  import('./components/hero/HeroPreviewModal').then(module => ({
+    default: module.HeroPreviewModal,
+  }))
+);
 
 export default function App() {
   const [activeNav, setActiveNav] = useState<string>('explore');
@@ -149,12 +155,16 @@ export default function App() {
           </main>
         </ProductDiscoveryModule>
 
-        <HeroPreviewModal
-          mode={modalMode}
-          selectedTopic={selectedTopic}
-          onSwitchMode={(next) => setModalMode(next)}
-          onClose={() => setModalMode(null)}
-        />
+        {modalMode !== null && (
+          <Suspense fallback={null}>
+            <HeroPreviewModal
+              mode={modalMode}
+              selectedTopic={selectedTopic}
+              onSwitchMode={(next) => setModalMode(next)}
+              onClose={() => setModalMode(null)}
+            />
+          </Suspense>
+        )}
 
         <ConsentBanner
           forceOpen={consentOpen}

@@ -539,3 +539,10 @@
     rgba(0, 0, 0, 0.85) 100%
   );
 }
+
+/* Keep offscreen sections in the document for anchors and accessibility,
+   while postponing their layout and paint until they approach the viewport. */
+#explore, #app, #marketplace, #mart, #traceability, #technology, #partnership {
+  content-visibility: auto;
+  contain-intrinsic-block-size: auto 900px;
+}

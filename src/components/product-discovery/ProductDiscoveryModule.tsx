@@ -1,5 +1,7 @@
 import React, {
   createContext,
+  lazy,
+  Suspense,
   useCallback,
   useContext,
   useEffect,
@@ -16,8 +18,13 @@ import {
   trackPreorderModalOpen,
   trackProductCtaClick,
 } from '../../utils/productConversionTracking';
-import { PreorderModal } from '../campaign/PreorderModal';
 import { FloatingProductCTA } from './FloatingProductCTA';
+
+const PreorderModal = lazy(() =>
+  import('../campaign/PreorderModal').then(module => ({
+    default: module.PreorderModal,
+  }))
+);
 
 interface ProductDiscoveryContextValue {
   isActive: boolean;
@@ -58,6 +65,7 @@ export const ProductDiscoveryModule: React.FC<ProductDiscoveryModuleProps> = ({
   const isActive = isCampaignActive(CAMPAIGN_CONFIG);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [hasOpenedModal, setHasOpenedModal] = useState(false);
   const [activeEntryPoint, setActiveEntryPoint] = useState<ProductEntryPoint>(
     'hero_featured_product'
   );
@@ -191,6 +199,7 @@ export const ProductDiscoveryModule: React.FC<ProductDiscoveryModuleProps> = ({
         productId: PRODUCT_DISCOVERY_CONFIG.productId,
       });
 
+      setHasOpenedModal(true);
       setIsModalOpen(true);
     },
     []
@@ -239,14 +248,18 @@ export const ProductDiscoveryModule: React.FC<ProductDiscoveryModuleProps> = ({
         <>
           <FloatingProductCTA />
 
-          <PreorderModal
-            isOpen={isModalOpen}
-            entryPoint={activeEntryPoint}
-            config={CAMPAIGN_CONFIG}
-            restoreFocusRef={restoreFocusRef}
-            onClose={() => setIsModalOpen(false)}
-            onSuccessSubmitted={() => setHasSubmittedSuccess(true)}
-          />
+          {hasOpenedModal && (
+            <Suspense fallback={null}>
+              <PreorderModal
+                isOpen={isModalOpen}
+                entryPoint={activeEntryPoint}
+                config={CAMPAIGN_CONFIG}
+                restoreFocusRef={restoreFocusRef}
+                onClose={() => setIsModalOpen(false)}
+                onSuccessSubmitted={() => setHasSubmittedSuccess(true)}
+              />
+            </Suspense>
+          )}
         </>
       )}
     </ProductDiscoveryContext.Provider>
