@@ -4,6 +4,15 @@ export type ProductEntryPoint =
   | 'marketplace_product_card'
   | 'floating_product_cta';
 
+export interface SpotlightBreedItem {
+  id: string;
+  name: string;
+  imageWebp: string;
+  imageFallback: string;
+  imageAlt: string;
+  objectPositionClass: string;
+}
+
 export interface DiscoveryProductItem {
   id: string;
   campaignId: string;
@@ -14,11 +23,9 @@ export interface DiscoveryProductItem {
   description: string;
   secondaryDescription: string;
   ctaLabel: string;
-  imageWebp: string;
-  imageFallback: string;
-  imageAlt: string;
-  imageWidth: number;
-  imageHeight: number;
+  backdropImageWebp: string;
+  backdropImageFallback: string;
+  breeds: SpotlightBreedItem[];
 }
 
 export const PRODUCT_DISCOVERY_CONFIG = {
@@ -38,17 +45,47 @@ export const PRODUCT_DISCOVERY_CONFIG = {
         campaignId: 'CHICKEN-PREORDER',
         producer: 'Organic Việt Nam',
         producerLogo: '/assets/organic-vietnam-logo.png',
-        name: 'Gà ta nguyên con',
+        name: 'Đặt gà hôm nay',
         spec: 'Nguyên con',
         description: 'Được nuôi dưỡng theo mô hình thảo dược.',
         secondaryDescription: 'Từ vùng nuôi đến bữa cơm gia đình.',
         ctaLabel: 'Đặt mua ngay',
-        imageWebp: '/src/assets/images/spotlight_herbal_chicken_1795657811823.webp',
-        imageFallback: '/src/assets/images/spotlight_herbal_chicken_1795657811823.jpg',
-        imageAlt:
-          'Gà ta nguyên con làm sạch, da vàng nhạt tự nhiên cùng gừng, nghệ, sả và khay gà đóng gói trên nền vùng nuôi thảo dược',
-        imageWidth: 1408,
-        imageHeight: 768,
+        backdropImageWebp: '/src/assets/images/herbal_chicken_farm_1795655112377.webp',
+        backdropImageFallback: '/src/assets/images/herbal_chicken_farm_1795655112377.jpg',
+        breeds: [
+          {
+            id: 'ga-kien',
+            name: 'Gà Kiến',
+            imageWebp: '/src/assets/images/breed_ga_kien_1795658558247.webp',
+            imageFallback: '/src/assets/images/breed_ga_kien_1795658558247.jpg',
+            imageAlt: 'Giống Gà Kiến Organic Việt Nam dáng thon gọn, lông vàng óng tự nhiên trên đồng cỏ thảo dược',
+            objectPositionClass: 'object-[50%_34%]',
+          },
+          {
+            id: 'ga-co',
+            name: 'Gà Cỏ',
+            imageWebp: '/src/assets/images/breed_ga_co_1795658558653.webp',
+            imageFallback: '/src/assets/images/breed_ga_co_1795658558653.jpg',
+            imageAlt: 'Giống Gà Cỏ Organic Việt Nam lông nâu vàng tự nhiên kiếm ăn trên đồng cỏ xanh',
+            objectPositionClass: 'object-[52%_40%]',
+          },
+          {
+            id: 'ga-sao',
+            name: 'Gà Sao',
+            imageWebp: '/src/assets/images/breed_ga_sao_1795658560281.webp',
+            imageFallback: '/src/assets/images/breed_ga_sao_1795658560281.jpg',
+            imageAlt: 'Giống Gà Sao Organic Việt Nam bộ lông chấm bi trắng đặc trưng trên vùng nuôi tự nhiên',
+            objectPositionClass: 'object-[48%_34%]',
+          },
+          {
+            id: 'ga-mia',
+            name: 'Gà Mía',
+            imageWebp: '/src/assets/images/breed_ga_mia_1795658560544.webp',
+            imageFallback: '/src/assets/images/breed_ga_mia_1795658560544.jpg',
+            imageAlt: 'Giống Gà Mía Organic Việt Nam dáng bệ vệ, lông đỏ tía óng mượt trên đồng cỏ thảo dược',
+            objectPositionClass: 'object-[46%_32%]',
+          },
+        ],
       },
     ] as DiscoveryProductItem[],
   },

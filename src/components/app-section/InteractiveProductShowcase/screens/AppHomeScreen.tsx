@@ -89,7 +89,7 @@ export const AppHomeScreen: React.FC<ScreenProps> = ({ onNavigate }) => {
             loading="lazy"
             decoding="async"
             referrerPolicy="no-referrer"
-            className="w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover"
           />
           <div
             className="absolute inset-0 bg-gradient-to-r from-[#1D5E31]/90 via-[#2E7D32]/65 to-transparent"
@@ -177,9 +177,9 @@ export const AppHomeScreen: React.FC<ScreenProps> = ({ onNavigate }) => {
                       />
                     </button>
                   </div>
-                  <div className="flex items-center justify-between mt-auto">
-                    <span className="text-[10px] font-semibold text-[#52677D] tabular-nums">
-                      {item.price}
+                  <div className="flex items-center justify-between gap-1 mt-auto">
+                    <span className="text-[9.5px] font-medium text-[#52677D] truncate">
+                      {item.subtitle}
                     </span>
                     <button
                       type="button"

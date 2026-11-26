@@ -50,7 +50,7 @@ export const HeroContent: React.FC<HeroContentProps> = ({ onSecondaryCta }) => {
         initial={{ opacity: 0, y: 14 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.45, delay: 0.32, ease: [0.16, 1, 0.3, 1] }}
-        className="hidden md:block w-full mt-9"
+        className="hidden md:block w-full mt-7"
       >
         <FeatureChips />
       </motion.div>

@@ -14,7 +14,7 @@ export const HeroActions: React.FC<HeroActionsProps> = ({
   const buyButtonRef = useRef<HTMLButtonElement>(null);
 
   return (
-    <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 w-full sm:w-auto">
+    <div className="mt-6 sm:mt-7 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 w-full sm:w-auto">
       {/* Primary CTA: Đặt mua ngay */}
       <button
         ref={buyButtonRef}

@@ -1,11 +1,53 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { ArrowRight, ShoppingCart, Sprout } from 'lucide-react';
 import {
   DiscoveryProductItem,
   PRODUCT_DISCOVERY_CONFIG,
+  SpotlightBreedItem,
 } from '../../config/productDiscoveryConfig';
 import { trackProductImpression } from '../../utils/productConversionTracking';
 import { useProductDiscovery } from './ProductDiscoveryModule';
+
+const BreedPortraitCard: React.FC<{
+  breed: SpotlightBreedItem;
+}> = ({ breed }) => {
+  const [hasError, setHasError] = useState(false);
+
+  return (
+    <figure className="group/breed relative aspect-[16/10] w-full overflow-hidden rounded-[18px] sm:rounded-[22px] border-[1.5px] border-white/90 bg-gradient-to-br from-[#EAF5FF] via-[#DFF1FC] to-[#D8F1E2] shadow-[0_14px_30px_-10px_rgba(20,47,99,0.18),0_4px_12px_-4px_rgba(57,132,65,0.12)]">
+      {hasError ? (
+        <div className="w-full h-full flex flex-col items-center justify-center p-3 text-center bg-gradient-to-br from-[#E6F4FE] to-[#DAF2E5]">
+          <Sprout className="w-6 h-6 text-[#2F7A42] mb-1.5" aria-hidden="true" />
+          <span className="font-display font-semibold text-sm text-[#142F63]">
+            {breed.name}
+          </span>
+        </div>
+      ) : (
+        <picture className="block w-full h-full">
+          <source type="image/webp" srcSet={breed.imageWebp} />
+          <img
+            src={breed.imageFallback}
+            alt={breed.imageAlt}
+            width={960}
+            height={540}
+            loading="lazy"
+            decoding="async"
+            referrerPolicy="no-referrer"
+            onError={() => setHasError(true)}
+            className={`w-full h-full object-cover ${breed.objectPositionClass} transition-transform duration-300 ease-out group-hover/breed:scale-[1.03] block`}
+          />
+        </picture>
+      )}
+
+      {/* Subtle Bottom Scrim for Unboxed Breed Typography */}
+      <figcaption className="pointer-events-none absolute inset-x-0 bottom-0 pt-7 pb-2.5 px-3.5 sm:px-4 bg-gradient-to-t from-[#0D2240]/72 via-[#0D2240]/22 to-transparent flex items-end justify-between">
+        <span className="font-display font-semibold text-[13px] sm:text-[14px] tracking-[-0.01em] text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.45)]">
+          {breed.name}
+        </span>
+      </figcaption>
+    </figure>
+  );
+};
 
 const MarketplaceSingleSpotlight: React.FC<{
   product: DiscoveryProductItem;
@@ -59,56 +101,50 @@ const MarketplaceSingleSpotlight: React.FC<{
         className="pointer-events-none absolute -bottom-24 left-[30%] w-[340px] h-[240px] rounded-full bg-[#A4CE46]/15 blur-3xl"
       />
 
+      {/* Soft Misty Pasture Landscape Depth Backdrop on Desktop */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none hidden lg:block absolute inset-y-0 right-0 w-[68%] z-0 spotlight-backdrop-mask opacity-25"
+      >
+        <picture className="block w-full h-full">
+          <source type="image/webp" srcSet={product.backdropImageWebp} />
+          <img
+            src={product.backdropImageFallback}
+            alt=""
+            width={1408}
+            height={768}
+            loading="lazy"
+            decoding="async"
+            referrerPolicy="no-referrer"
+            className="w-full h-full object-cover object-center blur-[1.5px] scale-105 block"
+          />
+        </picture>
+      </div>
+
       {/* Luminous Glass Curve Accent */}
       <svg
-        viewBox="0 0 1360 400"
+        viewBox="0 0 1360 420"
         fill="none"
         preserveAspectRatio="none"
         aria-hidden="true"
         className="pointer-events-none hidden md:block absolute inset-0 w-full h-full z-10"
       >
         <path
-          d="M0 32 C 360 8, 520 175, 420 400"
+          d="M0 32 C 360 8, 520 185, 420 420"
           stroke="rgba(255, 255, 255, 0.72)"
           strokeWidth="1.5"
         />
         <path
-          d="M0 356 Q 280 390, 560 330"
+          d="M0 374 Q 280 408, 560 346"
           stroke="rgba(255, 255, 255, 0.45)"
           strokeWidth="1.2"
         />
       </svg>
 
-      {/* Full-Bleed Blended Right Visual on Desktop (60%+ overlap, fades seamlessly into left glass) */}
-      <div
-        aria-hidden="false"
-        className="hidden lg:block absolute inset-y-0 right-0 w-[66%] z-0 pointer-events-none"
-        style={{
-          WebkitMaskImage:
-            'linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.35) 14%, rgba(0,0,0,0.85) 30%, black 46%)',
-          maskImage:
-            'linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.35) 14%, rgba(0,0,0,0.85) 30%, black 46%)',
-        }}
-      >
-        <picture className="block w-full h-full">
-          <source type="image/webp" srcSet={product.imageWebp} />
-          <img
-            src={product.imageFallback}
-            alt={product.imageAlt}
-            width={product.imageWidth}
-            height={product.imageHeight}
-            loading="lazy"
-            decoding="async"
-            referrerPolicy="no-referrer"
-            className="w-full h-full object-cover object-[58%_56%] transition-transform duration-500 ease-out group-hover:scale-[1.02] block"
-          />
-        </picture>
-      </div>
-
-      {/* Main 40% Left Content + Mobile Blended Visual */}
-      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 items-center min-h-[340px] lg:min-h-[372px]">
+      {/* Main 40% Left Content + 60% Right Heritage Breeds Cluster */}
+      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 items-center min-h-[380px] lg:min-h-[416px]">
         {/* Left 40% (5 cols on lg): Brand + Editorial Copy + Glossy Glass CTA */}
-        <div className="lg:col-span-5 relative z-20 px-6 pt-7 pb-3 sm:px-10 sm:py-9 lg:py-10 lg:pl-12 lg:pr-4 flex flex-col items-start">
+        <div className="lg:col-span-5 relative z-20 px-6 pt-7 pb-4 sm:px-10 sm:pt-9 sm:pb-5 lg:py-10 lg:pl-12 lg:pr-4 flex flex-col items-start">
           {/* Official Organic Việt Nam Logo */}
           <img
             src={product.producerLogo}
@@ -164,29 +200,16 @@ const MarketplaceSingleSpotlight: React.FC<{
           </div>
         </div>
 
-        {/* Mobile/Tablet Blended Product Visual */}
+        {/* Right 60% (7 cols on lg): Clean 2x2 Glassy Heritage Chicken Breeds Cluster */}
         <div
-          className="lg:hidden relative w-full h-[240px] sm:h-[300px] overflow-hidden"
-          style={{
-            WebkitMaskImage:
-              'linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.65) 18%, black 38%)',
-            maskImage:
-              'linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.65) 18%, black 38%)',
-          }}
+          className="lg:col-span-7 relative z-20 px-5 pb-6 pt-2 sm:px-8 sm:pb-8 lg:py-7 lg:pr-8 lg:pl-3"
+          aria-label="Các giống gà đặc trưng từ Organic Việt Nam"
         >
-          <picture className="block w-full h-full">
-            <source type="image/webp" srcSet={product.imageWebp} />
-            <img
-              src={product.imageFallback}
-              alt={product.imageAlt}
-              width={product.imageWidth}
-              height={product.imageHeight}
-              loading="lazy"
-              decoding="async"
-              referrerPolicy="no-referrer"
-              className="w-full h-full object-cover object-[56%_58%] block"
-            />
-          </picture>
+          <div className="grid grid-cols-2 gap-3 sm:gap-4">
+            {product.breeds.map((breed) => (
+              <BreedPortraitCard key={breed.id} breed={breed} />
+            ))}
+          </div>
         </div>
       </div>
 

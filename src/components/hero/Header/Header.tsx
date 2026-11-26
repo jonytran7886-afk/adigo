@@ -33,7 +33,7 @@ export const Header: React.FC<HeaderProps> = ({
           : 'bg-white/28 backdrop-blur-[22px] border-b border-white/55'
       }`}
     >
-      <div className="max-w-[1600px] mx-auto px-[5%] lg:px-[5.5%] h-[72px] sm:h-[80px] flex items-center justify-between gap-6">
+      <div className="max-w-[1600px] mx-auto px-[5%] lg:px-[5.5%] h-[64px] sm:h-[72px] flex items-center justify-between gap-6">
         <a
           href="#top"
           onClick={(e) => {

@@ -11,7 +11,13 @@ export type FoodVisualType =
   | 'pomelo'
   | 'seafood'
   | 'agri'
-  | 'processed';
+  | 'processed'
+  | 'botanicalCare'
+  | 'teaCoffee'
+  | 'homeCeramic'
+  | 'honeyWellness'
+  | 'freshFruits'
+  | 'pantryDry';
 
 const FOOD_PHOTO_MAP: Record<
   FoodVisualType,
@@ -42,14 +48,14 @@ const FOOD_PHOTO_MAP: Record<
     bgClass: 'bg-[#ECFDF5]',
   },
   orange: {
-    src: '/src/assets/images/marketplace_eggs_citrus_1795655578585.webp',
-    alt: 'Cam sành chọn lọc',
-    objectPosition: 'object-[84%_45%]',
+    src: '/src/assets/images/hero_prod_fresh_fruits_1795658859046.webp',
+    alt: 'Trái cây tươi chọn lọc',
+    objectPosition: 'object-center',
     bgClass: 'bg-[#FFF7ED]',
   },
   pomelo: {
     src: '/src/assets/images/adigo_traceability_produce_1795602233534.webp',
-    alt: 'Trái cây tươi chọn lọc',
+    alt: 'Nông sản chọn lọc',
     objectPosition: 'object-[70%_55%]',
     bgClass: 'bg-[#F0FDF4]',
   },
@@ -60,16 +66,52 @@ const FOOD_PHOTO_MAP: Record<
     bgClass: 'bg-[#EFF6FF]',
   },
   agri: {
-    src: '/src/assets/images/adigo_traceability_produce_1795602233534.webp',
-    alt: 'Nông sản tươi sạch',
+    src: '/src/assets/images/hero_prod_pantry_dry_1795658859664.webp',
+    alt: 'Nông sản & ngũ cốc sạch',
     objectPosition: 'object-center',
     bgClass: 'bg-[#F8FAFC]',
   },
   processed: {
-    src: '/src/assets/images/marketplace_veggies_processed_1795655578984.webp',
-    alt: 'Thực phẩm chế biến tiện lợi',
-    objectPosition: 'object-[82%_55%]',
+    src: '/src/assets/images/hero_prod_artisan_tea_coffee_1795658860432.webp',
+    alt: 'Đặc sản & đồ uống chọn lọc',
+    objectPosition: 'object-center',
     bgClass: 'bg-[#F8FAFC]',
+  },
+  botanicalCare: {
+    src: '/src/assets/images/hero_prod_botanical_care_1795658860019.webp',
+    alt: 'Sản phẩm chăm sóc cá nhân chiết xuất thảo mộc',
+    objectPosition: 'object-center',
+    bgClass: 'bg-[#F6F5F0]',
+  },
+  teaCoffee: {
+    src: '/src/assets/images/hero_prod_artisan_tea_coffee_1795658860432.webp',
+    alt: 'Trà và cà phê đặc sản đóng gói',
+    objectPosition: 'object-center',
+    bgClass: 'bg-[#F7F4EF]',
+  },
+  homeCeramic: {
+    src: '/src/assets/images/hero_prod_home_ceramic_1795658858752.webp',
+    alt: 'Bộ gia dụng gốm sứ và tre tự nhiên',
+    objectPosition: 'object-center',
+    bgClass: 'bg-[#F8F6F2]',
+  },
+  honeyWellness: {
+    src: '/src/assets/images/hero_prod_honey_wellness_1795658858371.webp',
+    alt: 'Mật ong hoa tự nhiên và sản phẩm chăm sóc sức khỏe',
+    objectPosition: 'object-center',
+    bgClass: 'bg-[#FBF6EC]',
+  },
+  freshFruits: {
+    src: '/src/assets/images/hero_prod_fresh_fruits_1795658859046.webp',
+    alt: 'Trái cây tươi chọn lọc theo mùa',
+    objectPosition: 'object-center',
+    bgClass: 'bg-[#F3F8F1]',
+  },
+  pantryDry: {
+    src: '/src/assets/images/hero_prod_pantry_dry_1795658859664.webp',
+    alt: 'Hạt dinh dưỡng và ngũ cốc chọn lọc',
+    objectPosition: 'object-center',
+    bgClass: 'bg-[#F7F5F0]',
   },
 };
 
@@ -84,8 +126,8 @@ export const FoodThumbnail: React.FC<{
       <img
         src={item.src}
         alt={item.alt}
-        width={480}
-        height={360}
+        width={420}
+        height={420}
         loading="lazy"
         decoding="async"
         referrerPolicy="no-referrer"

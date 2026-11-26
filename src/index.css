@@ -523,3 +523,19 @@
   transform: translateY(0) scale(0.985);
 }
 
+.spotlight-backdrop-mask {
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 0, 0, 0.25) 22%,
+    rgba(0, 0, 0, 0.65) 55%,
+    rgba(0, 0, 0, 0.85) 100%
+  );
+  mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 0, 0, 0.25) 22%,
+    rgba(0, 0, 0, 0.65) 55%,
+    rgba(0, 0, 0, 0.85) 100%
+  );
+}

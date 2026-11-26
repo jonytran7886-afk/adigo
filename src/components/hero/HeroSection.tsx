@@ -20,7 +20,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
     <section
       id="top"
       aria-labelledby="hero-section-heading"
-      className="relative w-full min-h-0 lg:min-h-[max(760px,100svh)] flex flex-col overflow-x-clip"
+      className="relative w-full flex flex-col overflow-x-clip"
     >
       {/* Layer 01 & 02: Soft Blue-Mint Gradient Background + Luminous Curves */}
       <HeroBackground />
@@ -32,17 +32,17 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         onOpenExperience={onExploreCta}
       />
 
-      {/* Layer 04 & 05: Hero Main Grid (42% Left Content / 58% Right Showcase) */}
+      {/* Layer 04 & 05: Hero Main Grid (Balanced 50/50 split for 2-3 line Headline + Smartphone Showcase) */}
       <div className="relative z-10 flex-1 flex items-center">
-        <div className="w-full max-w-[1600px] mx-auto px-[5%] lg:px-[5.5%] py-8 sm:py-12 lg:py-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 items-center">
-            {/* Left ~42% (5 of 12 cols) */}
-            <div className="lg:col-span-5">
+        <div className="w-full max-w-[1600px] mx-auto px-[5%] lg:px-[5.5%] pt-4 pb-8 sm:pt-6 sm:pb-10 lg:pt-6 lg:pb-12">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 items-center">
+            {/* Left 50% (6 of 12 cols) */}
+            <div className="lg:col-span-6 lg:pr-2">
               <HeroContent onSecondaryCta={onExploreCta} />
             </div>
 
-            {/* Right ~58% (7 of 12 cols) */}
-            <div className="lg:col-span-7 flex flex-col items-center">
+            {/* Right 50% (6 of 12 cols) */}
+            <div className="lg:col-span-6 flex flex-col items-center">
               <ProductShowcase onExploreTap={onExploreCta} />
 
               {/* Mobile Feature Chips rendered below smartphones */}

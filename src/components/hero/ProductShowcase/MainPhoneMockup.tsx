@@ -74,24 +74,24 @@ export const MainPhoneMockup: React.FC<{ onExploreTap?: () => void }> = ({
           <Mic className="w-3.5 h-3.5 text-[#52677D] shrink-0" />
         </div>
 
-        {/* Fresh Produce Hero Banner inside App */}
+        {/* Multi-Sector Platform Banner inside App */}
         <div className="relative h-[126px] rounded-2xl overflow-hidden border border-[#E2ECF4] shrink-0">
           <img
-            src={HERO_CONFIG.assets.freshBannerPhoto}
-            alt="Thực phẩm tươi ngon cho mỗi ngày trên ADIGO"
-            width={960}
-            height={536}
+            src={HERO_CONFIG.assets.heroPlatformBannerPhoto}
+            alt="Hệ sinh thái sản phẩm đa dạng trên ADIGO"
+            width={720}
+            height={405}
             decoding="async"
             fetchPriority="high"
             referrerPolicy="no-referrer"
-            className="w-full h-full object-cover object-center"
+            className="absolute inset-0 w-full h-full object-cover object-center"
           />
           <div
-            className="absolute inset-0 bg-gradient-to-r from-[#1D5E31]/90 via-[#2E7D32]/65 to-transparent"
+            className="absolute inset-0 bg-gradient-to-r from-[#142F63]/88 via-[#1F4D8B]/62 to-transparent"
             aria-hidden="true"
           />
-          <div className="relative z-10 h-full p-3.5 flex flex-col justify-between max-w-[170px]">
-            <p className="font-display text-[14px] font-bold text-white leading-[1.2]">
+          <div className="relative z-10 h-full p-3.5 flex flex-col justify-between max-w-[176px]">
+            <p className="font-display text-[13.5px] font-bold text-white leading-[1.22]">
               {HERO_CONFIG.mainPhone.bannerTitle}
             </p>
             <button
@@ -109,13 +109,6 @@ export const MainPhoneMockup: React.FC<{ onExploreTap?: () => void }> = ({
         <div className="grid grid-cols-5 gap-1.5 text-center">
           {HERO_CONFIG.mainPhone.categories.map((cat) => {
             const active = selectedCat === cat.id;
-            const visualMap: Record<string, 'pork' | 'veggies' | 'orange' | 'eggs' | 'agri'> = {
-              meat: 'pork',
-              veggies: 'veggies',
-              fruits: 'orange',
-              eggs: 'eggs',
-              agri: 'agri',
-            };
             return (
               <button
                 key={cat.id}
@@ -128,7 +121,7 @@ export const MainPhoneMockup: React.FC<{ onExploreTap?: () => void }> = ({
                     active ? 'border-[#345EAA] ring-2 ring-[#345EAA]/25' : 'border-[#E2ECF4]'
                   }`}
                 >
-                  <FoodThumbnail type={visualMap[cat.id]} />
+                  <FoodThumbnail type={cat.visualType} />
                 </div>
                 <span className="text-[9.5px] font-medium text-[#112D52] whitespace-nowrap">
                   {cat.label}
@@ -182,8 +175,8 @@ export const MainPhoneMockup: React.FC<{ onExploreTap?: () => void }> = ({
                   <p className="text-[11px] font-bold text-[#112D52] truncate">{item.name}</p>
 
                   <div className="flex items-center justify-between gap-1 mt-auto">
-                    <span className="text-[10.5px] font-bold text-[#112D52] tabular-nums">
-                      {item.price}
+                    <span className="text-[9.5px] font-medium text-[#52677D] truncate">
+                      {item.subtitle}
                     </span>
                     <button
                       type="button"

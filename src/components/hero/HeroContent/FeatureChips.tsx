@@ -1,25 +1,27 @@
 import React from 'react';
-import { ShoppingCart, ShieldCheck, Share2 } from 'lucide-react';
+import { Layers, ShieldCheck, ShoppingCart } from 'lucide-react';
 import { HERO_CONFIG } from '../../../config/heroConfig';
 
 export const FeatureChips: React.FC<{ className?: string }> = ({ className = '' }) => {
   const iconMap = {
-    cart: ShoppingCart,
+    layers: Layers,
     shield: ShieldCheck,
-    network: Share2,
+    cart: ShoppingCart,
   };
 
   return (
-    <div className={`grid grid-cols-3 gap-2.5 sm:gap-3.5 w-full max-w-[540px] ${className}`}>
+    <div
+      className={`flex flex-wrap sm:grid sm:grid-cols-3 gap-2.5 sm:gap-3 w-full max-w-[630px] ${className}`}
+    >
       {HERO_CONFIG.featureChips.map((chip) => {
         const Icon = iconMap[chip.icon];
         return (
           <div
             key={chip.id}
-            className="h-[54px] sm:h-[58px] px-3 sm:px-5 rounded-[20px] adigo-glass-strong flex items-center justify-center sm:justify-start gap-2 sm:gap-3"
+            className="h-[50px] sm:h-[54px] px-3.5 sm:px-4 rounded-[18px] adigo-glass-strong flex items-center justify-center gap-2 sm:gap-2.5"
           >
-            <Icon className="w-[18px] h-[18px] sm:w-5 sm:h-5 text-[#398441] shrink-0" />
-            <span className="font-display text-xs sm:text-[14px] font-semibold text-[#112D52] whitespace-nowrap">
+            <Icon className="w-[17px] h-[17px] sm:w-[18px] sm:h-[18px] text-[#398441] shrink-0" aria-hidden="true" />
+            <span className="font-display text-xs sm:text-[13px] font-semibold text-[#112D52] whitespace-nowrap">
               {chip.label}
             </span>
           </div>
