@@ -102,8 +102,8 @@ export function bootstrapTrackingScripts(): void {
   if (typeof window === 'undefined' || trackingBootstrapped) return;
   if (getStoredConsent() !== 'granted') return;
 
-  const { gaMeasurementId, gtmId } = SEO_CONFIG.analytics;
-  if (!gaMeasurementId && !gtmId) return;
+  const { gaMeasurementIds, gtmId } = SEO_CONFIG.analytics;
+  if (!gaMeasurementIds.length && !gtmId) return;
 
   trackingBootstrapped = true;
   window.dataLayer = window.dataLayer || [];
@@ -120,20 +120,24 @@ export function bootstrapTrackingScripts(): void {
     ad_personalization: 'denied',
   });
 
-  if (gaMeasurementId) {
-    const existingGa = document.querySelector(
-      `script[src*="gtag/js?id=${encodeURIComponent(gaMeasurementId)}"]`
-    );
-    if (!existingGa) {
-      window.gtag('js', new Date());
+  const [primaryGaMeasurementId] = gaMeasurementIds;
+  if (primaryGaMeasurementId) {
+    window.gtag('js', new Date());
+    for (const gaMeasurementId of gaMeasurementIds) {
       window.gtag('config', gaMeasurementId, {
         anonymize_ip: true,
         send_page_view: true,
       });
+    }
+
+    const existingGa = document.querySelector(
+      `script[src*="gtag/js?id=${encodeURIComponent(primaryGaMeasurementId)}"]`
+    );
+    if (!existingGa) {
 
       const gaScript = document.createElement('script');
       gaScript.async = true;
-      gaScript.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(gaMeasurementId)}`;
+      gaScript.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(primaryGaMeasurementId)}`;
       document.head.appendChild(gaScript);
     }
   }
@@ -163,9 +167,9 @@ export function trackEvent(
   if (getStoredConsent() !== 'granted') return;
 
   const safeParams = sanitizeParams(params);
-  const { gaMeasurementId, gtmId } = SEO_CONFIG.analytics;
+  const { gaMeasurementIds, gtmId } = SEO_CONFIG.analytics;
 
-  if (typeof window.gtag === 'function' && gaMeasurementId) {
+  if (typeof window.gtag === 'function' && gaMeasurementIds.length) {
     window.gtag('event', eventName, safeParams);
   } else if (gtmId && Array.isArray(window.dataLayer)) {
     window.dataLayer.push({

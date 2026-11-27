@@ -74,7 +74,7 @@ export const SEO_CONFIG = {
     bing: (import.meta.env.VITE_BING_VERIFICATION || '').trim(),
   },
   analytics: {
-    gaMeasurementId: 'G-NFCW3H5YZ4',
+    gaMeasurementIds: ['G-NFCW3H5YZ4', 'G-2JS6M18YB6'],
     gtmId: 'GTM-WWZDSKTC',
   },
   storeLinks: {
