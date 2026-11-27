@@ -74,8 +74,8 @@ export const SEO_CONFIG = {
     bing: (import.meta.env.VITE_BING_VERIFICATION || '').trim(),
   },
   analytics: {
-    gaMeasurementId: (import.meta.env.VITE_GA_MEASUREMENT_ID || '').trim(),
-    gtmId: (import.meta.env.VITE_GTM_ID || 'GTM-WWZDSKTC').trim(),
+    gaMeasurementId: 'G-NFCW3H5YZ4',
+    gtmId: 'GTM-WWZDSKTC',
   },
   storeLinks: {
     appStore: (import.meta.env.VITE_APP_STORE_URL || '').trim(),
